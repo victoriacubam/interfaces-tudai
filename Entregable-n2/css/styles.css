@@ -3,3 +3,7 @@
     --colorAcent: #E8FC00;
     --fuente: 'Raleway', sans-serif;
 }
+
+body {
+  font-family: var(--fuente);
+}
