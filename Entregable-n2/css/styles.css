@@ -1,9 +1,47 @@
-:root{--colorPrimario: #241468;
-  --colorSecundario:#9F0D7F;
-  --colorAcento: #E8FC00;
-  --fuente: 'Raleway', sans-serif;
-  --blanco: #E4DFF9;
-  --sombra-S3:#520C4299;
+:root{
+  /*Color primario*/
+    --colorPrimario: #241468;
+
+    /*Luces*/
+    --luz-P1:#3E2B8F;
+    --luz-P2:#513F9E;
+    --luz-P3:#7560CE;
+
+    /*Sombras*/
+    --sombra-P1:#18095B;
+    --sombra-P2:#140846;
+    --sombra-P3:#170F3C;
+
+  /*Color secundario*/
+    --colorSecundario:#9F0D7F;
+
+    /*Luces*/
+    --luz-S1:#B52796;
+    --luz-S2:#B74DA0;
+    --luz-S3:#FF85E4;
+    /*Sombras*/
+    --sombra-S1:#8B1471;
+    --sombra-S2:#71195D;
+    --sombra-S3:#520C4299;
+    
+  /*Color acento*/
+    --colorAcento: #E8FC00;
+
+    /*Luces*/
+    --luz-A1:#F0FD60;
+    --luz-A2:#F7FF9B;
+    --luz-A3:#F9FFB7;
+    /*Sombras*/
+    --sombra-A1:#BACA00;
+    --sombra-A2:#B5B81C;
+    --sombra-A3:#899500;
+
+  /*Blancos y negros*/
+    --blanco: #E4DFF9;
+    --negro:#070417; 
+
+  /*Fuentes*/
+    --fuente: 'Raleway', sans-serif;
 }
 
 body {
@@ -24,9 +62,9 @@ h2{
 }
 
 h3{
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .texto {
