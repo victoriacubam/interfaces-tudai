@@ -1,9 +1,9 @@
 :root{--colorPrimario: #241468;
-      --colorSecundario:#9F0D7F;
-    --colorAcento: #E8FC00;
-    --fuente: 'Raleway', sans-serif;
-    --blanco: #E4DFF9;
-    --sombra-S3:#520C4299;
+  --colorSecundario:#9F0D7F;
+  --colorAcento: #E8FC00;
+  --fuente: 'Raleway', sans-serif;
+  --blanco: #E4DFF9;
+  --sombra-S3:#520C4299;
 }
 
 body {
@@ -11,10 +11,63 @@ body {
   color: var(--blanco);
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h2{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24;
+}
+
+h3{
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+}
+
+.texto {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.btn-primario {
+  background: var(--colorAcento);
+  border-radius: 45px;
+  width: 320px;
+  height: 65px;
+  font-family: var(--fuente);
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin: 30px;
+}
+
+.btn-secundario {
+
+}
+
+.btn-terciario {
+
+}
+
+/*Pantalla de registro*/
+
 .registracion {
   background-image: url('/css/imagenes/fondo.png');
   display: flex;
   justify-content: center;
+}
+
+.registracion h2 {
+  text-align: center;
 }
 
 .form {
@@ -41,21 +94,6 @@ body {
   height: 64px;
 }
 
-h2{
-  text-align: center;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24;
-}
-
-.texto {
-  font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-}
-
 .form input{
   top: 32.23%;
   bottom: 23.14%;
@@ -69,19 +107,8 @@ h2{
 }
 
 
-.btn-primario {
-  background: var(--colorAcento);
-  border-radius: 45px;
-  width: 320px;
-  height: 65px;
-  font-family: var(--fuente);
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 19px;
-  text-align: center;
-  margin: 30px;
 
-}
+/*Pantalla de login*/
 
 
 
