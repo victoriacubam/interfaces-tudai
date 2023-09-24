@@ -83,17 +83,41 @@ h3{
   font-family: var(--fuente);
   font-weight: 900;
   font-size: 16px;
-  line-height: 19px;
-  text-align: center;
   margin: 30px;
 }
 
+.btn-primario:hover{
+  filter: drop-shadow(0px 6.46414px 6.46414px rgba(0, 0, 0, 0.25));
+  background: #F7FF9B;
+  color: var(--colorPrimario);
+}
+
 .btn-secundario {
+  width: 153.52px;
+  height: 35.55px;
+
+  border: 1.61603px solid --colorAcento;
+  border-radius: 32.3207px;
+
+  font-weight: 600;
+  font-size: 16.1603px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: var(--colorAcento);
+
 
 }
 
 .btn-terciario {
+  color: var(--colorAcento);
+  text-decoration: none;
+}
 
+.btn-terciario:hover {
+  text-decoration:underline;
 }
 
 /*Pantalla de registro*/
@@ -114,7 +138,7 @@ h3{
   align-items: center;
 
   width: 759px;
-  height: 1300px;
+  height: 1400px;
   
   margin: 100px;
   background-color: var(--sombra-S3);
@@ -127,7 +151,7 @@ h3{
 }
 
 #logo {
-  margin: 30px;
+  margin: 100px 50px 50px 50px;
   width: 75px;
   height: 64px;
 }
