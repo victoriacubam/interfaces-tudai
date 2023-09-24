@@ -27,6 +27,8 @@ body {
   
   margin: 100px;
   background-color: var(--sombra-S3);
+
+  border-radius: 10px;
 }
 
 .form h2{
