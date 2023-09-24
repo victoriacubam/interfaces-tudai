@@ -1,9 +1,85 @@
 :root{--colorPrimario: #241468;
       --colorSecundario:#9F0D7F;
-    --colorAcent: #E8FC00;
+    --colorAcento: #E8FC00;
     --fuente: 'Raleway', sans-serif;
+    --blanco: #E4DFF9;
+    --sombra-S3:#520C4299;
 }
 
 body {
   font-family: var(--fuente);
+  color: var(--blanco);
 }
+
+.registracion {
+  background-image: url('/css/imagenes/fondo.png');
+  display: flex;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 759px;
+  height: 1300px;
+  
+  margin: 100px;
+  background-color: var(--sombra-S3);
+}
+
+.form h2{
+  width: 519px;
+}
+
+#logo {
+  margin: 30px;
+  width: 75px;
+  height: 64px;
+}
+
+h2{
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24;
+}
+
+.texto {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.form input{
+  top: 32.23%;
+  bottom: 23.14%;
+  width: 415px;
+  height: 54px;
+
+  background: rgba(228, 223, 249, 0.63);
+  box-shadow: inset -3px -4px 4px rgba(181, 39, 150, 0.37);
+  border-radius: 9px;
+  border: 0px;
+}
+
+
+.btn-primario {
+  background: var(--colorAcento);
+  border-radius: 45px;
+  width: 320px;
+  height: 65px;
+  font-family: var(--fuente);
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin: 30px;
+
+}
+
+
+
