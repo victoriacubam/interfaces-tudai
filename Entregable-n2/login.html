@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
-<body class="fondo">
+<body class="login">
     <div class="container">
-        <div class="form login">
-            <img src="/css/imagenes/logo.png" id="logo" alt="Logo">
+        <form class="form-login">
+            <img src="/css/imagenes/logo.png" class="logo-forms" alt="Logo">
             <div class="iniciar-sesion-redes">
                 <div class="google">
                     <img src="/css/imagenes/iconos/google.png" alt="">
@@ -25,12 +25,12 @@
                 <p>-------------------------------  o  -------------------------------</p>
             </div>
             <div>
-                <p class="texto">Email</p>
-                <input class="sin-validar" type="text">
+                <p class="email" >Email</p>
+                <input class="sin-validar" type="text" required>
             </div>
             <div>
                 <p class="texto">Contraseña</p>
-                <input class="sin-validar" type="password">
+                <input class="sin-validar" type="password" required>
             </div>
             <img class="recaptcha" src="/css/imagenes/recaptcha.png" alt="recaptcha">
             <button class="btn-primario">Iniciar Sesión</button>
