@@ -19,11 +19,14 @@
     --luz-S1:#B52796;
     --luz-S2:#B74DA0;
     --luz-S3:#FF85E4;
+
+    --luz-S3-transparencia: #ff85e569;
     /*Sombras*/
     --sombra-S1:#8B1471;
     --sombra-S2:#71195D;
-    --sombra-S3:#520C4299;
+    --sombra-S3:#520C42;
     
+    --sombra-S3-transparencia: #520C4299;
   /*Color acento*/
     --colorAcento: #E8FC00;
 
@@ -39,6 +42,10 @@
   /*Blancos y negros*/
     --blanco: #E4DFF9;
     --negro:#070417; 
+
+  /*Cancelar y aceptar*/
+    --cancelar:#FF1B1B;
+    --aceptar:#29C80F;
 
   /*Fuentes*/
     --fuente: 'Raleway', sans-serif;
@@ -88,7 +95,7 @@ h3{
 
 .btn-primario:hover{
   filter: drop-shadow(0px 6.46414px 6.46414px rgba(0, 0, 0, 0.25));
-  background: #F7FF9B;
+  background: var(--luz-A3);
   color: var(--colorPrimario);
 }
 
@@ -96,7 +103,7 @@ h3{
   width: 153.52px;
   height: 35.55px;
 
-  border: 1.61603px solid --colorAcento;
+  border: 1.61603px solid var(--colorAcento);
   border-radius: 32.3207px;
 
   font-weight: 600;
@@ -107,8 +114,11 @@ h3{
   text-align: center;
 
   color: var(--colorAcento);
+}
 
-
+.btn-secundario:hover {
+  border: 1.61603px solid var(--luz-A1);
+  color: var(--luz-A1);
 }
 
 .btn-terciario {
@@ -120,16 +130,97 @@ h3{
   text-decoration:underline;
 }
 
+a {
+  padding: 5px;
+  margin: 5px;
+}
+
+input {
+  color: var(--sombra-S2);
+  font-family: var(--fuente);
+  font-weight: 900;
+  padding-left: 10px;
+}
+
+.sin-validar {
+  border: 0px;
+}
+
+.verificado {
+  color: var(--aceptar);
+  border-bottom: solid 4px var(--aceptar);
+}
+
+.error-input {
+  color: var(--cancelar);
+  border-bottom: 4px solid var(--cancelar);
+}
+
+.error {
+  color: var(--cancelar);
+}
+
+.recaptcha {
+  margin: 5px;
+  width: 300px;
+}
+
+.iniciar-sesion-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.google, .facebook {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 30px;
+  height: 40px;
+  width: 205px;
+  margin-bottom: 5px;
+  padding: 0px 20px 0px 20px;
+}
+
+.google img, .facebook img {
+  width: 25px;
+  height: 25px;
+}
+
+.google button, .facebook button {
+  background: none;
+  border: 0;
+}
+
+.google {
+  color: var(--negro);
+  background-color: var(--blanco);
+}
+
+.facebook {
+  background-color: #1877F2;
+}
+
+.facebook button {
+  color: var(--blanco);
+}
+
+
+
 /*Pantalla de registro*/
 
-.registracion {
+.fondo {
   background-image: url('/css/imagenes/fondo.png');
   display: flex;
   justify-content: center;
 }
 
-.registracion h2 {
+.fondo h2 {
   text-align: center;
+}
+
+.container {
+
 }
 
 .form {
@@ -138,12 +229,15 @@ h3{
   align-items: center;
 
   width: 759px;
-  height: 1400px;
+  height: 1450px;
   
   margin: 100px;
-  background-color: var(--sombra-S3);
-
+  
   border-radius: 10px;
+}
+
+.registro {
+  background-color: var(--sombra-S3-transparencia);
 }
 
 .form h2{
@@ -157,20 +251,29 @@ h3{
 }
 
 .form input{
-  top: 32.23%;
-  bottom: 23.14%;
   width: 415px;
   height: 54px;
+
+  margin-bottom: 10px;
 
   background: rgba(228, 223, 249, 0.63);
   box-shadow: inset -3px -4px 4px rgba(181, 39, 150, 0.37);
   border-radius: 9px;
-  border: 0px;
+  /*border: 0px;*/
+
+  margin: 0; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
 }
 
 
 
 /*Pantalla de login*/
 
-
+.login {
+  background-color: var(--luz-S3-transparencia);
+}
 

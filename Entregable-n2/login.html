@@ -9,7 +9,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="fondo">
+    <div class="container">
+        <div class="form login">
+            <img src="/css/imagenes/logo.png" id="logo" alt="Logo">
+            <div class="iniciar-sesion-redes">
+                <div class="google">
+                    <img src="/css/imagenes/iconos/google.png" alt="">
+                    <button>Iniciar sesión con Google</button>
+                </div>
+                <div class="facebook">
+                    <img src="/css/imagenes/iconos/facebook.png" alt="">
+                    <button>Iniciar sesión con Facebook</button>
+                </div>
+                <p>-------------------------------  o  -------------------------------</p>
+            </div>
+            <div>
+                <p class="texto">Email</p>
+                <input class="sin-validar" type="text">
+            </div>
+            <div>
+                <p class="texto">Contraseña</p>
+                <input class="sin-validar" type="password">
+            </div>
+            <img class="recaptcha" src="/css/imagenes/recaptcha.png" alt="recaptcha">
+            <button class="btn-primario">Iniciar Sesión</button>
+            <a class="btn-terciario">¿Olvidaste tu contraseña?</a>
+            <a href="signUp.html" class="btn-terciario">¿No tenes cuenta? Registrate</a>
+        </div>   
+    </div>
 </body>
 </html>
