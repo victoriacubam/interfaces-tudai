@@ -57,9 +57,10 @@ body {
   font-family: var(--fuente);
   color: var(--blanco);
   margin: 0;
+  background-color: var(--colorPrimario);
 }
 
-h1 {
+ h1 {
   font-weight: 500;
   font-size: 30px;
   line-height: 35px;
@@ -333,12 +334,13 @@ header {
 
 /*Footer*/
 footer {
-  height: 518px;
+  /* antes 518 px */
+  height: 445px;
   background-color: var(--sombra-P2);
   display: flex;
   flex-direction: column;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 footer .descripcion-footer {
@@ -364,8 +366,8 @@ footer .copyright {
   background-color: var(--sombra-P1);
   margin: 0;
   text-align: center;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
   width: 100%;
 }
 
@@ -382,4 +384,223 @@ footer .redes {
 footer .redes div{
   display: flex;
   flex-direction: row;
+} 
+
+/* juego en ejecucion */
+
+/* body{
+  background-color: var(--colorPrimario);
+} */
+.juegoEnEjecucion{
+  margin: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: var(--sombra-S1);
+  border-radius: 5px 5px 5px 5px;
+  
+  
 }
+.headlines{
+  width: 100%;
+  height: 50px;
+  margin-top: 0%;
+  background-color: var(--sombra-P1) ;
+  display: flex;
+  align-items: center;
+}
+.headlines h3{
+  color: #FFFFFF
+  
+}
+#portada{
+  width: 995px;
+  height: 590px;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 15px;
+}
+#caratula{
+  background-image: url(imagenes/portada-juego.png);
+  width: 995px;
+  height: 590px;
+  background-size: contain;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 15px;
+  margin-left: 170px;
+  margin-bottom: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+
+}
+.empezar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#instrucciones{
+   display: flex;
+   /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  width: 90%; 
+  background-color: var(--luz-P2);
+  border-radius: 10px 10px 10px 10px;
+  color: #FFFFFF;
+  font-weight: lighter;
+  margin-left: 60px;
+ 
+}
+#armas , #controles , #comoJugar , #comoGanar{
+   margin: 10px;
+   
+   
+}
+#armas{
+  width: 33%;
+  border-right-width: 1em;
+}
+#controles , #comoJugar , #comoGanar{
+  width: 22%;
+}
+#instrucciones p{
+  align-content: center;
+}
+#instrucciones h2{
+  display: flex;
+  flex-direction: column; 
+  text-align: center; 
+  align-items: flex-start; 
+
+}
+
+#instrucciones h3{
+  font-size: medium;
+  align-items: center;
+}
+#zanahoria , #guante , #mouse{
+  width: 50px;
+  height: 46px;
+}
+
+ #cursor {
+  width: 60px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+#descripcion{
+  margin-left: 40px;
+  margin-right: 40px;
+  color: #FFFFFF;
+}
+
+#conocerMas{
+  color:#FFFFFF;
+  margin-left: 40px;
+  
+}
+#conocerMas h3{
+  text-decoration: underline;
+  
+}
+#agregarComentario{
+  background-color: var(--luz-P2);
+  border-radius: 5px 5px 5px 5px;
+  width: 70%;
+  
+
+}
+#agregarComentario input{
+  background-color: var(--luz-S2);
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  height: 60px;
+  width: 50%;
+}
+#enviar{
+  font-family: var(--fuente);
+  width: 10%;
+  padding: 10px;
+  margin: 5px 5%;
+  font-size: 15px;
+  background-color: var(--aceptar);
+  color: #FFFFFF;
+  font-weight: bolder;
+  border: none;
+  border-radius: 20px 20px 20px 20px;
+}
+
+
+.comentarios{
+  margin-top: 100px;
+  margin-left: 40px;
+  color:#FFFFFF;
+}
+.comentarios h2{
+  color :#FFFFFF
+}
+#agregarComentario{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+  margin-left: 15px;
+
+}
+#agregarComentario p{
+  width: 100%;
+}
+.comentario {
+  background-color: var(--luz-P2);
+  border-radius: 5px 5px 5px 5px;
+  width: 60%;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.comentario p{
+  padding: 20px;
+  /* margin: 20px; */
+  height: 20px;
+  width: 100%;
+  background-color: var(--luz-S2);
+  border-radius: 5px 5px 5px 5px;
+  display: flex;
+  align-items: center;
+}
+.perfil {
+  display: flex;
+  flex-direction: column;
+}
+.comentario p , h3 , #perfil{
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.comentario h3 , #perfil{
+  display: flex;
+  flex-direction: column;
+  border: none
+  
+}
+/* .puntuacion{
+  display: flex;
+  flex-direction: column;
+} */
+
+
+#perfil{
+  width: 60px;
+  height: 50px;
+  margin-left: 15px;
+}
+
