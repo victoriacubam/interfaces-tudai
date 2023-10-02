@@ -25,9 +25,11 @@ function verificarFormulario(e){
 
       let contraseña1 = document.querySelector("#contraseña");
       let contraseña2 = document.querySelector("#repetir-contraseña")
+      let contraseñaInvalida = document.querySelector("#contraseña-error");
       if(contraseña1.value!=contraseña2.value ){
         contraseña1.classList.add("error-input");
         contraseña2.classList.add("error-input");
+        contraseñaInvalida.classList.remove("oculto");
         e.preventDefault();
         console.log("Las contraseñas no coinciden")
     } else {
@@ -37,6 +39,7 @@ function verificarFormulario(e){
             contraseña2.classList.remove("error-input");
             contraseña1.classList.add("verificado");
             contraseña2.classList.add("verificado");
+            contraseñaInvalida.classList.add("oculto");
             e.preventDefault();
             console.log("Verificado")
         } 
