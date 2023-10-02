@@ -159,7 +159,6 @@ input {
 }
 
 .verificado {
-  color: var(--aceptar);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -167,7 +166,6 @@ input {
 }
 
 .error-input {
-  color: var(--cancelar);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -176,6 +174,7 @@ input {
 
 .error {
   color: var(--cancelar);
+  font-size: smaller;
 }
 
 .recaptcha {
@@ -235,6 +234,16 @@ form {
   border-radius: 10px;
 }
 
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.oculto {
+  display: none;
+}
+
+
 /*Pantalla de registro*/
 
 .registro, .login {
@@ -253,7 +262,7 @@ form {
 
 .form-registro {
   width: 759px;
-  height: 1450px;
+  height: 1550px;
   background-color: var(--sombra-S3-transparencia);
 }
 
