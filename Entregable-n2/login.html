@@ -16,29 +16,35 @@
             <div class="iniciar-sesion-redes">
                 <div class="google">
                     <img src="/css/imagenes/iconos/google.png" alt="">
-                    <button>Iniciar sesión con Google</button>
+                    <button id="btn-google">Iniciar sesión con Google</button>
                 </div>
                 <div class="facebook">
                     <img src="/css/imagenes/iconos/facebook.png" alt="">
-                    <button>Iniciar sesión con Facebook</button>
+                    <button id="btn-fb">Iniciar sesión con Facebook</button>
                 </div>
                 <p>o</p>
             </div>
             <div>
-                <p class="texto label" >Email</p></p>
-                <input class="sin-validar campo" type="text" required>
+                <p class="texto label" >Email</p>
+                <input class="sin-validar campo" type="email">
                 <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <div>
                 <p class="texto label">Contraseña</p>
-                <input class="sin-validar campo" type="password" required>
+                <input class="sin-validar campo" type="password" >
                 <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <img class="recaptcha" src="/css/imagenes/recaptcha.png" alt="recaptcha">
             <button class="btn-primario" id="btn-iniciar">Iniciar Sesión</button>
             <a class="btn-terciario">¿Olvidaste tu contraseña?</a>
             <a href="signUp.html" class="btn-terciario">¿No tenes cuenta? Registrate</a>
-        </div>   
+           
+            
+            <div class="spinner-container" id="spinner">
+                <div class="spinner"></div>
+            </div>
+
+        </form>   
     </div>
     <script type="text/javascript" src="js/login.js"></script>
 </body>

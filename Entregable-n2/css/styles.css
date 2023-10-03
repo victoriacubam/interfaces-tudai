@@ -58,7 +58,9 @@ body {
   color: var(--blanco);
   margin: 0;
   background-color: var(--colorPrimario);
-  overflow: hidden;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
  h1 {
@@ -266,8 +268,9 @@ form div {
 
 #form-registro {
   width: 759px;
-  height: 1550px;
   background-color: var(--sombra-S3-transparencia);
+  padding-bottom: 100px;
+  padding-top: 50px;
 }
 
 form h2{
@@ -275,7 +278,7 @@ form h2{
 }
 
 .logo-forms {
-  margin: 100px 50px 50px 50px;
+  margin: 50px 50px 50px 50px;
   width: 75px;
   height: 64px;
 }
@@ -373,18 +376,18 @@ ul {
   bottom: 0;
 }
 
-.items-perfil {
-  visibility: hidden;
-  position: absolute;
-  right: -200px;
-  margin: 0;
-}
-
 .menu-desplegado{
   opacity: 1;
   visibility: visible;
   left: 0;
   transition: left 0.5s ease-in-out;
+}
+
+.items-perfil {
+  visibility: hidden;
+  position: absolute;
+  right: -200px;
+  margin: 0;
 }
 
 .perfil-desplegado{
@@ -712,6 +715,9 @@ footer .redes div{
   height: 50px;
   margin-left: 15px;
 }
+
+
+
 
 /* home */
 

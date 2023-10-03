@@ -1,6 +1,11 @@
-
 let btn = document.querySelector("#btn-iniciar");
 btn.addEventListener("click", verificarFormulario);
+
+let btnGoogle = document.querySelector("#btn-google");
+btnGoogle.addEventListener("click", iniciarSesion);
+
+let btnFb = document.querySelector("#btn-fb");
+btnFb.addEventListener("click", iniciarSesion);
 
 let form = document.querySelector("form-login");
 
@@ -11,16 +16,30 @@ function verificarFormulario(e){
     e.preventDefault();
     for (var i = 0; i < campos.length; i++) {
         if (campos[i].value.trim() === "") {
+            console.log("if");
             // El campo está vacío
             campos[i].classList.add("error-input");
             errores[i].classList.remove("oculto");
-            //console.log(campos[i].nextElementSibling)
-            //campos[i].nextElementSibling.remove("oculto");
+
         } else {
+            console.log("else");
             // El campo no está vacío
             campos[i].classList.remove("error-input");
             errores[i].classList.add("oculto");
-            form.submit();
         }
-      }
+    }
+    if((campos[0].value.trim() !== "")&&(campos[1].value.trim() !== "")){
+        iniciarSesion();
+    }
 }
+
+function iniciarSesion(e){
+    e.preventDefault();
+    setTimeout(function(){
+        window.location.href = "index.html"
+    }, 3000);
+}
+
+  
+  
+  

@@ -5,6 +5,7 @@ btn.addEventListener("click", verificarFormulario);
 let form = document.querySelector("#form-registro");
 
 
+
 function verificarFormulario(e){
     campos = document.getElementsByClassName("campo");
     errores = document.getElementsByClassName("error");
@@ -14,8 +15,7 @@ function verificarFormulario(e){
             // El campo está vacío
             campos[i].classList.add("error-input");
             errores[i].classList.remove("oculto");
-            //console.log(campos[i].nextElementSibling)
-            //campos[i].nextElementSibling.remove("oculto");
+
         } else {
             // El campo no está vacío
             campos[i].classList.remove("error-input");
@@ -26,26 +26,32 @@ function verificarFormulario(e){
       let contraseña1 = document.querySelector("#contraseña");
       let contraseña2 = document.querySelector("#repetir-contraseña")
       let contraseñaInvalida = document.querySelector("#contraseña-error");
-      if(contraseña1.value!=contraseña2.value ){
+
+      if(contraseña1.value!=contraseña2.value){
         contraseña1.classList.add("error-input");
         contraseña2.classList.add("error-input");
-        contraseñaInvalida.classList.remove("oculto");
+        contraseñaInvalida.classList.toggle("oculto");
         e.preventDefault();
-        console.log("Las contraseñas no coinciden")
+        console.log("Las contraseñas no coinciden");
+
     } else {
         //Agregarle tiempo para hacer el submit
-        if((contraseña1.value!="")&&((contraseña2.value!=""))){
+        if((contraseña1.value!=="")&&((contraseña2.value!==""))){
             e.preventDefault();
-            contraseña1.classList.remove("error-input");
-            contraseña2.classList.remove("error-input");
-            contraseña1.classList.add("verificado");
-            contraseña2.classList.add("verificado");
-            contraseñaInvalida.classList.add("oculto");
+            contraseña1.classList.toggle("error-input");
+            contraseña2.classList.toggle("error-input");
+            contraseñaInvalida.classList.toggle("oculto");
             console.log("Verificado")
-            setTimeout(function(){
-                        window.location.href = "index.html"
-                       },1000);
+            if(campos[0].value.trim(),campos[1],campos[2]){
+                iniciarSesion();
+            }
 
         }
     }
+}
+
+function iniciarSesion(){
+    setTimeout(function(){
+        window.location.href = "index.html"
+       }, 1000);
 }
