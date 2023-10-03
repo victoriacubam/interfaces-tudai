@@ -58,6 +58,7 @@ body {
   color: var(--blanco);
   margin: 0;
   background-color: var(--colorPrimario);
+  overflow: hidden;
 }
 
  h1 {
@@ -72,11 +73,13 @@ h2{
   font-size: 24;
 }
 
-h3{
+h3{ 
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
 }
+
+
 
 button {
   border: none;
@@ -261,7 +264,7 @@ form div {
 
 } */
 
-.form-registro {
+#form-registro {
   width: 759px;
   height: 1550px;
   background-color: var(--sombra-S3-transparencia);
@@ -297,7 +300,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*Pantalla de login*/
 
-.form-login {
+#form-login {
   background-color: var(--luz-S3-transparencia);
   width: 650px;
   height: 950px;
@@ -322,16 +325,94 @@ header {
   width: 43px;
   height: 47px;
   margin: 20px;
+
+}
+
+.header-izq {
+  display: flex;
 }
 
 .header-der{
   display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
 .header-der img {
   width: 30px;
   height: 28px;
+  margin: 10px;
+}
+
+.item {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  top: 106px;
+  background-color: var(--luz-P1);
+  padding: 30px;
+  /*box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);*/
+}
+
+.items-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -226px;
+  margin: 0;
+  bottom: 0;
+}
+
+.items-perfil {
+  visibility: hidden;
+  position: absolute;
+  right: -200px;
+  margin: 0;
+}
+
+.menu-desplegado{
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.perfil-desplegado{
+  opacity: 1;
+  visibility: visible;
+  top: 106px;
+  right: 0;
+  transition: right 0.5s ease-in-out;
+}
+
+
+.btn-menu {
+  background-image: url(/css/imagenes/iconos/menu.png);
+  background-color: var(--luz-P2);
+}
+
+.btn-perfil {
+  background-image: url(/css/imagenes/iconos/perfil.png);
+  background-color: var(--luz-P2);
+  height: 28px;
+  width: 30px;
+}
+
+.btn-carrito {
+  background-image: url(/css/imagenes/iconos/carrito.png);
+  background-color: var(--luz-P2);
+  height: 32px;
+  width: 30px;
   margin: 10px;
 }
 

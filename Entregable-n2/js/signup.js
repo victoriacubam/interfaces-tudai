@@ -2,7 +2,7 @@
 let btn = document.querySelector("#btn-registrar");
 btn.addEventListener("click", verificarFormulario);
 
-let form = document.querySelector("form-registro");
+let form = document.querySelector("#form-registro");
 
 
 function verificarFormulario(e){
@@ -35,13 +35,17 @@ function verificarFormulario(e){
     } else {
         //Agregarle tiempo para hacer el submit
         if((contraseña1.value!="")&&((contraseña2.value!=""))){
+            e.preventDefault();
             contraseña1.classList.remove("error-input");
             contraseña2.classList.remove("error-input");
             contraseña1.classList.add("verificado");
             contraseña2.classList.add("verificado");
             contraseñaInvalida.classList.add("oculto");
-            e.preventDefault();
             console.log("Verificado")
-        } 
+            setTimeout(function(){
+                        window.location.href = "index.html"
+                       },1000);
+
+        }
     }
 }
