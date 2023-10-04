@@ -411,19 +411,19 @@ ul {
 
 
 .btn-menu {
-  background-image: url(/css/imagenes/iconos/menu.png);
+  background-image: url(/css/imagenes/iconos/menu.svg);
   background-color: var(--luz-P2);
 }
 
 .btn-perfil {
-  background-image: url(/css/imagenes/iconos/perfil.png);
+  background-image: url(/css/imagenes/iconos/perfil.svg);
   background-color: var(--luz-P2);
   height: 28px;
   width: 30px;
 }
 
 .btn-carrito {
-  background-image: url(/css/imagenes/iconos/carrito.png);
+  background-image: url(/css/imagenes/iconos/carrito.svg);
   background-color: var(--luz-P2);
   height: 32px;
   width: 30px;
@@ -441,6 +441,9 @@ nav {
   height: 40px;
   margin-right: 10px;
   border: none;
+  color: var(--blanco);
+  font-family: var(--fuente);
+  fo
 }
 
 .buscador img {
