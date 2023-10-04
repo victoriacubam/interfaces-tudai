@@ -29,12 +29,13 @@ function verificarFormulario(e){
         }
     }
     if((campos[0].value.trim() !== "")&&(campos[1].value.trim() !== "")){
-        iniciarSesion();
+        iniciarSesion(e);
     }
 }
 
 function iniciarSesion(e){
-    e.preventDefault();
+   /* e.preventDefault();*/
+   e.preventDefault();
     setTimeout(function(){
         window.location.href = "index.html"
     }, 3000);
