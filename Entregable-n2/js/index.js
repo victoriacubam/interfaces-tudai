@@ -2,7 +2,14 @@ let menu = document.querySelector("#items-menu");
 let btnMenu = document.querySelector("#btn-menu");
 
 btnMenu.addEventListener("click", () => {
-    menu.classList.toggle("menu-desplegado")
+    console.log(menu.classList.value);
+    if(menu.classList.contains("menu-abrir")){
+        menu.classList.remove("menu-abrir");
+        menu.classList.add("menu-cerrar");  
+    } else if(menu.classList.contains("menu-cerrar")){
+        menu.classList.remove("menu-cerrar");
+        menu.classList.add("menu-abrir");     
+    }
 });
 
 

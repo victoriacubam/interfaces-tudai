@@ -114,6 +114,7 @@ button {
   filter: drop-shadow(0px 6.46414px 6.46414px rgba(0, 0, 0, 0.25));
   background: var(--luz-A3);
   color: var(--colorPrimario);
+  transform: scale(1.01);
 }
 
 .btn-secundario {
@@ -376,11 +377,21 @@ ul {
   bottom: 0;
 }
 
-.menu-desplegado{
+.menu-abrir{
   opacity: 1;
   visibility: visible;
   left: 0;
   transition: left 0.5s ease-in-out;
+}
+
+.menu-cerrar{
+  /* opacity: 0;
+  visibility: hidden; */
+  position: absolute;
+  left: -226px;
+  margin: 0;
+  bottom: 0;
+  transition: right 0.5s ease-in-out;
 }
 
 .items-perfil {
@@ -721,8 +732,8 @@ footer .redes div{
 
 /* home */
 
-/* movile */
+/* mobile */
 
-@media only screen and (min-width: 600px){
 /* desktop */
+@media only screen and (min-width: 600px){
 }
