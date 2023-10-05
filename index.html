@@ -5,26 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <a href="https://www.flaticon.es/iconos-gratis/palanca-de-mando" title="palanca de mando iconos"></a><link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="header-izq">
-            <img class="menu" src="/css/imagenes/iconos/menu.png" alt="">
-            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.png" alt=""></a>
+            <div class="menu-deplegable">
+                <button class="btn-menu menu" id="btn-menu"></button>
+                <ul class="items-menu menu-cerrar" id="items-menu">
+                    <li><a class="item" href="">Mas populares</a></li>
+                    <li><a class="item" href="">Ultimos juegos</a></li>
+                    <li><a class="item" href="">Recomendados</a></li>
+                    <hr>
+                    <li><a class="item" href="">Accion</a></li>
+                    <li><a class="item" href="">Aventuras</a></li>
+                    <li><a class="item" href="">Carreras</a></li>
+                    <li><a class="item" href="">Cartas</a></li>
+                    <li><a class="item" href="">Clasicos</a></li>
+                    <li><a class="item" href="">Terror</a></li>
+                </ul>
+            </div>
+            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.svg" alt=""></a>
         </div>
+        
         <div class="header-der">
             <div>
                 <!-- <img src="/css/imagenes/iconos/buscar.png" alt="buscar"> -->
                 <input type="text" class="buscador">
             </div>
-            <img src="/css/imagenes/iconos/carrito.png" alt="carrito">
-            <img src="/css/imagenes/iconos/perfil.png" alt="perfil">
+            <div class="carrito-desplegable">
+                <button class="btn-carrito"></button>
+            </div>
+            <div class="perfil-deplegable">
+                <button class="btn-perfil perfil" id="btn-perfil"></button>
+                <ul class="items-perfil" id="items-perfil">
+                    <li><a class="item" href="">Mi perfil</a></li>
+                    <li><a class="item" href="">Mis juegos</a></li>
+                    <li><a class="item" href="login.html">Cerrar sesion</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+    
     <nav>Home</nav>
+    
     <div class="home-container">
         <h2>Recomendado del dia</h2>
         <main>
@@ -48,16 +75,16 @@
             <h2> Mis juegos</h2>
             <button class="btn-carrousel"> <- </button>
             <div class="card">
-                <img src="">
+                <img src="css/imagenes/cards/mis_juegos/card_sarascooking.png">
                 <div class="precio">
                     $    
                 </div>
                 <div class="card-body">
-                    <h3>Sara´s cooking class</h3>
-                    <div class="info-card">
-                        <img class="corazon" src="css/imagenes/iconos/no-me-gusta.png">
-                        <img class="guardar" src="css/imagenes/iconos/no-guardado.png">
-                        <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                    <h3>Sara's cooking class</h3>
+                    <div>
+                        <img src="css/imagenes/iconos/marcar_fav.png">
+                        <img src="css/imagenes/iconos/guardar.png">
+                        <button class="btn-primario">Jugar</button>
                     </div>
                 </div>
             </div>
@@ -66,64 +93,63 @@
     
         <section class="carrousel">
             <h2> Recomendados</h2>
-            <button class="btn-carrousel"> <- </button>
+            <button class="btn-carrousel-izq"> <- </button>
             <div class="card">
-                <img src="">
+                <img src="css/imagenes/cards/mis_juegos/card_fireboy.png">
                 <div class="precio">
                     $    
                 </div>
                 <div class="card-body">
-                    <h3>Egg car</h3>
-                    <div class="info-card">
-                        <img class="corazon" src="css/imagenes/iconos/no-me-gusta.png">
-                        <img class="guardar" src="css/imagenes/iconos/no-guardado.png">
-                        <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                    <h3>Fireboy & Watergirl 5</h3>
+                    <div>
+                        <img src="css/imagenes/iconos/marcar_fav.png">
+                        <img src="css/imagenes/iconos/guardar.png">
+                        <button class="btn-primario">Jugar</button>
                     </div>
                 </div>
             </div>
-            <button class="btn-carrousel"> -> </button>
+            <button class="btn-carrousel-der"> -> </button>
         </section>
     
         <section class="carrousel">
             <h2>Clasicos</h2>
-            <button class="btn-carrousel"> <- </button>
+            <button class="btn-carrousel-izq"> <- </button>
             <div class="card">
-                <img src="">
+                <img src="css/imagenes/cards/mis_juegos/card_geometry.png">
                 <div class="precio">
                     $    
                 </div>
-                <div id="triangulo"></div>
                 <div class="card-body">
-                    <h3>Candy crush</h3>
-                    <div class="info-card">
-                        <img class="corazon" src="css/imagenes/iconos/no-me-gusta.png">
-                        <img class="guardar" src="css/imagenes/iconos/no-guardado.png">
-                        <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                    <h3>Geometry Dash</h3>
+                    <div>
+                        <img src="css/imagenes/iconos/marcar_fav.png">
+                        <img src="css/imagenes/iconos/guardar.png">
+                        <button class="btn-primario">Jugar</button>
                     </div>
                 </div>
             </div>
-            <button class="btn-carrousel"> -> </button>
+            <button class="btn-carrousel-der"> -> </button>
     
         </section>
     
         <section class="carrousel">
             <h2>Aventura</h2>
-            <button class="btn-carrousel"> <- </button>
+            <button class="btn-carrousel-izq"> <- </button>
             <div class="card">
-                <img src="">
+                <img src="css/imagenes/cards/mis_juegos/card_ctr.png">
                 <div class="precio">
                     $    
                 </div>
                 <div class="card-body">
-                    <h3>Red ball forever</h3>
-                    <div class="info-card">
-                        <img class="corazon" src="css/imagenes/iconos/no-me-gusta.png">
-                        <img class="guardar" src="css/imagenes/iconos/no-guardado.png">
-                        <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                    <h3>CTR Crash Team Racing</h3>
+                    <div>
+                        <img src="css/imagenes/iconos/marcar_fav.png">
+                        <img src="css/imagenes/iconos/guardar.png">
+                        <button class="btn-primario">Jugar</button>
                     </div>
                 </div>
             </div>
-            <button class="btn-carrousel"> -> </button>
+            <button class="btn-carrousel-der"> -> </button>
     
         </section>
     </div>
@@ -176,5 +202,6 @@
             <p>Todos los derechos reservados Copyright © 2023 Entretech.com · Juegos Gratis online</p>
         </div>
     </footer>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

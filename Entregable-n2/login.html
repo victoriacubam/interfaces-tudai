@@ -11,41 +11,32 @@
 </head>
 <body class="login">
     <div class="container">
-        <form id="form-login">
+        <form class="form-login">
             <img src="/css/imagenes/logo.png" class="logo-forms" alt="Logo">
             <div class="iniciar-sesion-redes">
                 <div class="google">
-                    <img src="/css/imagenes/iconos/google.svg" alt="">
-                    <button id="btn-google">Iniciar sesión con Google</button>
+                    <img src="/css/imagenes/iconos/google.png" alt="">
+                    <button>Iniciar sesión con Google</button>
                 </div>
                 <div class="facebook">
-                    <img src="/css/imagenes/iconos/facebook.svg" alt="">
-                    <button id="btn-fb">Iniciar sesión con Facebook</button>
+                    <img src="/css/imagenes/iconos/facebook.png" alt="">
+                    <button>Iniciar sesión con Facebook</button>
                 </div>
                 <p>o</p>
             </div>
             <div>
-                <p class="texto label" >Email</p>
-                <input class="sin-validar campo" type="email">
-                <span class="error oculto">* Este campo es obligatorio</span>
+                <p class="texto label" >Email</p></p>
+                <input class="sin-validar" type="text" required>
             </div>
             <div>
                 <p class="texto label">Contraseña</p>
-                <input class="sin-validar campo" type="password" >
-                <span class="error oculto">* Este campo es obligatorio</span>
+                <input class="sin-validar" type="password" required>
             </div>
             <img class="recaptcha" src="/css/imagenes/recaptcha.png" alt="recaptcha">
-            <button class="btn-primario" id="btn-iniciar">Iniciar Sesión</button>
+            <button class="btn-primario">Iniciar Sesión</button>
             <a class="btn-terciario">¿Olvidaste tu contraseña?</a>
             <a href="signUp.html" class="btn-terciario">¿No tenes cuenta? Registrate</a>
-           
-            
-            <div class="spinner-container" id="spinner">
-                <div class="spinner"></div>
-            </div>
-
-        </form>   
+        </div>   
     </div>
-    <script type="text/javascript" src="js/login.js"></script>
 </body>
 </html>

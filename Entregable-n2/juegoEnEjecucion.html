@@ -40,7 +40,7 @@
                 <h3>Tu contrincante sera El Pato Lucas y su arma de combate sera</h3>
                 <img src="css/imagenes/iconos/puño.png" id="guante" />
             </div>
-            <div id="linea-vertical"></div>
+            
             <div id="controles">
                 <h2>Controles</h2>
                 <h3>Click izquierdo para bombardear</h3>
@@ -78,10 +78,14 @@
     <h2>Te invitamos a que participes en nuestra comunidad dejandonos un comentario</h2>
 
     <form id="agregarComentario">
-        <label for="comentario">¿Que te parecio el juego?</label>
-        <!-- <p>⭐​⭐​⭐​⭐​⭐​⭐​</p> -->
-        <input type="text" id="comentario" placeholder="Dejanos tu opinion">
-        <button id="enviar">Enviar</button>
+        <div class="form-puntuacion">
+            <label for="comentario">¿Que te parecio el juego?</label>
+            <p>⭐​⭐​⭐​⭐​⭐​⭐​</p>
+        </div>
+        <div class="form-comentario">
+            <input type="text" id="comentario" placeholder="Dejanos tu opinion">
+            <button id="enviar">Enviar</button>
+        </div>
     </form>
 
     <div id="comentarioNuevo">
@@ -94,8 +98,8 @@
             <img src="css/imagenes/iconos/avatar-perfil.png" id="perfil" />
             <h3>Anonimo</h3>
         </div>
-        <div class="puntuacion">
-            <!-- <h4>⭐​⭐​⭐​⭐​⭐​</h4> -->
+        <div class="puntuacion anonoimo">
+            <h4>⭐​⭐​⭐​⭐​⭐​</h4>
             <p>Esta bueno</p>
         </div>
     </div>
@@ -106,7 +110,7 @@
         <h3>Pedro</h3>
         </div>
         <div class="puntuacion">
-            <!-- <h4>⭐​⭐​⭐​⭐​⭐​⭐</h4> -->
+            <h4>⭐​⭐​⭐​⭐​⭐​⭐</h4>
             <p>Muy divertido!! Me encantan los Looney Tunes</p>
         </div>
     </div>
@@ -117,7 +121,7 @@
         <h3>Maria</h3>
         </div>
         <div class="puntuacion">
-            <!-- <h4>⭐​</h4> -->
+            <h4>⭐​</h4>
             <p>No me gusto</p>
         </div>
     </div>
