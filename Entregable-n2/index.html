@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/carrousel.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -54,7 +54,7 @@
     
     <div class="home-container">
         <h2>Recomendado del dia</h2>
-        <main>
+        <main class="inicio">
             <section class="juegoRecomendado">
                 <div class="descripcion-juego">
                     <h1>Bugs Bunny VS El Pato Lucas</h1>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="caratula">  
                     <img src="css/imagenes/portada-recomendado.png" alt="">
-                    <button class="btn-primario">Empezar a jugar</button>
+                    <button class="btn-primario" id="empezar-jugar">Empezar a jugar</button>
                 </div> 
             </section>
             <article>
@@ -73,89 +73,265 @@
     
         <section class="carrousel">
             <h2> Mis juegos</h2>
-            <button class="btn-carrousel"> <- </button>
+            <!-- <button id= "izq" type="button" class="btn-izq"> <img src="css/imagenes/iconos/flecha-izq.png"> </button> -->
             <div class="card">
-                <img src="css/imagenes/cards/mis_juegos/card_sarascooking.png">
+                <img  id="img-juego" src="css/imagenes/cards/mis_juegos/card_sarascooking.png">
                 <div class="precio">
                     $    
                 </div>
                 <div class="card-body">
-                    <h3>Sara's cooking class</h3>
-                    <div>
-                        <img src="css/imagenes/iconos/marcar_fav.png">
-                        <img src="css/imagenes/iconos/guardar.png">
-                        <button class="btn-primario">Jugar</button>
+                    <h3>Sara´s cooking class</h3>
+                    <div class="info-card">
+                        <div>
+                            <img src="css/imagenes/iconos/marcar_fav.png">
+                            <img src="css/imagenes/iconos/guardar.png">
+                        </div>  
+                        <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                     </div>
                 </div>
             </div>
-            <button class="btn-carrousel"> -> </button>
+            <!-- <button class="btn-der"  id= "der" type="button"> <img src="css/imagenes/iconos/flecha-der.png"> </button> -->
         </section>
+
     
-        <section class="carrousel">
+    <section class="cuerpo-carrousel">
+        <div class="carrousel">
             <h2> Recomendados</h2>
-            <button class="btn-carrousel-izq"> <- </button>
-            <div class="card">
-                <img src="css/imagenes/cards/mis_juegos/card_fireboy.png">
-                <div class="precio">
-                    $    
-                </div>
-                <div class="card-body">
-                    <h3>Fireboy & Watergirl 5</h3>
-                    <div>
-                        <img src="css/imagenes/iconos/marcar_fav.png">
-                        <img src="css/imagenes/iconos/guardar.png">
-                        <button class="btn-primario">Jugar</button>
+            <div class="carrousel-list" id="carrousel-list">
+                <button id= "izq" type="button" class="btn-izq"> <img src="css/imagenes/iconos/flecha-izq.png"> </button>
+                <div class="carrousel-track" id="track">
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/mis_juegos/card_fireboy.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Fireboy & Watergirl 5</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <button class="btn-carrousel-der"> -> </button>
-        </section>
-    
-        <section class="carrousel">
-            <h2>Clasicos</h2>
-            <button class="btn-carrousel-izq"> <- </button>
-            <div class="card">
-                <img src="css/imagenes/cards/mis_juegos/card_geometry.png">
-                <div class="precio">
-                    $    
-                </div>
-                <div class="card-body">
-                    <h3>Geometry Dash</h3>
-                    <div>
-                        <img src="css/imagenes/iconos/marcar_fav.png">
-                        <img src="css/imagenes/iconos/guardar.png">
-                        <button class="btn-primario">Jugar</button>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_257.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>257</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <button class="btn-carrousel-der"> -> </button>
-    
-        </section>
-    
-        <section class="carrousel">
-            <h2>Aventura</h2>
-            <button class="btn-carrousel-izq"> <- </button>
-            <div class="card">
-                <img src="css/imagenes/cards/mis_juegos/card_ctr.png">
-                <div class="precio">
-                    $    
-                </div>
-                <div class="card-body">
-                    <h3>CTR Crash Team Racing</h3>
-                    <div>
-                        <img src="css/imagenes/iconos/marcar_fav.png">
-                        <img src="css/imagenes/iconos/guardar.png">
-                        <button class="btn-primario">Jugar</button>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_bigtower.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Big Tower</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_bowling.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Bowling</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_brainteaser.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Brain teaser</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_crazyforspeed.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Crazy for speed</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_debris.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Debris</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_drift.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Drift</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_eggcar.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Egg Car</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_kartwars.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Kart wars</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_spectrum.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Spectrum</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_supercity.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Supercity</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img  id="img-juego" src="css/imagenes/cards/recomedados/card_supertrief.png">
+                    <div class="precio">
+                        $    
+                    </div>
+                    <div class="card-body">
+                        <h3>Supertrief</h3>
+                        <div class="info-card">
+                            <div>
+                                <img src="css/imagenes/iconos/marcar_fav.png">
+                                <img src="css/imagenes/iconos/guardar.png">
+                            </div>  
+                            <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <button class="btn-carrousel-der"> -> </button>
+            <button class="btn-der"  id= "der" type="button"> <img src="css/imagenes/iconos/flecha-der.png"> </button>
+        </div>
+           
+        </div>
+    </section>
+        
+
+
     
-        </section>
-    </div>
-    <article>
-        <img src="css/imagenes/publicidad3.png">
-    </article>
+       
     
     <footer>
         <div class="descripcion-footer">
@@ -187,14 +363,14 @@
             <div class="redes">
                 <h3>Seguinos en las redes</h3>
                 <div>
-                    <img src="/css/imagenes/iconos/fb.png" alt="">
-                    <img src="/css/imagenes/iconos/instagram.png" alt="">
-                    <img src="/css/imagenes/iconos/youtube.png" alt="">
+                    <img src="/css/imagenes/iconos/redes/facebook.svg" alt="">
+                    <img src="/css/imagenes/iconos/redes/instagram.svg" alt="">
+                    <img src="/css/imagenes/iconos/redes/youtube.svg" alt="">
                 </div>
                 <div>
-                    <img src="/css/imagenes/iconos/tiktok.png" alt="">
-                    <img src="/css/imagenes/iconos/twitch.png" alt="">
-                    <img src="/css/imagenes/iconos/twitter.png" alt="">
+                    <img src="/css/imagenes/iconos/redes/tiktok.svg" alt="">
+                    <img src="/css/imagenes/iconos/redes/twitch.svg" alt="">
+                    <img src="/css/imagenes/iconos/redes/twitter.svg" alt="">
                 </div>
             </div>
         </div>

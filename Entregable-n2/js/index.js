@@ -24,3 +24,8 @@ btnPerfil.addEventListener("click", () => {
 });
 
 
+let btnEmpezarJugar = document.querySelector("#empezar-jugar");
+btnEmpezarJugar.addEventListener("click", () => {
+    window.location.href = "juegoEnEjecucion.html"
+});
+
