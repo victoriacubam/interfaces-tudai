@@ -58,6 +58,9 @@ body {
   color: var(--blanco);
   margin: 0;
   background-color: var(--colorPrimario);
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
  h1 {
@@ -72,11 +75,13 @@ h2{
   font-size: 24;
 }
 
-h3{
+h3{ 
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
 }
+
+
 
 button {
   border: none;
@@ -109,6 +114,7 @@ button {
   filter: drop-shadow(0px 6.46414px 6.46414px rgba(0, 0, 0, 0.25));
   background: var(--luz-A3);
   color: var(--colorPrimario);
+  transform: scale(1.01);
 }
 
 .btn-secundario {
@@ -159,7 +165,6 @@ input {
 }
 
 .verificado {
-  color: var(--aceptar);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -167,7 +172,6 @@ input {
 }
 
 .error-input {
-  color: var(--cancelar);
   border-top: none;
   border-left: none;
   border-right: none;
@@ -176,6 +180,7 @@ input {
 
 .error {
   color: var(--cancelar);
+  font-size: smaller;
 }
 
 .recaptcha {
@@ -235,6 +240,17 @@ form {
   border-radius: 10px;
 }
 
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.oculto {
+  display: none;
+}
+
+
+
 /*Pantalla de registro*/
 
 .registro, .login {
@@ -251,10 +267,11 @@ form {
 
 } */
 
-.form-registro {
+#form-registro {
   width: 759px;
-  height: 1450px;
   background-color: var(--sombra-S3-transparencia);
+  padding-bottom: 100px;
+  padding-top: 50px;
 }
 
 form h2{
@@ -262,7 +279,7 @@ form h2{
 }
 
 .logo-forms {
-  margin: 100px 50px 50px 50px;
+  margin: 50px 50px 50px 50px;
   width: 75px;
   height: 64px;
 }
@@ -287,7 +304,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /*Pantalla de login*/
 
-.form-login {
+#form-login {
   background-color: var(--luz-S3-transparencia);
   width: 650px;
   height: 950px;
@@ -312,16 +329,104 @@ header {
   width: 43px;
   height: 47px;
   margin: 20px;
+
+}
+
+.header-izq {
+  display: flex;
 }
 
 .header-der{
   display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
 .header-der img {
   width: 30px;
   height: 28px;
+  margin: 10px;
+}
+
+.item {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  color: var(--blanco);
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  top: 106px;
+  background-color: var(--luz-P1);
+  padding: 30px;
+  /*box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);*/
+}
+
+.items-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: -226px;
+  margin: 0;
+  bottom: 0;
+}
+
+.menu-abrir{
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+  transition: left 0.5s ease-in-out;
+}
+
+.menu-cerrar{
+  /* opacity: 0;
+  visibility: hidden; */
+  position: absolute;
+  left: -226px;
+  margin: 0;
+  bottom: 0;
+  transition: right 0.5s ease-in-out;
+}
+
+.items-perfil {
+  visibility: hidden;
+  position: absolute;
+  right: -200px;
+  margin: 0;
+}
+
+.perfil-desplegado{
+  opacity: 1;
+  visibility: visible;
+  top: 106px;
+  right: 0;
+  transition: right 0.5s ease-in-out;
+}
+
+
+.btn-menu {
+  background-image: url(/css/imagenes/iconos/menu.svg);
+  background-color: var(--luz-P2);
+}
+
+.btn-perfil {
+  background-image: url(/css/imagenes/iconos/perfil.svg);
+  background-color: var(--luz-P2);
+  height: 28px;
+  width: 30px;
+}
+
+.btn-carrito {
+  background-image: url(/css/imagenes/iconos/carrito.svg);
+  background-color: var(--luz-P2);
+  height: 32px;
+  width: 30px;
   margin: 10px;
 }
 
@@ -336,6 +441,9 @@ nav {
   height: 40px;
   margin-right: 10px;
   border: none;
+  color: var(--blanco);
+  font-family: var(--fuente);
+  fo
 }
 
 .buscador img {
@@ -687,10 +795,14 @@ footer .redes div{
   justify-content: center;
 }
 
+
+
+
 /* home */
 
-/* movile */
+/* mobile */
 
+<<<<<<< HEAD
 .card{
   background-color: var(--blanco);
   border-radius: 5px;
@@ -873,3 +985,8 @@ footer .redes div{
 }
 
 }  */
+=======
+/* desktop */
+@media only screen and (min-width: 600px){
+}
+>>>>>>> 9b92eff20ab30f745fcd15219348e4e082a3022f

@@ -11,16 +11,18 @@
 </head>
 <body class="registro">
     <div class="container">
-        <form class="form-registro">
+        <form id="form-registro">
             <img src="/css/imagenes/logo.png" class="logo-forms" alt="Logo">
             <h2>¡Registrate para formar parte de la comunidad de juegos mas divertida!</h2>
             <div>
                 <p class="texto label">Nombre *</p>
-                <input class="sin-validar" type="text" required>
+                <input class="sin-validar campo" id="nombre" type="text" required>
+                <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <div>
                 <p class="texto label">Apellido *</p>
-                <input class="sin-validar" type="text" required>
+                <input class="sin-validar campo" id="apellido" type="text" required>
+                <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <div>
                 <p class="texto label">Nickname</p>
@@ -28,26 +30,32 @@
             </div>
             <div>
                 <p class="texto label">Edad *</p>
-                <input class="sin-validar" type="number" min="0" max="100" required>
+                <input class="sin-validar campo" id="edad" type="number" min="0" max="100" required>
+                <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <div>
                 <p class="texto label">Email *</p>
-                <input class="sin-validar" type="email" required>
+                <input class="sin-validar campo" id="email" type="email" required>
+                <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <div>
                 <p class="texto label">Contraseña *</p>
-                <input class="sin-validar" type="password" required>
+                <input class="sin-validar campo" id="contraseña" type="password" required>
+                <span class="error oculto">* Este campo es obligatorio</span>
             </div>
             <div>
                 <p class="texto label">Repetir contraseña *</p>
-                <input class="sin-validar" type="password" required>
+                <input class="sin-validar campo" id="repetir-contraseña" type="password" required>
+                <span class="error oculto">* Este campo es obligatorio</span>
+                <span class="error oculto" id="contraseña-error">* Las contraseñas no coinciden</span>
             </div>
             <p class="texto">*Los campos son obligatorios</p>
             <img src="/css/imagenes/recaptcha.png" alt="recaptcha" class="recaptcha">
-            <button class="btn-primario">Registrate</button>
+            <button class="btn-primario" id="btn-registrar">Registrate</button>
             <a href="login.html" class="btn-terciario">¿Ya tenes cuenta? Ingresa Acá</a>
         </div>   
     </div>
     
+    <script type="text/javascript" src="js/signup.js"></script>
 </body>
 </html>

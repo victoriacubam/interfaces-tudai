@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="js/carrousel.js" defer></script>
@@ -13,19 +14,45 @@
 <body>
     <header>
         <div class="header-izq">
-            <img class="menu" src="/css/imagenes/iconos/menu.png" alt="">
-            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.png" alt=""></a>
+            <div class="menu-deplegable">
+                <button class="btn-menu menu" id="btn-menu"></button>
+                <ul class="items-menu menu-cerrar" id="items-menu">
+                    <li><a class="item" href="">Mas populares</a></li>
+                    <li><a class="item" href="">Ultimos juegos</a></li>
+                    <li><a class="item" href="">Recomendados</a></li>
+                    <hr>
+                    <li><a class="item" href="">Accion</a></li>
+                    <li><a class="item" href="">Aventuras</a></li>
+                    <li><a class="item" href="">Carreras</a></li>
+                    <li><a class="item" href="">Cartas</a></li>
+                    <li><a class="item" href="">Clasicos</a></li>
+                    <li><a class="item" href="">Terror</a></li>
+                </ul>
+            </div>
+            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.svg" alt=""></a>
         </div>
+        
         <div class="header-der">
             <div>
                 <!-- <img src="/css/imagenes/iconos/buscar.png" alt="buscar"> -->
                 <input type="text" class="buscador">
             </div>
-            <img src="/css/imagenes/iconos/carrito.png" alt="carrito">
-            <img src="/css/imagenes/iconos/perfil.png" alt="perfil">
+            <div class="carrito-desplegable">
+                <button class="btn-carrito"></button>
+            </div>
+            <div class="perfil-deplegable">
+                <button class="btn-perfil perfil" id="btn-perfil"></button>
+                <ul class="items-perfil" id="items-perfil">
+                    <li><a class="item" href="">Mi perfil</a></li>
+                    <li><a class="item" href="">Mis juegos</a></li>
+                    <li><a class="item" href="login.html">Cerrar sesion</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+    
     <nav>Home</nav>
+    
     <div class="home-container">
         <h2>Recomendado del dia</h2>
         <main>
@@ -352,5 +379,6 @@
             <p>Todos los derechos reservados Copyright © 2023 Entretech.com · Juegos Gratis online</p>
         </div>
     </footer>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
