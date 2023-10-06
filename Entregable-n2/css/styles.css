@@ -900,11 +900,7 @@ footer .redes div{
   margin: 0%;
   color: var(--negro);
 }
-/* .card-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
+
 
 #img-juego{
   width: 100%;
@@ -920,13 +916,7 @@ footer .redes div{
   align-items:center ;
 }
 
-/* .triangulo {
-  width: 50px;
-  height: 50px;
-  border-bottom: 80px solid var(--colorSecundario);
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-} */
+
 
   .card:hover{
     background-color: var(--luz-S1);
@@ -1001,14 +991,11 @@ footer .redes div{
     margin: 0;
     padding: 0;
     display: flex;
-    /* height: 100vh; */
-    /* width: 100%; */
     align-items: center;
     background-color: var(--sombra-P1);
   }
   
   .carrousel{
-    /* width: 100%; */
     margin: 0px 0px;
   }
   
@@ -1019,7 +1006,6 @@ footer .redes div{
     width: fit-content;
     padding: 10px 0px;
     margin: 0px auto;
-    /* max-width: 90vw; */
     overflow: hidden;
   }
 
@@ -1043,7 +1029,7 @@ footer .redes div{
   margin: 10px;
   position:relative; 
   height: 280px; 
-  /* object-fit: cover; */
+  object-fit: cover;
   transition: .3s ease-in-out;
 }
 
