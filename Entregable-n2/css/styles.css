@@ -635,10 +635,10 @@ footer .redes div{
   /* margin:20px; */
   order: 2;
 }
-#armas{
-  /* width: 33%; */
-  /* border-right-width: 1em; */
-}
+/* #armas{
+  width: 33%; 
+   border-right-width: 1em;
+} */
 
 #armas div {
   display: flex;
@@ -661,9 +661,9 @@ footer .redes div{
   height: 80%;
   /* left: 1px; */
 }
-#instrucciones p{
-  /* align-content: center; */
-}
+/* #instrucciones p{
+  align-content: center;
+} */
 #instrucciones h2{
   display: flex;
   flex-direction: column; 
@@ -717,6 +717,47 @@ footer .redes div{
   margin: 0;
   
 }
+
+.wrapper{
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper i{
+  top : 50%;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: center;
+  line-height: 46px;
+  transform: translateY(-50%);
+}
+
+.wrapper i img{
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.wrapper i:first-child{
+  left: -23px;
+}
+.wrapper i:last-child{
+  right: -23px;
+}
+.wrapper .carrucel2{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior:smooth;
+  /* smooth de a uno , auto de a muchas */
+}
+.carrucel2 img{
+  height: 340px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% /3);
+}
 #agregarComentario{
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;
@@ -748,7 +789,7 @@ footer .redes div{
 
 .comentarios{
   margin-top: 100px;
-  margin-left: 40px;
+  margin-left: 30px;
   color:#FFFFFF;
 }
 .comentarios h2{
@@ -810,6 +851,10 @@ footer .redes div{
   margin-left: -30px;
   padding-left: 0px;
 }
+.perfil img {
+  width: 50px;
+  height: 50px;
+}
 .comentario p , h3 , #perfil{
   margin-left: 20px;
   margin-bottom: 20px;
@@ -862,74 +907,75 @@ footer .redes div{
 
 /* mobile */
 
-
+/* estilos cards */
 .card{
-  background-color: var(--blanco);
-  border-radius: 5px;
-  width: 100px;
-  height: 150px;
-  padding: 0%;
-  margin: 0%;
-  color: var(--negro);
-}
-/* .card-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
+    background-color: var(--blanco);
+    border-radius: 5px;
+    /* width: 100px;
+    height: 150px; */
+    padding: 0%;
+    margin: 0%;
+    color: var(--negro);
+    margin: 10px;
+    position:relative; 
+    height: 280px; 
+    width: 240px;
+  }
 
-#img-juego{
-  width: 100%;
-}
-.precio {
-  background-color: var(--colorSecundario);
-  width: 25%;
-  height: 10%;
-  float: right;
-  margin-top: 5%;
-}
-
-.triangulo {
-  width: 50px;
-  height: 50px;
-  border-bottom: 80px solid var(--colorSecundario);
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-}
+  #img-juego{
+    width: 100%;
+  
+  }
+  .precio {
+    background-color: var(--colorSecundario);
+    width: 25%;
+    height: 10%;
+    float: right;
+    margin-top: 5%;
+    border-radius: 5px 0px 0px 5px;
+    display: flex;
+    align-items:center ;
+  }
 
   .card:hover{
-    background-color: var(--luz-S1);
+      background-color: var(--luz-S1);
   }
+
   .info-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    float: inline-end;
-    padding:  0px 10px 0px 10px;
-    margin-bottom: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding:  0px 10px 0px 10px;
+      margin-top: 30px;
+      position: absolute;
+      bottom: 15px;
+    }
     
-  }
-  
-  
+    
   .jugar {
-    width: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--sombra-P3);
-    z-index: 1;
-    margin: 0;
-    height: 40px;
+      width: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--sombra-P3);
+      z-index: 1;
+      margin: 0;
+      height: 40px;
+
+      margin-left: 30px;
+      
+    }
     
-  }
-  
   .jugar img{
-    width: 30px;
-    height: 30px;
-    padding-left: 10px;
-    color: var(--sombra-P3);
+      width: 30px;
+      height: 30px;
+      padding-left: 10px;
+      color: var(--sombra-P3);
+    }
+  .carrousel h2{
+    margin-bottom: 0px;
   }
-  
+
   .btn-izq , .btn-der{
     top : 50%;
     height: 46px;
@@ -958,109 +1004,83 @@ footer .redes div{
     justify-content: center;
   }
   
-  
-  .card{
-    width: calc(100% /5);
-    object-fit: cover;
-  }
-  
-  .cuerpo-carrousel{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    /* height: 100vh; */
-    /* width: 100%; */
-    align-items: center;
-    background-color: var(--sombra-P1);
-  }
-  
-  .carrousel{
-    /* width: 100%; */
-    margin: 0px 0px;
-  }
-  
-  .carrousel-list{
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    padding: 10px 0px;
-    margin: 0px auto;
-    /* max-width: 90vw; */
-    overflow: hidden;
-  }
+.cuerpo-carrousel{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+}
+.carrousel{
+  width: 100%;
+  margin: 0px 60px;
+}
+.carrousel-list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
 
-
-
-
-
-
-/* home */
-
-/* mobile */
-.carrousel-track{
-  position:relative;
+.slick-track{
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
-  transition: .5 ease-in-out;
-}
-.card{
-  margin: 10px;
-  position:relative; 
-  height: 280px; 
-  /* object-fit: cover; */
-  transition: .3s ease-in-out;
+  transition: .5s ease-in-out;
+} 
+.misJuegos{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:left;
+  transition: .5s ease-in-out;
 }
 
-.btn-der .btn-izq{
-  position:absolute;
+#btn-prev  #btn-next{
+  position: absolute;
+  z-index: 4;
   text-align: center;
   cursor: pointer;
 }
-.btn-der .btn-izq :focus{
-  outline: 0;
-}
-.btn-der .btn-izq svg{
-  width: 12px;
-  height: 100%;
-}
-
-#izq {
+#btn-prev , #btn-prev-2 , #btn-prev-3 {
   left: 0px;
 }
-
-#der{
+#btn-next, #btn-next-2 , #btn-next-3{
   right: 0px;
 }
 
-@media(min-width: 768px){
-
-    .carrousel{
-      margin: 0px 60px;
-    }
-
-    .carrousel{
-      width: 275px;
-    }
-    .card{
-      width: 250px;
-    }
+.publicidad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 
 
-/* @media only screen and (min-width: 600px){
-/* desktop */
-/* .card{
-  width: 300px;
-  height: 250px;
-}
 
-}  */
-=======
+
+
+
+
 /* desktop */
 @media only screen and (min-width: 600px){
+  /* .carrousel{
+    margin: 0px 60px;
+  }
+
+  .carrousel{
+    width: 275px;
+  }
+  .card{
+    width: 250px;
+  } */
 }

@@ -1,33 +1,74 @@
-function App(){}
-    window.onload = function(event){
-        let app = new App();
-        window.app = app;
-    }
+const buttonPrev = document.getElementById('btn-prev');
+const buttonNext = document.getElementById('btn-next');
+const track = document.getElementById('track');
+const carrouselList = document.getElementById('carrousel-list' );
+const card = document.querySelectorAll('.card');
 
-    App.prototype.processingButton= function(event){
-        constbtn = event.currentTarget;
-        const carrouselList = event.currentTargent.parentNode;
-        const track = event.currentTarget.parentNode.querySelector('#track');
-        const carrusel = track.querySelectorAll('.carrousel');
+const slickWidth = card[0].offsetWidth;
 
-        const carrouselWidth =  carrusel[0].offsetWidth;
-        
-        const trackWidth = track.offsetWidth;
-        const listWidth = carrouselList.offsetWidth;
+buttonPrev.onclick = () => Move(1);
+buttonNext.onclick = () => Move(2);
 
-        
-        track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = paserFloat(track.style.left.clice(0,-2) *-1);
-        btn.dataset.button = "izq" ? prevAction(leftPosition,carrouselWidth, track) : nextAction(leftPosition, trackWidth , listWidth, carrouselWidth, track);
-    }
+function Move(value) {
+    const trackWidth = track.offsetWidth;
+    const listWidth = carrouselList.offsetWidth;
 
-    let prevAction = (leftPosition, carrouselWidth , track) => {
-        if(leftPosition >0){
-            track.style.left=   `${-1 *(leftPosition - carrouselWidth)}px`
+    track.style.left == "" ? leftPosition = track.style.left = 0 : leftPosition = parseFloat(track.style.left.slice(0 , -2) * -1);
+
+    if(leftPosition < (trackWidth -listWidth) && value == 2){
+        track.style.left = `${-1 * (leftPosition + slickWidth)}px`
         }
-    }
-
-    let nextAction = (leftPosition , trackWidth , listWidth, carrouselWidth, track) =>{
-        if (leftPosition < (trackWidth = listWidth)){
-            track.style.left=   `${-1 *(leftPosition - carrouselWidth)}px`
+        else if(leftPosition > 0 && value == 1){
+            track.style.left =`${-1 * (leftPosition - slickWidth)}px`
         }
-    }
+}
+
+const buttonPrev2 = document.getElementById('btn-prev-2' );
+const buttonNext2 = document.getElementById('btn-next-2');
+const track2 = document.getElementById( 'track-2');
+const carrouselList2 = document.getElementById('carrousel-list-2' );
+const card2 = document.querySelectorAll('.card-2');
+
+const slickWidth2 = card2[0].offsetWidth;
+
+buttonPrev2.onclick = () => Move2(1);
+buttonNext2.onclick = () => Move2(2);
+
+function Move2(value) {
+    const trackWidth = track2.offsetWidth;
+    const listWidth = carrouselList2.offsetWidth;
+
+    track2.style.left == "" ? leftPosition = track2.style.left = 0 : leftPosition = parseFloat(track2.style.left.slice(0 , -2) * -1);
+
+    if(leftPosition < (trackWidth -listWidth) && value == 2){
+        track2.style.left = `${-1 * (leftPosition + slickWidth)}px`
+        }
+        else if(leftPosition > 0 && value == 1){
+            track2.style.left =`${-1 * (leftPosition - slickWidth)}px`
+        }
+}
+
+const buttonPrev3 = document.getElementById('btn-prev-3' );
+const buttonNext3 = document.getElementById('btn-next-3');
+const track3 = document.getElementById( 'track-3');
+const carrouselList3 = document.getElementById('carrousel-list-3' );
+const card3 = document.querySelectorAll('.card-3');
+
+const slickWidth3 = card3[0].offsetWidth;
+
+buttonPrev3.onclick = () => Move3(1);
+buttonNext3.onclick = () => Move3(2);
+
+function Move3(value) {
+    const trackWidth = track3.offsetWidth;
+    const listWidth = carrouselList3.offsetWidth;
+
+    track3.style.left == "" ? leftPosition = track3.style.left = 0 : leftPosition = parseFloat(track3.style.left.slice(0 , -2) * -1);
+
+    if(leftPosition < (trackWidth -listWidth) && value == 2){
+        track3.style.left = `${-1 * (leftPosition + slickWidth)}px`
+        }
+        else if(leftPosition > 0 && value == 1){
+            track3.style.left =`${-1 * (leftPosition - slickWidth)}px`
+        }
+}
