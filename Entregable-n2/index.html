@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="js/carrousel.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -32,31 +32,49 @@
                     <li><a class="item" href="">Terror</a></li>
                 </ul>
             </div>
-            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.svg" alt=""></a>
+            <a href="index.html"><img class="logo-header" src="css/imagenes/logo.svg" alt=""></a>
         </div>
         
         <div class="header-der">
-            <div>
+            <div class="input-busqueda">
                 <!-- <img src="/css/imagenes/iconos/buscar.png" alt="buscar"> -->
                 <input type="text" class="buscador">
+                <span>
+                    <img src="/css/imagenes/iconos/buscar.svg" alt="">
+                </span>
             </div>
             <div>
-                <img src="css/imagenes/iconos/carrito.svg">
-                <img src="css/imagenes/iconos/perfil.svg" class="btn-perfil">
+                <img src="css/imagenes/iconos/carrito.svg" id="btn-carrito">
+                <div class="carrito-desplegable" id="carrito">
+                    <button id="cerrar-carrito">X</button>
+                    <h3>Mi carrito</h3>
+                    <div class="carrito-productos">
+                        <ul>
+                            <li>Candy Crush <span>$100<img class="papelera" src="/css/imagenes/iconos/papelera.svg" alt=""></span></li>
+                            <hr>
+                            <li>Total: $250</li>
+                        </ul>
+                        <button class="btn-primario">Iniciar compra</button>
+
+                    </div>
+                </div>
+                <img src="css/imagenes/iconos/perfil.svg" id="btn-perfil">
+                <div class="perfil-deplegable" id="perfil-header">
+                        <ul>
+                            <li><a class="item" href="">Mi perfil</a></li>
+                            <li><a class="item" href="">Mis juegos</a></li>
+                            <li><a class="item" href="login.html">Cerrar sesion</a></li>
+                        </ul>
+                </div>
             </div>
-            <!-- <div class="perfil-deplegable" id="perfil-deplegable">
-                <ul>
-                    <li><a class="item" href="">Mi perfil</a></li>
-                    <li><a class="item" href="">Mis juegos</a></li>
-                    <li><a class="item" href="login.html">Cerrar sesion</a></li>
-                </ul>
-            </div> -->
+            
             
         </div>
     </header>
-    
-    <nav class="breadcrum">Home</nav>
-    
+    <div class="headlines">
+        <h3>Inicio</h3>
+    </div>
+
     <div class="home-container">
         <h2>Recomendado del dia</h2>
         <main class="inicio">
@@ -65,8 +83,8 @@
                     <h1>Bugs Bunny VS El Pato Lucas</h1>
                     <p>Se el primero en conectar 4 fichas del mismo personaje de forma vertical, horizontal o diagonal en el tablero.</p>
                 </div>
-                <div class="caratula">  
-                    <img src="css/imagenes/portada-recomendado.png" alt="">
+                <div class="caratula-recomendado">  
+                    <!-- <img src="css/imagenes/portada-recomendado.png" alt=""> -->
                     <button class="btn-primario" id="empezar-jugar">Empezar a jugar</button>
                 </div> 
             </section>
@@ -890,6 +908,7 @@
             <p>Todos los derechos reservados Copyright © 2023 Entretech.com · Juegos Gratis online</p>
         </div>
     </footer>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/empezarAJugar.js"></script>
+    <script src="js/carrousel.js" defer></script>
 </body>
-</html>

@@ -13,9 +13,13 @@
 <body id="juegoEnEjecucion">
     <header>
         <div class="header-izq">
-            <div class="menu-deplegable">
-                <button class="btn-menu menu" id="btn-menu"></button>
-                <ul class="items-menu menu-cerrar" id="items-menu">
+            <div class="btn-menu">
+                <div id="linea1"></div>
+                <div id="linea2"></div>
+                <div id="linea3"></div>
+            </div>
+            <div class="menu-deplegable" id="menu">
+                <ul>
                     <li><a class="item" href="">Mas populares</a></li>
                     <li><a class="item" href="">Ultimos juegos</a></li>
                     <li><a class="item" href="">Recomendados</a></li>
@@ -36,17 +40,18 @@
                 <!-- <img src="/css/imagenes/iconos/buscar.png" alt="buscar"> -->
                 <input type="text" class="buscador">
             </div>
-            <div class="carrito-desplegable">
-                <button class="btn-carrito"></button>
+            <div>
+                <img src="css/imagenes/iconos/carrito.svg">
+                <img src="css/imagenes/iconos/perfil.svg" class="btn-perfil">
             </div>
-            <div class="perfil-deplegable">
-                <button class="btn-perfil perfil" id="btn-perfil"></button>
-                <ul class="items-perfil" id="items-perfil">
+            <!-- <div class="perfil-deplegable" id="perfil-deplegable">
+                <ul>
                     <li><a class="item" href="">Mi perfil</a></li>
                     <li><a class="item" href="">Mis juegos</a></li>
                     <li><a class="item" href="login.html">Cerrar sesion</a></li>
                 </ul>
-            </div>
+            </div> -->
+            
         </div>
     </header>
 
@@ -117,7 +122,9 @@
 
         <div id="conocerMas">
         <h2>¿Queres conocer mas sobre el universo de los Looney Tunes?</h2>
-        <h3 href="https://youtu.be/pCJ73uSn_F8">Hace click  aquí</h3>
+        <h3>
+            <a class="btn-terciario" href="https://youtu.be/pCJ73uSn_F8" target="_blank">Hace click  aquí</a>
+        </h3>
         </div>
     </div>
 <section class="comentarios">
@@ -219,6 +226,6 @@
         <p>Todos los derechos reservados Copyright © 2023 Entretech.com · Juegos Gratis online</p>
     </div>
 </footer>
-<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>
