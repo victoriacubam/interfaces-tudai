@@ -464,10 +464,6 @@ nav.breadcrum {
   border: none;
   color: var(--blanco);
   font-family: var(--fuente);
-<<<<<<< HEAD
-
-=======
->>>>>>> 70a7d6e5d6a60fe86854b88f9591726f2cd10556
 }
 
 .buscador img {
@@ -979,7 +975,9 @@ footer .redes div{
       padding-left: 10px;
       color: var(--sombra-P3);
     }
-  
+  .carrousel h2{
+    margin-bottom: 0px;
+  }
 
   .btn-izq , .btn-der{
     top : 50%;
@@ -1031,6 +1029,7 @@ footer .redes div{
   max-width: 90vw;
   overflow: hidden;
 }
+
 .slick-track{
   position: relative;
   top: 0;
@@ -1039,7 +1038,14 @@ footer .redes div{
   justify-content: center;
   transition: .5s ease-in-out;
 } 
- 
+.misJuegos{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:left;
+  transition: .5s ease-in-out;
+}
 
 #btn-prev  #btn-next{
   position: absolute;
@@ -1047,11 +1053,17 @@ footer .redes div{
   text-align: center;
   cursor: pointer;
 }
-#btn-prev {
+#btn-prev , #btn-prev-2 , #btn-prev-3 {
   left: 0px;
 }
-#btn-next{
+#btn-next, #btn-next-2 , #btn-next-3{
   right: 0px;
+}
+
+.publicidad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
