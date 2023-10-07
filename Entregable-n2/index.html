@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="loading">
@@ -53,30 +54,49 @@
                     <li><a class="item" href="">Terror</a></li>
                 </ul>
             </div>
-            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.svg" alt=""></a>
+            <a href="index.html"><img class="logo-header" src="css/imagenes/logo.svg" alt=""></a>
         </div>
         
         <div class="header-der">
-            <div>
+            <div class="input-busqueda">
                 <!-- <img src="/css/imagenes/iconos/buscar.png" alt="buscar"> -->
                 <input type="text" class="buscador">
+                <span>
+                    <img src="/css/imagenes/iconos/buscar.svg" alt="">
+                </span>
             </div>
             <div>
-                <img src="css/imagenes/iconos/carrito.svg">
-                <img src="css/imagenes/iconos/perfil.svg" class="btn-perfil">
+                <img src="css/imagenes/iconos/carrito.svg" id="btn-carrito">
+                <div class="carrito-desplegable" id="carrito">
+                    <button id="cerrar-carrito">X</button>
+                    <h3>Mi carrito</h3>
+                    <div class="carrito-productos">
+                        <ul>
+                            <li>Candy Crush <span>$100<img class="papelera" src="/css/imagenes/iconos/papelera.svg" alt=""></span></li>
+                            <hr>
+                            <li>Total: $250</li>
+                        </ul>
+                        <button class="btn-primario">Iniciar compra</button>
+
+                    </div>
+                </div>
+                <img src="css/imagenes/iconos/perfil.svg" id="btn-perfil">
+                <div class="perfil-deplegable" id="perfil-header">
+                        <ul>
+                            <li><a class="item" href="">Mi perfil</a></li>
+                            <li><a class="item" href="">Mis juegos</a></li>
+                            <li><a class="item" href="login.html">Cerrar sesion</a></li>
+                        </ul>
+                </div>
             </div>
-            <!-- <div class="perfil-deplegable" id="perfil-deplegable">
-                <ul>
-                    <li><a class="item" href="">Mi perfil</a></li>
-                    <li><a class="item" href="">Mis juegos</a></li>
-                    <li><a class="item" href="login.html">Cerrar sesion</a></li>
-                </ul>
-            </div> -->
+            
+            
         </div>
     </header>
-    
-    <nav class="breadcrum">Home</nav>
-    
+    <div class="headlines">
+        <h3>Inicio</h3>
+    </div>
+
     <div class="home-container">
         <h2>Recomendado del dia</h2>
         <main class="inicio">
@@ -85,8 +105,8 @@
                     <h1>Bugs Bunny VS El Pato Lucas</h1>
                     <p>Se el primero en conectar 4 fichas del mismo personaje de forma vertical, horizontal o diagonal en el tablero.</p>
                 </div>
-                <div class="caratula">  
-                    <img src="css/imagenes/portada-recomendado.png" alt="">
+                <div class="caratula-recomendado">  
+                    <!-- <img src="css/imagenes/portada-recomendado.png" alt=""> -->
                     <button class="btn-primario" id="empezar-jugar">Empezar a jugar</button>
                 </div> 
             </section>
@@ -115,8 +135,8 @@
                                     <h3>Sara´s cooking class</h3>
                                     <div class="info-card">
                                         <div>
-                                            <img src="css/imagenes/iconos/marcar_fav.png">
-                                            <img src="css/imagenes/iconos/guardar.png">
+                                            <img id="like" src="css/imagenes/iconos/marcar_fav.png">
+                                            <img id="guardar" src="css/imagenes/iconos/guardar.png">
                                         </div>  
                                         <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                     </div>
@@ -135,8 +155,8 @@
                                     <h3>Crash Team rasing</h3>
                                     <div class="info-card">
                                         <div>
-                                            <img src="css/imagenes/iconos/marcar_fav.png">
-                                            <img src="css/imagenes/iconos/guardar.png">
+                                            <img  id="like" src="css/imagenes/iconos/marcar_fav.png">
+                                            <img id="guardar" src="css/imagenes/iconos/guardar.png">
                                         </div>  
                                         <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                     </div>
@@ -155,8 +175,8 @@
                                     <h3>Fireboy & Watergirl</h3>
                                     <div class="info-card">
                                         <div>
-                                            <img src="css/imagenes/iconos/marcar_fav.png">
-                                            <img src="css/imagenes/iconos/guardar.png">
+                                            <img  id="like" src="css/imagenes/iconos/marcar_fav.png">
+                                            <img id="guardar" src="css/imagenes/iconos/guardar.png">
                                         </div>  
                                         <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                     </div>
@@ -175,8 +195,8 @@
                                     <h3>Geometry dash</h3>
                                     <div class="info-card">
                                         <div>
-                                            <img src="css/imagenes/iconos/marcar_fav.png">
-                                            <img src="css/imagenes/iconos/guardar.png">
+                                            <img  id="like" src="css/imagenes/iconos/marcar_fav.png">
+                                            <img id="guardar" src="css/imagenes/iconos/guardar.png">
                                         </div>  
                                         <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                     </div>
@@ -212,8 +232,8 @@
                                 <h3>Fireboy & Watergirl 5</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like" src="css/imagenes/iconos/marcar_fav.png">
+                                        <img  id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -232,8 +252,8 @@
                                 <h3>257</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img  id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -252,8 +272,8 @@
                                 <h3>Big Tower</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like" src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -272,8 +292,8 @@
                                 <h3>Bowling</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -292,8 +312,8 @@
                                 <h3>Brain teaser</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -312,8 +332,8 @@
                                 <h3>Crazy for speed</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -332,8 +352,8 @@
                                 <h3>Debris</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -352,8 +372,8 @@
                                 <h3>Drift</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -372,8 +392,8 @@
                                 <h3>Egg Car</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -392,8 +412,8 @@
                                 <h3>Kart wars</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar" src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -412,8 +432,8 @@
                                 <h3>Spectrum</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -432,8 +452,8 @@
                                 <h3>Supercity</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -452,8 +472,8 @@
                                 <h3>Supertrief</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -487,8 +507,8 @@
                                 <h3>4 imagenes 1 palabra</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -507,8 +527,8 @@
                                 <h3>Agario</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -527,8 +547,8 @@
                                 <h3>Candy crush</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -547,8 +567,8 @@
                                 <h3>Cut the Road</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar<img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -567,8 +587,8 @@
                                 <h3>Mario VS Luigi</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -587,8 +607,8 @@
                                 <h3>Pacman</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -607,8 +627,8 @@
                                 <h3>Pikachu</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -627,8 +647,8 @@
                                 <h3>Simons</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -647,8 +667,8 @@
                                 <h3>Snail Bob</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -667,8 +687,8 @@
                                 <h3>Snake</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -687,8 +707,8 @@
                                 <h3>Solitario</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -707,8 +727,8 @@
                                 <h3>Subway surfers</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -744,8 +764,8 @@
                                 <h3>Pokemon Violet</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -764,8 +784,8 @@
                                 <h3>Alien hominid</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -784,8 +804,8 @@
                                 <h3>Bombit</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar"> Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -804,8 +824,8 @@
                                 <h3>Card Wars</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -824,8 +844,8 @@
                                 <h3>Evoland</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -844,8 +864,8 @@
                                 <h3>FireBoy</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -864,8 +884,8 @@
                                 <h3>Gun</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -884,8 +904,8 @@
                                 <h3>Kick</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -904,8 +924,8 @@
                                 <h3>MeetBoy</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -924,8 +944,8 @@
                                 <h3>Redball</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Comprar <img src="css/imagenes/iconos/carrito-de-compras.png"></button>
                                 </div>
@@ -944,8 +964,8 @@
                                 <h3>Sword</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -964,8 +984,8 @@
                                 <h3>Swordigo</h3>
                                 <div class="info-card">
                                     <div>
-                                        <img src="css/imagenes/iconos/marcar_fav.png">
-                                        <img src="css/imagenes/iconos/guardar.png">
+                                        <img id="like"src="css/imagenes/iconos/marcar_fav.png">
+                                        <img id="guardar"src="css/imagenes/iconos/guardar.png">
                                     </div>  
                                     <button class="btn-primario jugar">Jugar <img src="css/imagenes/iconos/palanca-de-mando.png"></button>
                                 </div>
@@ -1033,10 +1053,8 @@
             <p>Todos los derechos reservados Copyright © 2023 Entretech.com · Juegos Gratis online</p>
         </div>
     </footer>
-
-   
-    <script src="js/loading.js"></script>
     <script src="js/carrousel.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/loading.js"></script>
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/empezarAJugar.js"></script>
 </body>
-</html>

@@ -43,15 +43,18 @@ function verificarFormulario(e){
             contraseñaInvalida.classList.toggle("oculto");
             console.log("Verificado")
             if(campos[0].value.trim(),campos[1],campos[2]){
-                iniciarSesion();
+                contraseña1.classList.remove("error-input");
+                contraseña2.classList.remove("error-input");
+                contraseñaInvalida.classList.add("oculto");
+                login();
             }
 
         }
     }
 }
 
-function iniciarSesion(){
+function login(){
     setTimeout(function(){
-        window.location.href = "index.html"
+        window.location.href = "login.html"
        }, 1000);
 }
