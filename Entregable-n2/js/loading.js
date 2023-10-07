@@ -19,4 +19,4 @@ const numb = document.querySelector('.numb');
                   counter+=1;
                   numb.textContent = counter + "%";
                 }
-              }, 80);
+              }, 70);

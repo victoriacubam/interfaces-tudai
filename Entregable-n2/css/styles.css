@@ -978,7 +978,15 @@ article img {
 .form-comentario input{
   width: 700px;
 }
-
+.estrellas {
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: inline;
+}
+.estrellas img{
+  width: 20px;
+}
 .comentario {
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;
@@ -1263,17 +1271,201 @@ article img {
       bottom: 15px;
     }
 
-  /* .marcado-fav {
+  
+    
+    
+  .jugar {
+      width: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--sombra-P3);
+      z-index: 1;
+      margin: 0;
+      height: 40px;
+
+      margin-left: 30px;
+      
+    }
+    
+  .jugar img{
+      width: 30px;
+      height: 30px;
+      padding-left: 10px;
+      color: var(--sombra-P3);
+    }
+  .carrousel h2{
+    margin-bottom: 0px;
+  }
+
+  /* .btn-izq , .btn-der{
+    
+     top : 50%;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    text-align: center;
+    line-height: 46px;
+    background-color: var(--sombra-S2);
+    border-radius: 50%;
+    transform: translateY(-50%); 
+  } */
+  
+  /* .btn-izq img{
+    height: 60%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-der img{
+    height: 60%;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+/* .cuerpo-carrousel{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+} */
+.carrousel{
+  width: 100%;
+  margin: 0px 60px;
+}
+.carrousel-list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+}
+
+.slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+} 
+.misJuegos{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:left;
+  transition: .5s ease-in-out;
+}
+
+/* #btn-prev  #btn-next{
+  position: absolute;
+  z-index: 4;
+  text-align: center;
+  cursor: pointer;
+}
+#btn-prev , #btn-prev-2 , #btn-prev-3 {
+  left: 0px;
+}
+#btn-next, #btn-next-2 , #btn-next-3{
+  right: 0px;
+} */
+
+
+
+.carrousel h2{
+  margin-left: 20px;
+}
+
+
+
+
+
+
+
+/* desktop */
+@media only screen and (min-width: 600px){
+  .card{
+    background-color: var(--blanco);
+    border-radius: 5px;
+    /* width: 100px;
+    height: 150px; */
+    padding: 0%;
+    margin: 0%;
+    color: var(--negro);
+    margin: 10px;
+    position:relative; 
+    height: 240px; 
+    width: 240px;
+    
+  }
+
+  #img-juego{
+    width: 100%;
+    position: relative;
+    display: inline-block;
+  
+  }
+  
+  .etiqueta {
+    display: block;
+    position: absolute;
+    /* z-index: 100; */
+    top: 10px;
+    right: 7px;
+    color: var(--blanco);
+  }
+  .triangulo{
+    width: 5px;
+    height: 30px;
+    margin-left: 0px;
+    margin-right: -82px;
+    margin-top: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-right: 7px solid transparent; 
+    border-top: 7px solid var(--luz-S1); 
+    position: relative; 
+    float: right;
+  }  
+  .precio {
+    background-color: var(--colorSecundario);
+    width: 80px;
+    height: 22px;
+    padding-left: 2px;
+    float: right;
+    margin-top: 5%;
+    /* margin-left: auto; */
+    margin-right: -17px;
+    display: flex;
+    align-items:center ;
+    font-size: medium;
+    box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.8);
+  }
+  .card:hover{
+      background-color: var(--luz-S1);
+  }
+
+  .info-card {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       padding:  0px 10px 0px 10px;
       margin-top: 30px;
       position: absolute;
       bottom: 15px;
-      height: 25px;
-      width: 25px;
-  } */
+    }
+
+  
     
     
   .jugar {
@@ -1381,34 +1573,11 @@ article img {
   right: 0px;
 }
 
-.publicidad{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .carrousel h2{
   margin-left: 20px;
 }
-
-
-
-
-
-
-
-/* desktop */
-@media only screen and (min-width: 600px){
-  /* .carrousel{
-    margin: 0px 60px;
-  }
-
-  .carrousel{
-    width: 275px;
-  }
-  .card{
-    width: 250px;
-  } */
 
 
 
