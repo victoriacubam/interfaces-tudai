@@ -1,16 +1,5 @@
-// setTimeout(() => {
-//     // Ocultar el loader
-//     const loader = document.querySelector('.circular');
-//     loader.style.display = 'none';
-
-//     // Mostrar el contenido del index
-//     const content = document.querySelector( '.index');
-//     content.style.display = 'block';
-// }, 9000);
-
-
 document.addEventListener("DOMContentLoaded", function () {
-    var loader = document.querySelector('.loading');
+    let loader = document.querySelector('.loading');
 
     // Mostrar el loader
     loader.style.display = "block";
