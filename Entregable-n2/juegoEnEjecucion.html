@@ -32,25 +32,42 @@
                     <li><a class="item" href="">Terror</a></li>
                 </ul>
             </div>
-            <a href="index.html"><img class="logo-header" src="/css/imagenes/logo.svg" alt=""></a>
+            <a href="index.html"><img class="logo-header" src="css/imagenes/logo.svg" alt=""></a>
         </div>
         
         <div class="header-der">
-            <div>
+            <div class="input-busqueda">
                 <!-- <img src="/css/imagenes/iconos/buscar.png" alt="buscar"> -->
                 <input type="text" class="buscador">
+                <span>
+                    <img src="/css/imagenes/iconos/buscar.svg" alt="">
+                </span>
             </div>
             <div>
-                <img src="css/imagenes/iconos/carrito.svg">
-                <img src="css/imagenes/iconos/perfil.svg" class="btn-perfil">
+                <img src="css/imagenes/iconos/carrito.svg" id="btn-carrito">
+                <div class="carrito-desplegable" id="carrito">
+                    <button id="cerrar-carrito">X</button>
+                    <h3>Mi carrito</h3>
+                    <div class="carrito-productos">
+                        <ul>
+                            <li>Candy Crush <span>$100<img class="papelera" src="/css/imagenes/iconos/papelera.svg" alt=""></span></li>
+                            <hr>
+                            <li>Total: $250</li>
+                        </ul>
+                        <button class="btn-primario">Iniciar compra</button>
+
+                    </div>
+                </div>
+                <img src="css/imagenes/iconos/perfil.svg" id="btn-perfil">
+                <div class="perfil-deplegable" id="perfil-header">
+                        <ul>
+                            <li><a class="item" href="">Mi perfil</a></li>
+                            <li><a class="item" href="">Mis juegos</a></li>
+                            <li><a class="item" href="login.html">Cerrar sesion</a></li>
+                        </ul>
+                </div>
             </div>
-            <!-- <div class="perfil-deplegable" id="perfil-deplegable">
-                <ul>
-                    <li><a class="item" href="">Mi perfil</a></li>
-                    <li><a class="item" href="">Mis juegos</a></li>
-                    <li><a class="item" href="login.html">Cerrar sesion</a></li>
-                </ul>
-            </div> -->
+            
             
         </div>
     </header>

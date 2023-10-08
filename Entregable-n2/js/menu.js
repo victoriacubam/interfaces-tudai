@@ -36,6 +36,8 @@ let btnPerfil = document.querySelector("#btn-perfil");
 btnPerfil.addEventListener("click", () => {
     perfil.classList.toggle("abrir-perfil");
     btnPerfil.classList.toggle("activar-ico");
+    // if()
+    btnCarrito.classList.remove("abrir-carrito");
 });
 
 
@@ -50,16 +52,6 @@ let carrito = document.querySelector("#carrito");
 let btnCarrito = document.querySelector("#btn-carrito");
 
 let btnCarritoCerrar = document.querySelector("#cerrar-carrito");
-
-btnCarritoCerrar.addEventListener("click", activarCarrito);
-//     carrito.classList.toggle("abrir-carrito");
-//     btnCarrito.classList.toggle("activar-ico");
-// });
-
-btnCarrito.addEventListener("click", activarCarrito);
-//     carrito.classList.toggle("abrir-carrito");
-//     btnCarrito.classList.toggle("activar-ico");
-// });
 
 function activarCarrito(){
     carrito.classList.toggle("abrir-carrito");
