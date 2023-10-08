@@ -54,6 +54,7 @@ let btnCarrito = document.querySelector("#btn-carrito");
 let btnCarritoCerrar = document.querySelector("#cerrar-carrito");
 
 function activarCarrito(){
+    console.log("abrir-cerrar")
     carrito.classList.toggle("abrir-carrito");
     btnCarrito.classList.toggle("activar-ico");
 }

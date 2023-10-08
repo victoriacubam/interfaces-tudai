@@ -34,11 +34,8 @@ function verificarFormulario(e){
 }
 
 function iniciarSesion(e){
-   /* e.preventDefault();*/
-   e.preventDefault();
-    setTimeout(function(){
-        window.location.href = "index.html"
-    }, 3000);
+    e.preventDefault();
+    window.location.href = "index.html";
 }
 
 

@@ -46,6 +46,7 @@ function verificarFormulario(e){
                 contraseña1.classList.remove("error-input");
                 contraseña2.classList.remove("error-input");
                 contraseñaInvalida.classList.add("oculto");
+                
                 login();
             }
 
@@ -54,7 +55,10 @@ function verificarFormulario(e){
 }
 
 function login(){
+    let registroExitoso = document.querySelector("#registro-loader");
+    registroExitoso.classList.remove("registro-oculto");
+    
     setTimeout(function(){
         window.location.href = "login.html"
-       }, 1000);
+    },5000)
 }
