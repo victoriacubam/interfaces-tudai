@@ -72,3 +72,40 @@ function Move3(value) {
             track3.style.left =`${-1 * (leftPosition - slickWidth)}px`
         }
 }
+
+let corazones = document.querySelectorAll('#like');
+let pintado = true;
+
+corazones.forEach(function(corazon) {
+        corazon.addEventListener('click', function() {
+                if (pintado) {
+                    corazon.src = '../css/imagenes/iconos/marcar_fav.png'; // Cambia la imagen a corazón sin pintar
+                } else {
+                    corazon.src = '../css/imagenes/iconos/favorito.png'; // Cambia la imagen a corazón pintado
+                }
+
+    pintado = !pintado; 
+            });
+});
+
+
+
+
+
+let guardados = document.querySelectorAll('#guardar');
+let guardado = true;
+
+guardados.forEach(function(guardar) {
+        guardar.addEventListener('click', function() {
+                if (guardado) {
+                    guardar.src = '../css/imagenes/iconos/guardar.png'; // Cambia la imagen a corazón sin pintar
+                } else {
+                    guardar.src = '../css/imagenes/iconos/guardado.png'; // Cambia la imagen a corazón pintado
+                }
+
+    guardado = !guardado; 
+            });
+});
+
+
+

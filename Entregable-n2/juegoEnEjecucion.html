@@ -69,6 +69,13 @@
             </div>
             
             
+            <!-- <div class="perfil-deplegable" id="perfil-deplegable">
+                <ul>
+                    <li><a class="item" href="">Mi perfil</a></li>
+                    <li><a class="item" href="">Mis juegos</a></li>
+                    <li><a class="item" href="login.html">Cerrar sesion</a></li>
+                </ul>
+            </div> -->
         </div>
     </header>
 
@@ -147,10 +154,16 @@
 <section class="comentarios">
     <h2>Te invitamos a que participes en nuestra comunidad dejandonos un comentario</h2>
 
-    <form id="agregarComentario">
+    <form id="agregarComentario" onsubmit="return false">
         <div class="form-puntuacion">
             <label for="comentario">¿Que te parecio el juego?</label>
-            <p>⭐​⭐​⭐​⭐​⭐​⭐​</p>
+            <div  class="estrellas">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+        ​​</div>
         </div>
         <div class="form-comentario">
             <input type="text" id="comentario" placeholder="Dejanos tu opinion">
@@ -158,8 +171,9 @@
         </div>
     </form>
 
-    <div id="comentarioNuevo">
-        <!-- estrellitas -->
+    <div  id="comentarioNuevo">
+        <div id="estrellas" class="estrellas">
+            </div>
         <p id="Comentario nuevo"></p>
     </div>
 
@@ -244,5 +258,6 @@
     </div>
 </footer>
 <script type="text/javascript" src="js/menu.js"></script>
+<script type= "text/javascript"src="js/comentarios.js"></script>
 </body>
 </html>

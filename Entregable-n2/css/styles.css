@@ -890,6 +890,7 @@ article img {
   text-align: center;
   line-height: 46px;
   transform: translateY(-50%);
+  animation: zoom 0.5s ease-in-out;
 }
 
 .wrapper i img{
@@ -915,7 +916,18 @@ article img {
   object-fit: cover;
   margin-left: 14px;
   width: calc(100% /3);
+  /* animation: zoom 0.5s ease-in-out;
+  animation: slide 0.5s ease-in-out; */
 }
+/* @keyframes zoom {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+} */
 #agregarComentario{
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;
@@ -978,7 +990,15 @@ article img {
 .form-comentario input{
   width: 700px;
 }
-
+.estrellas {
+  margin-left: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: inline;
+}
+.estrellas img{
+  width: 20px;
+}
 .comentario {
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;
@@ -1066,11 +1086,11 @@ article img {
 /* mobile */
 
 .loading{
-  position: fixed; /* o absolute, según tus necesidades */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100vw; /* 100% del ancho del viewport */
-  height: 100vh; 
+  width: 100%; 
+  height: 100%; 
   background-color: var(--luz-S3-transparencia);
   z-index: 8000;
 }
@@ -1079,8 +1099,8 @@ article img {
   height: 100px;
   width: 100px;
   position: relative;
-  margin-left: 630px;
-  margin-top: 300px;
+  margin-left: 75px;
+  margin-top: 250px;
   position: fixed; 
   z-index: 9999;
 }
@@ -1193,114 +1213,180 @@ article img {
 
 /* estilos cards */
 .card{
-    background-color: var(--blanco);
-    border-radius: 5px;
-    /* width: 100px;
-    height: 150px; */
-    padding: 0%;
-    margin: 0%;
-    color: var(--negro);
-    margin: 10px;
-    position:relative; 
-    height: 280px; 
-    width: 240px;
-  }
-
-  #img-juego{
-    width: 100%;
+  background-color: var(--blanco);
+  border-radius: 5px;
+  /* width: 100px;
+  height: 150px; */
+  padding: 0%;
+  margin: 0%;
+  color: var(--negro);
+  margin: 10px;
+  position:relative; 
+  height: 240px; 
+  width: 240px;
   
-  }
-  .precio {
-    background-color: var(--colorSecundario);
-    width: 25%;
-    height: 10%;
-    float: right;
-    margin-top: 5%;
-    border-radius: 5px 0px 0px 5px;
+}
+
+#img-juego{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+
+}
+
+.etiqueta {
+  display: block;
+  position: absolute;
+  /* z-index: 100; */
+  top: 10px;
+  right: 7px;
+  color: var(--blanco);
+}
+.triangulo{
+  width: 5px;
+  height: 30px;
+  margin-left: 0px;
+  margin-right: -82px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-right: 7px solid transparent; 
+  border-top: 7px solid var(--luz-S1); 
+  position: relative; 
+  float: right;
+}  
+.precio {
+  background-color: var(--colorSecundario);
+  width: 80px;
+  height: 22px;
+  padding-left: 2px;
+  float: right;
+  margin-top: 5%;
+  /* margin-left: auto; */
+  margin-right: -17px;
+  display: flex;
+  align-items:center ;
+  font-size: medium;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.8);
+}
+.card:hover{
+    background-color: var(--luz-S1);
+}
+
+.info-card {
     display: flex;
-    align-items:center ;
-  }
-
-  .card:hover{
-      background-color: var(--luz-S1);
-  }
-
-  .info-card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding:  0px 10px 0px 10px;
-      margin-top: 30px;
-      position: absolute;
-      bottom: 15px;
-    }
-    
-    
-  .jugar {
-      width: 130px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: var(--sombra-P3);
-      z-index: 1;
-      margin: 0;
-      height: 40px;
-
-      margin-left: 30px;
-      
-    }
-    
-  .jugar img{
-      width: 30px;
-      height: 30px;
-      padding-left: 10px;
-      color: var(--sombra-P3);
-    }
-  .carrousel h2{
-    margin-bottom: 0px;
-  }
-
-  .btn-izq , .btn-der{
-    top : 50%;
-    height: 46px;
-    width: 46px;
-    cursor: pointer;
-    font-size: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0px 10px 0px 10px;
+    margin-top: 30px;
     position: absolute;
-    text-align: center;
-    line-height: 46px;
-    background-color: var(--sombra-S2);
-    border-radius: 50%;
-    transform: translateY(-50%);
+    bottom: 15px;
   }
+
+
   
-  .btn-izq img{
-    height: 60%;
+  
+.jugar {
+    width: 130px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    color: var(--sombra-P3);
+    z-index: 1;
+    margin: 0;
+    height: 40px;
+
+    margin-left: 30px;
+    
   }
   
-  .btn-der img{
-    height: 60%;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.jugar img{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    color: var(--sombra-P3);
   }
+.carrousel h2{
+  margin-bottom: 0px;
+}
+
+ .btn-izq , .btn-der{
   
-.cuerpo-carrousel{
+   top : 50%;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: center;
+  line-height: 46px;
+  background-color: var(--sombra-S2);
+  border-radius: 50%;
+  transform: translateY(-50%); 
+} 
+
+ .btn-izq img{
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-der img{
+  height: 60%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+/* .cuerpo-carrousel{
+margin: 0;
+padding: 0;
+display: flex;
+height: auto;
+width: 100%;
+align-items: center;
+}
+.carrousel{
+width: 100%;
+margin: 0px 60px;
+}
+.carrousel-list{
+position: relative;
+display: flex;
+align-items: center;
+width: fit-content;
+padding: 10px 0px;
+margin: 0px auto;
+max-width: 90vw;
+overflow: hidden;
+}
+
+.slick-track{
+position: relative;
+top: 0;
+left: 0;
+display: flex;
+justify-content: center;
+transition: .5s ease-in-out;
+}  */
+
+.cuerpo-carrousel {
   margin: 0;
   padding: 0;
   display: flex;
   height: auto;
   width: 100%;
   align-items: center;
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal en el contenedor principal */
 }
-.carrousel{
+
+.carrousel {
   width: 100%;
   margin: 0px 60px;
 }
-.carrousel-list{
+
+.carrousel-list {
   position: relative;
   display: flex;
   align-items: center;
@@ -1309,45 +1395,45 @@ article img {
   margin: 0px auto;
   max-width: 90vw;
   overflow: hidden;
+  white-space: nowrap; /* Impide que los elementos se dividan en varias líneas */
 }
 
-.slick-track{
+.slick-track {
   position: relative;
   top: 0;
   left: 0;
   display: flex;
   justify-content: center;
   transition: .5s ease-in-out;
-} 
+  white-space: nowrap; /* Impide que los elementos se dividan en varias líneas */
+}
 .misJuegos{
-  position: relative;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content:left;
-  transition: .5s ease-in-out;
+position: relative;
+top: 0;
+left: 0;
+display: flex;
+justify-content:left;
+transition: .5s ease-in-out;
 }
 
 #btn-prev  #btn-next{
-  position: absolute;
-  z-index: 4;
-  text-align: center;
-  cursor: pointer;
+position: absolute;
+z-index: 4;
+text-align: center;
+cursor: pointer;
 }
 #btn-prev , #btn-prev-2 , #btn-prev-3 {
-  left: 0px;
+left: 0px;
 }
 #btn-next, #btn-next-2 , #btn-next-3{
-  right: 0px;
+right: 0px;
+} 
+
+
+
+.carrousel h2{
+margin-left: 20px;
 }
-
-.publicidad{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 
 
 
@@ -1357,19 +1443,201 @@ article img {
 
 /* desktop */
 @media only screen and (min-width: 600px){
-  /* .carrousel{
-    margin: 0px 60px;
+  .circular{
+   
+    margin-left: 630px;
+    margin-top: 300px;
+    
+  }
+.card{
+  background-color: var(--blanco);
+  border-radius: 5px;
+  /* width: 100px;
+  height: 150px; */
+  padding: 0%;
+  margin: 0%;
+  color: var(--negro);
+  margin: 10px;
+  position:relative; 
+  height: 240px; 
+  width: 240px;
+  
+}
+
+#img-juego{
+  width: 100%;
+  position: relative;
+  display: inline-block;
+
+}
+
+.etiqueta {
+  display: block;
+  position: absolute;
+  /* z-index: 100; */
+  top: 10px;
+  right: 7px;
+  color: var(--blanco);
+}
+.triangulo{
+  width: 5px;
+  height: 30px;
+  margin-left: 0px;
+  margin-right: -82px;
+  margin-top: 25px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-right: 7px solid transparent; 
+  border-top: 7px solid var(--luz-S1); 
+  position: relative; 
+  float: right;
+}  
+.precio {
+  background-color: var(--colorSecundario);
+  width: 80px;
+  height: 22px;
+  padding-left: 2px;
+  float: right;
+  margin-top: 5%;
+  /* margin-left: auto; */
+  margin-right: -17px;
+  display: flex;
+  align-items:center ;
+  font-size: medium;
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.8);
+}
+.card:hover{
+    background-color: var(--luz-S1);
+}
+
+.info-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  0px 10px 0px 10px;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 15px;
   }
 
-  .carrousel{
-    width: 275px;
+
+  
+  
+.jugar {
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--sombra-P3);
+    z-index: 1;
+    margin: 0;
+    height: 40px;
+
+    margin-left: 30px;
+    
   }
-  .card{
-    width: 250px;
-  } */
+  
+.jugar img{
+    width: 30px;
+    height: 30px;
+    padding-left: 10px;
+    color: var(--sombra-P3);
+  }
+.carrousel h2{
+  margin-bottom: 0px;
+}
+
+.btn-izq , .btn-der{
+  top : 50%;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  text-align: center;
+  line-height: 46px;
+  background-color: var(--sombra-S2);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-izq img{
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-der img{
+  height: 60%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cuerpo-carrousel{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: auto;
+  width: 100%;
+  align-items: center;
+  }
+  .carrousel{
+  width: 100%;
+  margin: 0px 60px;
+  }
+  .carrousel-list{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 10px 0px;
+  margin: 0px auto;
+  max-width: 90vw;
+  overflow: hidden;
+  }
+  
+  .slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  transition: .5s ease-in-out;
+  } 
+
+.misJuegos{
+position: relative;
+top: 0;
+left: 0;
+display: flex;
+justify-content:left;
+transition: .5s ease-in-out;
+}
+
+#btn-prev  #btn-next{
+position: absolute;
+z-index: 4;
+text-align: center;
+cursor: pointer;
+}
+#btn-prev , #btn-prev-2 , #btn-prev-3 {
+left: 0px;
+}
+#btn-next, #btn-next-2 , #btn-next-3{
+right: 0px;
+}
+
+
+
+.carrousel h2{
+margin-left: 20px;
+}
 
 
 
 
 
 }
+
