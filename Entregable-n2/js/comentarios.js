@@ -57,4 +57,43 @@ function agregarComentario() {
 
 
 
+const items = document.querySelectorAll('.carousel-item');
+const izquierda = document.getElementById('izq');
+const derecha = document.getElementById('der');
+
+let currentIndex = 0;
+
+
+
+function rotateCarousel() {
+  const numItems = items.length;
+  const circumference = 360; 
+  const angle = -currentIndex * (circumference / numItems); 
+  const radius = 300;
+
+  items.forEach((item, index) => {
+      const rotation = angle + index * (circumference / numItems); 
+      const z = radius * Math.cos((rotation * Math.PI) / 180); 
+      item.style.transform = `rotateY(${rotation}deg) translateZ(${z}px)`; 
+  });
+}
+
+
+
+izquierda.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    rotateCarousel();
+});
+
+
+derecha.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    rotateCarousel();
+});
+
+rotateCarousel();
+
+
+
+
  
