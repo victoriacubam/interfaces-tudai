@@ -1091,25 +1091,18 @@ article img {
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior:smooth;
-  /* smooth de a uno , auto de a muchas */
+  transition: transform 0.3s ease-in-out;
+  
 }
 .carrucel2 img{
   height: 340px;
   object-fit: cover;
   margin-left: 14px;
   width: calc(100% /3);
-  /* animation: zoom 0.5s ease-in-out;
-  animation: slide 0.5s ease-in-out; */
-}
-/* @keyframes zoom {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
 }
 
-@keyframes slide {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
-} */
+
+
 #agregarComentario{
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;

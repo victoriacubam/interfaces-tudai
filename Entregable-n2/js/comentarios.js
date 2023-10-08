@@ -2,7 +2,6 @@ let estrellas = document.querySelectorAll('#estrellas');
 let pintado = true;
 
 estrellas.forEach(function(estrella) {
-        // console.log(estrella);
         estrella.pintado = false;
         estrella.addEventListener('click', function() {
           estrellas.forEach(function(estrella){
@@ -26,6 +25,8 @@ estrellas.forEach(function(estrella) {
 
 });
 
+
+
 let enviar = document.getElementById('enviar');
 enviar.addEventListener("click", agregarComentario);
 
@@ -45,12 +46,15 @@ function agregarComentario() {
     '<div class="comentario">' +
     '<div class="perfil">'+
         '<img src="css/imagenes/iconos/avatar-perfil.png.png" id="perfil" />'+
-        '<h3>tu</h3>'+
+        '<h3>Logueado</h3>'+
     '</div>'+
     '<div class="puntuacion anonoimo">'+
-        '<h4>'+54454+'​</h4>'+
+        '<h4> ⭐​⭐​⭐​⭐​⭐​​</h4>'+
         '<p>'+comentario.opinion+'</p>'+
     '</div>'
 '</div>';
   }
 
+
+
+ 
