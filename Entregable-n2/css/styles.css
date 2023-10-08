@@ -709,44 +709,6 @@ footer .redes div{
   margin: 10px;
 }
 
-
-.inicio {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 5px 0px 5px;
-}
-
-article{
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  
-}
-
-article img {
-  height: 50%;
-  width: 50%;
-}
-
-.caratula-recomendado {
-  background-image: url(imagenes/portada-recomendado.png);
-  background-size: cover;
-  width: 80%;
-  position: relative;
-}
-
-.caratula-recomendado img{
-  width: 100%;
-}
-
-.caratula-recomendado button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
 #empezar-jugar {
   transition: transform 0.3s ease;
 }
@@ -777,9 +739,6 @@ article img {
 #empezar-jugar::before{
   transform: translate(12px, 12px);
 } 
-
-
-
 
 #btn-iniciar, #btn-registrar {
   transition: 0.3s ease all;
@@ -836,7 +795,46 @@ article img {
 
 }
 
+.inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 5px 0px 5px;
+}
 
+article{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  
+}
+
+article img {
+  height: 50%;
+  width: 50%;
+}
+
+.caratula-recomendado {
+  /* background-image: url(imagenes/portada-recomendado.png); */
+  /* background-size: cover; */
+  /* width: 80%; */
+  width: 345px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caratula-recomendado img{
+  width: 100%;
+}
+
+.caratula-recomendado button {
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* right: 0; */
+}
 
 .juegoRecomendado {
   display: flex;
@@ -844,6 +842,9 @@ article img {
   align-items: center;
   margin-bottom: 10px;
   /* height: 400px; */
+  background-color: var(--luz-P1);
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .juegoRecomendado img {
@@ -851,6 +852,7 @@ article img {
 
 #empezar-jugar {
   width: 200px;
+  margin: 5px;
 }
 
 
@@ -1685,6 +1687,8 @@ margin-left: 20px;
  
   #empezar-jugar {
     width: 320px;
+    margin: 20px;
+
   }
 
 /*Footer*/
