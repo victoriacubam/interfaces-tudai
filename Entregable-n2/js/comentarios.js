@@ -2,7 +2,6 @@ let estrellas = document.querySelectorAll('#estrellas');
 let pintado = true;
 
 estrellas.forEach(function(estrella) {
-        // console.log(estrella);
         estrella.pintado = false;
         estrella.addEventListener('click', function() {
           estrellas.forEach(function(estrella){
@@ -26,6 +25,8 @@ estrellas.forEach(function(estrella) {
 
 });
 
+
+
 let enviar = document.getElementById('enviar');
 enviar.addEventListener("click", agregarComentario);
 
@@ -45,12 +46,54 @@ function agregarComentario() {
     '<div class="comentario">' +
     '<div class="perfil">'+
         '<img src="css/imagenes/iconos/avatar-perfil.png.png" id="perfil" />'+
-        '<h3>tu</h3>'+
+        '<h3>Logueado</h3>'+
     '</div>'+
     '<div class="puntuacion anonoimo">'+
-        '<h4>'+54454+'​</h4>'+
+        '<h4> ⭐​⭐​⭐​⭐​⭐​​</h4>'+
         '<p>'+comentario.opinion+'</p>'+
     '</div>'
 '</div>';
   }
 
+
+
+const items = document.querySelectorAll('.carousel-item');
+const izquierda = document.getElementById('izq');
+const derecha = document.getElementById('der');
+
+let currentIndex = 0;
+
+
+
+function rotateCarousel() {
+  const numItems = items.length;
+  const circumference = 360; 
+  const angle = -currentIndex * (circumference / numItems); 
+  const radius = 300;
+
+  items.forEach((item, index) => {
+      const rotation = angle + index * (circumference / numItems); 
+      const z = radius * Math.cos((rotation * Math.PI) / 180); 
+      item.style.transform = `rotateY(${rotation}deg) translateZ(${z}px)`; 
+  });
+}
+
+
+
+izquierda.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + items.length) % items.length;
+    rotateCarousel();
+});
+
+
+derecha.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % items.length;
+    rotateCarousel();
+});
+
+rotateCarousel();
+
+
+
+
+ 

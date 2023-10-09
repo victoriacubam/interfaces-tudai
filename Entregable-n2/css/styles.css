@@ -63,6 +63,14 @@ body {
   position: relative;
 }
 
+<<<<<<< HEAD
+=======
+/* Scrollbar vertical */
+::-webkit-scrollbar {
+  width: 5px;
+  display: none;
+}
+>>>>>>> 38d9db83523e9eb12f39ff7791d7feb93b6830bb
 
 
  h1 {
@@ -1134,25 +1142,21 @@ article img {
   overflow: hidden;
   white-space: nowrap;
   scroll-behavior:smooth;
-  /* smooth de a uno , auto de a muchas */
+  transition: transform 0.3s ease-in-out;
+  
 }
 .carrucel2 img{
   height: 340px;
   object-fit: cover;
   margin-left: 14px;
-  width: calc(100% /3);
-  /* animation: zoom 0.5s ease-in-out;
-  animation: slide 0.5s ease-in-out; */
-}
-/* @keyframes zoom {
-  0% { transform: scale(0); }
-  100% { transform: scale(1); }
+  width: calc((100% - 20px) / 3);
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
-@keyframes slide {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(0); }
-} */
+
+
 #agregarComentario{
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;
@@ -1323,10 +1327,10 @@ article img {
 .circular{
   height: 100px;
   width: 100px;
-  position: relative;
-  margin-left: 75px;
-  margin-top: 250px;
-  position: fixed; 
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
   z-index: 9999;
 }
 
@@ -1535,7 +1539,12 @@ article img {
 }
 
  .btn-izq , .btn-der{
+<<<<<<< HEAD
   top : 50%;
+=======
+  visibility: hidden;
+   top : 50%;
+>>>>>>> 38d9db83523e9eb12f39ff7791d7feb93b6830bb
   height: 46px;
   width: 46px;
   cursor: pointer;
@@ -1603,13 +1612,19 @@ transition: .5s ease-in-out;
   height: auto;
   width: 100%;
   align-items: center;
-  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal en el contenedor principal */
+  
+}
+.cuerpo-carrousel-mis-juegos{
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch;
 }
 
 .carrousel {
   width: 100%;
-  margin: 0px 60px;
+  margin: 0px 30px;
+  overflow-x: hidden;
 }
+
 
 .carrousel-list {
   position: relative;
@@ -1619,8 +1634,10 @@ transition: .5s ease-in-out;
   padding: 10px 0px;
   margin: 0px auto;
   max-width: 90vw;
-  overflow: hidden;
-  white-space: nowrap; /* Impide que los elementos se dividan en varias líneas */
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap; 
+  
 }
 
 .slick-track {
@@ -1630,7 +1647,7 @@ transition: .5s ease-in-out;
   display: flex;
   justify-content: center;
   transition: .5s ease-in-out;
-  white-space: nowrap; /* Impide que los elementos se dividan en varias líneas */
+  white-space: nowrap; 
 }
 .misJuegos{
 position: relative;
@@ -1881,8 +1898,10 @@ article img {
 
   .circular{
    
-    margin-left: 630px;
-    margin-top: 300px;
+    position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
     
   }
 .card{
@@ -1984,6 +2003,7 @@ article img {
 }
 
 .btn-izq , .btn-der{
+  visibility: visible;
   top : 50%;
   height: 46px;
   width: 46px;
