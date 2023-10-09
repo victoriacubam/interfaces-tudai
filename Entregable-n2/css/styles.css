@@ -375,12 +375,10 @@ input[type=number]::-webkit-outer-spin-button {
 .registro-exitoso {
   position: fixed;
   transform: translate(-50%, -50%);
-  left: 49%;
+  left: 47.5%;
+  top: 47.5%;
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  top: 49%;
-  animation: loader 800ms infinite linear;
+  animation: loader 800ms infinite alternate;
   width: 100px;
   height: 100px;
 }
