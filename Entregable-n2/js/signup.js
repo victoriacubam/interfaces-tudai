@@ -56,7 +56,7 @@ function login(){
     let registroExitoso = document.querySelector("#registro-loader");
     registroExitoso.classList.remove("registro-oculto");
     
-    // setTimeout(function(){
-    //     window.location.href = "login.html"
-    // },5000)
+    setTimeout(function(){
+        window.location.href = "login.html"
+    },5000)
 }
