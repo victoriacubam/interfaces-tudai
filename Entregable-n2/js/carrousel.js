@@ -90,8 +90,6 @@ corazones.forEach(function(corazon) {
 
 
 
-
-
 let guardados = document.querySelectorAll('#guardar');
 let guardado = true;
 

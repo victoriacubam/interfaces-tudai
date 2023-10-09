@@ -149,6 +149,7 @@ ul {
   background: var(--luz-A3);
   color: var(--colorPrimario);
   transform: scale(1.01);
+  transition: all .3s;
 }
 
 .btn-secundario {
@@ -436,6 +437,7 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 2;
+  width: 100%;
 }
 
 .logo-header {
@@ -447,7 +449,6 @@ header {
 
 .header-izq {
   display: flex;
-  /* justify-content: space-between; */
   width: 200px;
 }
 
@@ -481,7 +482,6 @@ header {
 .buscador img {
   width: 19px;
   height: 19px;
-  /* padding-right: 10px; */
 }
 
 .input-busqueda {
@@ -513,9 +513,6 @@ header {
 .btn-menu {
   width: 40px;
   height: 40px;
-  /* position: absolute; */
-  /* top: 10px;
-  left: 10px; */
   translate: (-50%, -50%);
   cursor: pointer;
   margin: 20px;
@@ -583,40 +580,29 @@ header {
 
 /*---------------------- Perfil*/
 
-#perfil-header {
+#perfil-desplegado {
   position: absolute;
+  width: 180px;
+  right: -20px;
   top: 77px;
-  transition: all 300ms;
-  right: -200%;
-  z-index: 1;
-  overflow: hidden;
+  z-index: 2;
+  opacity: 1;
+  box-shadow:0px 5px 10px rgba(0, 0, 0, 0.4);
 }
 
-#perfil-header ul li  {
+#perfil-desplegado li {
   display: flex;
   align-items: center;
-  padding: 5px;
-  border-radius: 5px;
-  padding: 5px;
 }
 
-#perfil-header ul li:hover {
+#perfil-desplegado li:hover {
   background-color: var(--colorPrimario);
+  border-radius: 5px;
 }
 
-#perfil-header ul li img {
-  width: 30px;
-  height: 30px;
-}
-
-#perfil-header ul hr {
-  border-color: var(--luz-P3);
-}
-
-.abrir-perfil {
-  transition: all 300ms;
-  transform: translate(-100%, 0px);
-  overflow: hidden;
+.activar-perfil {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .activar-ico{
@@ -632,31 +618,28 @@ header {
 
 /*----------------------Carrito*/
 
-/* #carrito {
-  position: absolute;
-  top: 77px;
-  transition: all 300ms;
-  right: -180%;
-  z-index: 2;
-  background-color: var(--luz-P1);
-  z-index: 1;
-  width: max-content;
-} */
+
+.activar-carrito {
+  visibility: hidden;
+  opacity: 0;
+}
 
 #carrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  /* top: -360px; */
   transition: all 300ms;
-  /* right: -190%; */
+  right: -66px;
+  top: 77px;
   background-color: var(--luz-P1);
   z-index: 1;
-  width: max-content;
+  width: 300px;
+  height: 500px;
+  box-shadow:0px 5px 10px rgba(0, 0, 0, 0.4);;
 }
 
-.abrir-carrito {
-  transition: all 300ms;
-  transform: translate(0%, -150px);
-}
 
 #carrito h3{
   text-align: center;
@@ -665,13 +648,20 @@ header {
 
 #carrito ul {
   padding: 10px 20px 10px 20px;
-  /* width: 200px; */
+  width: 100%;
 }
 
 #carrito ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#carrito ul li span {
+  display: flex;
+  align-items: center;
 }
 
 .carrito-productos {
@@ -679,12 +669,14 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 0px 20px 0px 20px;
+  height: 50%;
 }
 
 #carrito .btn-primario {
   width: 150px;
   height: 40px;
   margin: 10px;
+  bottom: 10px;
 }
 
 img.papelera {
@@ -694,6 +686,9 @@ img.papelera {
 }
 
 button#cerrar-carrito {
+  position: absolute;
+  left: 0;
+  top: 0;
   font-weight: bolder;
   font-size: 30px;
   padding: 10px;
@@ -701,7 +696,28 @@ button#cerrar-carrito {
   background-color: var(--luz-P1);
   color: var(--blanco);
   font-family: var(--fuente);
+  cursor: pointer;
 }
+
+
+/*Desplegables*/
+
+.desplegables {
+  display: flex;
+  padding: 0;
+  background-color: var(--luz-P2);
+}
+
+.desplegables li {
+  margin: 0;
+}
+
+.desplegables > li {
+  position: relative;
+  display: inline-block;
+}
+
+
 
 /*****************************************************/
 
@@ -763,8 +779,6 @@ footer .redes div{
   height: 25px;
   margin: 10px;
 }
-
-/*****************************************************/
 
 /*****************************************************/
 
@@ -927,17 +941,6 @@ footer .redes div{
   padding: 0px 5px 0px 5px;
 }
 
-article{
-  display: flex;
-  flex-direction: row;
-  width: 100%; 
-}
-
-article img {
-  height: 50%;
-  width: 50%;
-}
-
 .caratula-recomendado {
   width: 345px;
   position: relative;
@@ -1013,6 +1016,10 @@ article img {
   margin-bottom: 5px;
 }
 
+
+
+/*--------------------Juego en ejecucion*/
+
 .juegoEnEjecucion{
   display: flex;
   flex-direction: column;
@@ -1024,8 +1031,10 @@ article img {
   border-radius: 5px 5px 5px 5px;
 }
 
-/*--------------------Juego en ejecucion*/
-
+#juegoEnEjecucion article img {
+  width: 97.5%;
+  margin: 20px;
+}
 
 #empezar-jugar-ejecucion {
   box-shadow: rgba(78, 0, 94, 0.5), rgba(255, 13, 174, 0.5), rgba(251, 255, 0, 0.5);
@@ -1078,17 +1087,12 @@ article img {
 }
 
 #instrucciones{
-   display: flex;
-   /* flex-direction: column; */
-  /* justify-content: center; */
+  display: flex;
   align-items: center;
-  /* position: relative;  */
-  /* width: 90%;  */
   background-color: var(--luz-P2);
   border-radius: 10px 10px 10px 10px;
   color: var(--blanco);
   font-weight: lighter;
-  /* margin-left: 60px; */
   height: 280px;
   margin: 16px 40px;
  
@@ -1098,9 +1102,7 @@ article img {
   display: flex;
   flex-direction: column; 
   text-align: center; 
-  /* align-items: center; */
   margin-top: 0px;
-  /* height: 40px; */
   top: 0;
 }
 
@@ -1117,9 +1119,7 @@ article img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-   /* margin: 10px 0px 10px 0px; */
    padding: 10px;
-   /* display: inline; */
    height: 90%;
    width: 33%;
 }
@@ -1132,7 +1132,6 @@ article img {
 }
 
 #controles h3{
-  /* margin:20px; */
   order: 2;
 }
 
@@ -1154,7 +1153,6 @@ article img {
   border-left: thick solid var(--blanco);
   border-width: thin;
   height: 80%;
-  /* left: 1px; */
 }
 
 #zanahoria, 
@@ -1184,6 +1182,8 @@ article img {
   margin: 16px 40px;
   
 }
+
+
 
 /*****************************************************/
 
@@ -1438,30 +1438,55 @@ transition: .5s ease-in-out;
   }
 
 
-/*****************************************************/
+  #like,
+  #guardar {
+    cursor: pointer;
+  }
+  
+  /*****************************************************/
+  
+  /*Comentarios*/
+  
 
-/*Comentarios*/
-
-#agregarComentario{
-  background-color: var(--luz-P2);
-  border-radius: 5px 5px 5px 5px;
-  height: 150px;
-  width: 70%;
+section.comentarios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#agregarComentario input{
+input#comentario {
   background-color: var(--luz-S2);
   border: none;
   border-radius: 5px 5px 5px 5px;
   height: 60px;
-  width: 800px;
+  width: 85%;
 }
 
-#enviar{
+#comentarioNuevo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+form#agregarComentario{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 0;
+  margin: 20px 0px;
+  background-color: var(--luz-P2);
+  border-radius: 5px 5px 5px 5px;
+  height: 150px;
+  width: 70%;
+
+}
+
+form#agregarComentario button#enviar{
   font-family: var(--fuente);
-  width: 100px;
+  width: 15%;
   padding: 10px;
-  margin: 5px 5%;
+  margin: 10px;
   font-size: 15px;
   background-color: var(--aceptar);
   color: var(--blanco);
@@ -1471,44 +1496,32 @@ transition: .5s ease-in-out;
 }
 
 .comentarios{
-  margin-top: 100px;
-  margin-left: 30px;
+  margin: 20px 30px 20px 30px;
   color:var(--blanco);
 }
 
 .comentarios h2{
-  color :#FFFFFF
+  color :var(--blanco)
 }
 
-#agregarComentario{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 15px;
-  margin-left: 15px;
-
-}
 
 .form-puntuacion{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content:space-around;
-}
-
-.form-puntuacion p{
-  margin-left: 20px;
+  justify-content:space-between;
+  margin-left: 10px;
+  padding: 10px;
 }
 
 .form-comentario{
   display: flex;
   flex-direction: row;
-  margin-bottom: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  width: 97%;
 }
 
-.form-comentario input{
-  width: 700px;
-}
 
 .estrellas {
   margin-left: 30px;
@@ -1524,7 +1537,7 @@ transition: .5s ease-in-out;
 .comentario {
   background-color: var(--luz-P2);
   border-radius: 5px 5px 5px 5px;
-  width: 60%;
+  width: 70%;
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -1533,7 +1546,6 @@ transition: .5s ease-in-out;
 
 .comentario p{
   padding: 20px;
-  /* margin: 20px; */
   height: 20px;
   width: 100%;
   background-color: var(--luz-S2);
@@ -1545,8 +1557,9 @@ transition: .5s ease-in-out;
 .perfil {
   display: flex;
   flex-direction: column;  
-  justify-content: center;
   align-items: center;
+  width: 90px;
+  margin: 5px;
 }
 
 .anonoimo{
@@ -1554,17 +1567,9 @@ transition: .5s ease-in-out;
   padding-left: 0px;
 }
 
-.perfil img {
+img#perfil {
   width: 50px;
   height: 50px;
-}
-
-.comentario p, 
-.comentario h3, 
-#perfil{
-  margin-left: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
 }
 
 .comentario h3, 
@@ -1575,15 +1580,18 @@ transition: .5s ease-in-out;
   
 }
 
+.puntuacion {
+  width: 80%;
+  margin-left: 10px;
+}
+
 .puntuacion h4{
   margin-bottom: 0px;
   margin-left: 50px;
 }
 
 .puntuacion p{
-  margin-left: 50px;
-  margin-right: 50px;
-  width: 500px;
+  width: 95%;
 }
 
 #perfil{
@@ -1615,10 +1623,6 @@ transition: .5s ease-in-out;
     width: 300px;
   }
 
-  .abrir-perfil {
-    transform: translate(-240%, 0px);
-  }
-
   .buscador {
     background-color: var(--sombra-P3-transparencia);
     width: 200px;
@@ -1628,7 +1632,6 @@ transition: .5s ease-in-out;
     width: 19px;
     height: 19px;
     margin: 10px;
-    /* padding-right: 10px; */
   }
  
   /*****************************************************/
@@ -1678,17 +1681,6 @@ transition: .5s ease-in-out;
     height: 420px;
   }
 
-  article{
-    flex-direction: column;
-    height: 100%;
-    width: 200px;
-  }
-
-  article img {
-    width: 100%;
-    height: 50%;
-  }
-
   .caratula-recomendado img{
     height: 100%;
   }
@@ -1710,6 +1702,7 @@ transition: .5s ease-in-out;
 
   /*****************************************************/
   /*Carrucel*/
+
 
   .btn-izq , .btn-der{
     visibility: visible;
@@ -1739,4 +1732,3 @@ transition: .5s ease-in-out;
   /*****************************************************/
   
 }
-

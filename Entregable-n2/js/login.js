@@ -1,14 +1,18 @@
 let btn = document.querySelector("#btn-iniciar");
 btn.addEventListener("click", verificarFormulario);
 
+//Iniciar sesion con redes
+
 let btnGoogle = document.querySelector("#btn-google");
 btnGoogle.addEventListener("click", iniciarSesion);
 
 let btnFb = document.querySelector("#btn-fb");
 btnFb.addEventListener("click", iniciarSesion);
 
-let form = document.querySelector("form-login");
 
+//Iniciar sesion completando datos
+
+let form = document.querySelector("form-login");
 
 function verificarFormulario(e){
     campos = document.getElementsByClassName("campo");

@@ -35,7 +35,6 @@ function verificarFormulario(e){
         console.log("Las contraseñas no coinciden");
 
     } else {
-        //Agregarle tiempo para hacer el submit
         if((contraseña1.value!=="")&&((contraseña2.value!==""))){
             e.preventDefault();
             contraseña1.classList.toggle("error-input");
@@ -45,8 +44,7 @@ function verificarFormulario(e){
             if(campos[0].value.trim(),campos[1],campos[2]){
                 contraseña1.classList.remove("error-input");
                 contraseña2.classList.remove("error-input");
-                contraseñaInvalida.classList.add("oculto");
-                
+                contraseñaInvalida.classList.add("oculto");   
                 login();
             }
 

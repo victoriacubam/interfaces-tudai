@@ -46,7 +46,7 @@ function agregarComentario() {
     '<div class="comentario">' +
     '<div class="perfil">'+
         '<img src="css/imagenes/iconos/avatar-perfil.png.png" id="perfil" />'+
-        '<h3>Logueado</h3>'+
+        '<h3>Tu</h3>'+
     '</div>'+
     '<div class="puntuacion anonoimo">'+
         '<h4> ⭐​⭐​⭐​⭐​⭐​​</h4>'+
