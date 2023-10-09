@@ -63,19 +63,7 @@ body {
   position: relative;
 }
 
-/* Scrollbar vertical */
-::-webkit-scrollbar {
-  width: 5px;
-}
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--colorSecundario);
-  border-radius: 20px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: var(--colorPrimario)
-}
 
  h1 {
   font-weight: 500;
@@ -93,6 +81,7 @@ h3{
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
+  margin: 5px;
 }
 
 
@@ -321,7 +310,7 @@ form div {
 
 
 .registro, .login {
-  background-image: url('/css/imagenes/fondo.png');
+  background-image: url('imagenes/fondo.png');
   display: flex;
   justify-content: center;
 }
@@ -540,18 +529,63 @@ ul {
   width: 100%;
 }
 
+#menu ul li  {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+#menu ul li:hover {
+  background-color: var(--colorPrimario);
+  border-radius: 5px;
+}
+
+#menu ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+#menu ul hr {
+  border-color: var(--luz-P3);
+}
+
 #perfil-header {
   position: absolute;
-  top: 74px;
+  top: 77px;
   transition: all 300ms;
   right: -200%;
   z-index: 1;
   overflow: hidden;
 }
 
+#perfil-header ul li  {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+#perfil-header ul li {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#perfil-header ul li:hover {
+  background-color: var(--colorPrimario);
+}
+
+#perfil-header ul li img {
+  width: 30px;
+  height: 30px;
+}
+
+#perfil-header ul hr {
+  border-color: var(--luz-P3);
+}
+
+
 .abrir-perfil {
   transition: all 300ms;
-  transform: translate(-118%, 0px);
+  transform: translate(-100%, 0px);
   overflow: hidden;
 }
 
@@ -560,19 +594,25 @@ ul {
   border-radius: 10px;
 }
 
+#btn-perfil, #btn-carrito {
+  padding: 5px;
+
+}
+
 #carrito {
   position: absolute;
-  top: 70px;
+  top: 77px;
   transition: all 300ms;
-  right: -100px;
+  /* right: -100px; */
+  right: -100%;
   z-index: 2;
-  /* width: 300px;*/
-  height: 350px;
   background-color: var(--luz-P1);
   z-index: 2;
+  width: max-content;
   /* width: 100%; */
-  width: 100vw;
+  /* width: 100vh; */
 }
+
 
 #carrito h3{
   text-align: center;
@@ -605,7 +645,7 @@ ul {
 
 .abrir-carrito {
   transition: all 300ms;
-  transform: translate(-350px, 0px);
+  transform: translate(-122%, 0px);
 }
 
 img.papelera {
@@ -780,14 +820,15 @@ footer .redes div{
   position: absolute;
   background: var(--colorAcento);
 
-  background-image: linear-gradient(to top, #96fbc4 0%, #f9f586 100%);
+  background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);  
   z-index: -1;
   transition: transform 0.5s ease;
 }
 
 .empezar:hover {
   transform: translate(0, -6px);
-  box-shadow: 10px -10px 25px 0 rgba(229, 253, 16, 0.5), -10px 10px 25px 0 rgba(183, 0, 255, 0.7);
+  box-shadow: 10px -10px 25px 0 rgba(229, 253, 16, 0.5), -10px 10px 25px 0 rgba(58, 0, 140, 0.7);
+  color: var(--colorAcento);
 }
 
 .empezar:hover::after {
@@ -799,7 +840,7 @@ footer .redes div{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   padding: 0px 5px 0px 5px;
 }
 
@@ -831,9 +872,8 @@ article img {
 }
 
 .caratula-recomendado button {
-  /* position: absolute; */
-  /* bottom: 0; */
-  /* right: 0; */
+  position: absolute;
+  bottom: 160px;
 }
 
 .juegoRecomendado {
@@ -851,25 +891,28 @@ article img {
 }
 
 #empezar-jugar {
-  width: 200px;
+  width: 80%;
   margin: 5px;
 }
 
 
 .descripcion-juego {
   background-color: 206C1E;
-  background-image: url(/css/imagenes/descripcion-fondo.png);
+  background-image: url(imagenes/descripcion-fondo.png);
   width: 345px;
+  height: 210px;
   text-align: center;
 }
 
 .descripcion-juego h1 {
   font-weight: bolder;
+  margin-bottom: 5px;
 }
 
-.descripcion-juego p {
-  padding: 10px;
-}
+/* .descripcion-juego p {
+  padding-bottom: 10px;
+  margin-top: 5px;
+} */
 
 
 /* juego en ejecucion */
@@ -897,9 +940,10 @@ article img {
   display: flex;
   align-items: center;
 }
-.headlines h3{
-  color: var(--blanco)
-  
+.headlines h3 a{
+  color: var(--blanco);
+  padding-right: 5px;
+  text-decoration: none;
 }
 #portada{
   width: 995px;
@@ -1214,7 +1258,7 @@ article img {
   width: 50px;
   height: 50px;
 }
-.comentario p , h3 , #perfil{
+.comentario p , .comentario h3 , #perfil{
   margin-left: 20px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -1491,8 +1535,7 @@ article img {
 }
 
  .btn-izq , .btn-der{
-  
-   top : 50%;
+  top : 50%;
   height: 46px;
   width: 46px;
   cursor: pointer;
@@ -1503,7 +1546,9 @@ article img {
   background-color: var(--sombra-S2);
   border-radius: 50%;
   transform: translateY(-50%); 
+  visibility: hidden;
 } 
+
 
  .btn-izq img{
   height: 60%;
@@ -1641,18 +1686,11 @@ margin-left: 20px;
   }
 
   #perfil-header {
-    position: absolute;
-    top: 74px;
-    transition: all 300ms;
-    right: -130%;
-    z-index: 1;
-    overflow: hidden;
+    right: -200%;
   }
   
   .abrir-perfil {
-    transition: all 300ms;
-    transform: translate(-180%, 0px);
-    overflow: hidden;
+    transform: translate(-250%, 0px);
   }
 
   .buscador {
@@ -1686,9 +1724,8 @@ margin-left: 20px;
   }
  
   #empezar-jugar {
-    width: 320px;
+    width: 220px;
     margin: 20px;
-
   }
 
 /*Footer*/
@@ -1718,6 +1755,7 @@ footer .links {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  padding-bottom: 20px;
 }
 
 footer .links div {
@@ -1822,11 +1860,14 @@ article img {
 
 .descripcion-juego {
   background-color: 206C1E;
-  background-image: url(/css/imagenes/descripcion-fondo.png);
+  background-image: url(imagenes/descripcion-fondo.png);
   width: 300px;
   height: 100%;
   /* padding: 10px; */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .descripcion-juego h1 {
@@ -1954,6 +1995,7 @@ article img {
   background-color: var(--sombra-S2);
   border-radius: 50%;
   transform: translateY(-50%);
+  visibility: visible;
 }
 
 .btn-izq img{

@@ -28,17 +28,26 @@ function activarMenu(){
 
     menu.classList.toggle("activar-menu");
 
+    if(perfil.classList.contains("abrir-perfil")){
+        activarPerfil();
+    }
+
 }
 
 let perfil = document.querySelector("#perfil-header");
 let btnPerfil = document.querySelector("#btn-perfil");
 
-btnPerfil.addEventListener("click", () => {
+btnPerfil.addEventListener("click", activarPerfil);
+
+function activarPerfil() {
     perfil.classList.toggle("abrir-perfil");
     btnPerfil.classList.toggle("activar-ico");
-    // if()
-    btnCarrito.classList.remove("abrir-carrito");
-});
+
+    if(menu.classList.contains("activar-menu")){
+       activarMenu();
+    }
+    //btnCarrito.classList.remove("abrir-carrito");
+};
 
 
 // let btnEmpezarJugar = document.querySelector("#empezar-jugar");
@@ -52,6 +61,9 @@ let carrito = document.querySelector("#carrito");
 let btnCarrito = document.querySelector("#btn-carrito");
 
 let btnCarritoCerrar = document.querySelector("#cerrar-carrito");
+
+btnCarrito.addEventListener("click", activarCarrito);
+btnCarritoCerrar.addEventListener("click", activarCarrito);
 
 function activarCarrito(){
     console.log("abrir-cerrar")
