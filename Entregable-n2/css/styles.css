@@ -941,7 +941,6 @@ footer .redes div{
 }
 
 .caratula-recomendado {
-  width: 345px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -954,7 +953,7 @@ footer .redes div{
 
 .caratula-recomendado button {
   position: absolute;
-  bottom: 160px;
+  bottom: 80%;
 }
 
 /*--------------------Juego recomendado*/
@@ -994,6 +993,7 @@ footer .redes div{
 } 
 
 .juegoRecomendado {
+  background-image: url(imagenes/descripcion-fondo.png);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1004,7 +1004,7 @@ footer .redes div{
 }
 
 .descripcion-juego {
-  background-image: url(imagenes/descripcion-fondo.png);
+  
   width: 345px;
   height: 210px;
   text-align: center;
@@ -1633,6 +1633,10 @@ img#perfil {
     background-color: var(--sombra-P3-transparencia);
     width: 200px;
   }
+
+  .input-busqueda{
+    margin-right: 30px;
+  }
   
   .input-busqueda span img {
     width: 19px;
@@ -1660,12 +1664,11 @@ img#perfil {
     padding-bottom: 20px;
   }
   /*****************************************************/
-
+  
   /*Home*/
 
+ 
   .caratula-recomendado {
-    background-image: url(imagenes/portada-recomendado.png);
-    width: 732px;
     height: 100%;
   }
   
@@ -1687,24 +1690,43 @@ img#perfil {
     height: 420px;
   }
 
-  .caratula-recomendado img{
+  .caratula-recomendado img {
     height: 100%;
+    border-radius: 0px 15px 15px 0px;
   }
 
   .juegoRecomendado {
     flex-direction: row;
+    justify-content: end;
     height: 100%;
+    width: 95%;
     margin: 0;
+    border-radius: 100px 15px 15px 15px;
+    padding: 0;
   }
 
   .descripcion-juego {
-    width: 300px;
+    width: 50%;
     height: 100%;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
   }
+
+  .descripcion-juego p,
+  .descripcion-juego h1 {
+    padding: 30px;
+    width: 70%;
+  }
+
+  .descripcion-juego p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    margin: 5px;
+  }
+
 
   /*****************************************************/
   /*Carrucel*/
