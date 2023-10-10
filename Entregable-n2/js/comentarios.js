@@ -9,9 +9,9 @@ estrellas.forEach(function(estrella) {
             estrella.pintado = false;
           })
                 if (estrella.pintado) {
-                   estrella.src = '../css/imagenes/iconos/estrella-desmacarda.png'; 
+                   estrella.src = '/css/imagenes/iconos/estrella-desmacarda.png'; 
                 } else {
-                   estrella.src = '../css/imagenes/iconos/estrella-marcada.png';   
+                   estrella.src = '/css/imagenes/iconos/estrella-marcada.png';   
                 }
           estrella.pintado = !estrella.pintado; 
           i_e = 0 
