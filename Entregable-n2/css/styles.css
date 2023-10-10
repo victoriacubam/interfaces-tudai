@@ -726,6 +726,7 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
+  margin-top: 20px;
 }
 
 footer .descripcion-footer {
@@ -1325,7 +1326,7 @@ footer .redes div{
   overflow-x: auto; 
   -webkit-overflow-scrolling: touch;
   white-space: nowrap; 
-  
+  margin-left: 0px;
 }
 
 .slick-track {
@@ -1339,12 +1340,13 @@ footer .redes div{
 }
 
 .misJuegos{
-position: relative;
-top: 0;
-left: 0;
-display: flex;
-justify-content:left;
-transition: .5s ease-in-out;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content:left;
+  transition: .5s ease-in-out;
+  margin-left: 0px;
 }
 
 
