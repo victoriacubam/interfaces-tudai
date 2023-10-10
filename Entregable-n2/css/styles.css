@@ -1468,6 +1468,10 @@ input#comentario {
   width: 85%;
 }
 
+input#comentario::placeholder {
+  color: var(--blanco);
+}
+
 #comentarioNuevo {
   display: flex;
   flex-direction: column;
@@ -1481,7 +1485,7 @@ form#agregarComentario{
   align-items: flex-start;
   margin-left: 0;
   margin: 20px 0px;
-  background-color: var(--luz-P2);
+  background-color: var(--luz-P3);
   border-radius: 5px 5px 5px 5px;
   height: 150px;
   width: 70%;
