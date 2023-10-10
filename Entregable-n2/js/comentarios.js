@@ -5,18 +5,18 @@ estrellas.forEach(function(estrella) {
         estrella.pintado = false;
         estrella.addEventListener('click', function() {
           estrellas.forEach(function(estrella){
-            estrella.src = '../css/imagenes/iconos/estrella-desmacarda.png'; 
+            estrella.src = 'css/imagenes/iconos/estrella-desmacarda.png'; 
             estrella.pintado = false;
           })
                 if (estrella.pintado) {
-                   estrella.src = '/css/imagenes/iconos/estrella-desmacarda.png'; 
+                   estrella.src = 'css/imagenes/iconos/estrella-desmacarda.png'; 
                 } else {
-                   estrella.src = '/css/imagenes/iconos/estrella-marcada.png';   
+                   estrella.src = 'css/imagenes/iconos/estrella-marcada.png';   
                 }
           estrella.pintado = !estrella.pintado; 
           i_e = 0 
           while(i_e < estrellas.length && !estrellas[i_e].pintado){
-            estrellas[i_e].src = '../css/imagenes/iconos/estrella-marcada.png'; 
+            estrellas[i_e].src = 'css/imagenes/iconos/estrella-marcada.png'; 
             estrellas[i_e].pintado = !estrellas[i_e].pintado;
             i_e ++;
           }
