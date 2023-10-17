@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="login">
+    <div class="container">
+        <form id="form-login">
+            <img src="css/imagenes/logo.png" class="logo-forms" alt="Logo">
+            <div class="iniciar-sesion-redes">
+                <div class="google">
+                    <img src="css/imagenes/iconos/google.svg" alt="">
+                    <button id="btn-google">Iniciar sesión con Google</button>
+                </div>
+                <div class="facebook">
+                    <img src="css/imagenes/iconos/facebook.svg" alt="">
+                    <button id="btn-fb">Iniciar sesión con Facebook</button>
+                </div>
+                <p>o</p>
+            </div>
+            <div>
+                <p class="texto label" >Email</p>
+                <input class="sin-validar campo" type="email">
+                <span class="error oculto">* Este campo es obligatorio</span>
+            </div>
+            <div>
+                <p class="texto label">Contraseña</p>
+                <input class="sin-validar campo" type="password" >
+                <span class="error oculto">* Este campo es obligatorio</span>
+            </div>
+            <img class="recaptcha" src="css/imagenes/recaptcha.png" alt="recaptcha">
+            <button class="btn-primario" id="btn-iniciar">Iniciar Sesión</button>
+            <a class="btn-terciario">¿Olvidaste tu contraseña?</a>
+            <a href="signUp.html" class="btn-terciario">¿No tenes cuenta? Registrate</a>
+           
+            
+            <div class="spinner-container" id="spinner">
+                <div class="spinner"></div>
+            </div>
+
+        </form>   
+    </div>
+    <script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
