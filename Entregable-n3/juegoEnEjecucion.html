@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego en ejecución</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body id="juegoEnEjecucion">
+    <header>
+        <div class="header-izq">
+            <div class="btn-menu">
+                <div id="linea1"></div>
+                <div id="linea2"></div>
+                <div id="linea3"></div>
+            </div>
+            <div class="menu-deplegable" id="menu">
+                <ul>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/mas-populares.svg" alt="">
+                        <a class="item" href="">Mas populares</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/ultimos.svg" alt="">
+                        <a class="item" href="">Ultimos juegos</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/recomendados.svg" alt="">
+                        <a class="item" href="">Recomendados</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/accion.svg" alt="">
+                        <a class="item" href="">Accion</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/aventuras.svg" alt="">
+                        <a class="item" href="">Aventuras</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/carreras.svg" alt="">
+                        <a class="item" href="">Carreras</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/cartas.svg" alt="">
+                        <a class="item" href="">Cartas</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/clasicos.svg" alt="">
+                        <a class="item" href="">Clasicos</a>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/menu/mas-populares.svg" alt="">
+                        <a class="item" href="">Terror</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="index.html"><img class="logo-header" src="css/imagenes/logo.svg" alt=""></a>
+        </div>
+        
+        <div class="header-der">
+            <div class="input-busqueda">
+                <input type="text" class="buscador">
+                <span>
+                    <img src="css/imagenes/iconos/buscar.svg" alt="">
+                </span>
+            </div>
+            <div>
+                <ul class="desplegables">
+                    <li>
+                        <img src="css/imagenes/iconos/carrito.svg" id="btn-carrito">
+                        <div class="activar-carrito" id="carrito">
+                            <button id="cerrar-carrito">X</button>
+                            <h3>Mi carrito</h3>
+                            <div class="carrito-productos">
+                                <ul>
+                                    <li>Candy Crush <span>$23<img class="papelera" src="css/imagenes/iconos/papelera.svg" alt=""></span></li>
+                                    <li>4 imagenes 1 pal... <span>$30<img class="papelera" src="css/imagenes/iconos/papelera.svg" alt=""></span></li>
+                                    <hr>
+                                </ul>
+                            </div>
+                            <h3 class="total">Total: $53</h3>
+                            <button class="btn-primario">Iniciar compra</button>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="css/imagenes/iconos/perfil.svg" id="btn-perfil">
+                        <ul id="perfil-desplegado" class="activar-perfil">
+                            <li>
+                                <img src="css/imagenes/iconos/perfil.svg" alt="">
+                                <a class="item" href="">Mi perfil</a>
+                            </li>
+                            <li>
+                                <img src="css/imagenes/iconos/menu/libreria.svg" alt="">
+                                <a class="item" href="">Mis juegos</a>
+                            </li>
+                            <li>
+                                <img src="css/imagenes/iconos/menu/cerrar-sesion.svg" alt="">
+                                <a class="item" href="login.html">Cerrar sesion</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>    
+        </div>
+    </header>
+
+    <div class="breadcrum">
+    <h3>
+        <a href="index.html">Inicio </a>/
+        <a href="index.html">Recomendados</a>/
+        <a href="juegoEnEjecucion.html">Bugs Bunny vs El Pato Lucas</a>
+    </h3>
+    </div>
+    
+    <div class="juegoEnEjecucion">
+        <div id="caratula">
+           <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button>
+        </div>
+        <section id="instrucciones">
+            <div id="armas">
+                <div>
+                    <h3>Tu personaje sera Bugsbunny y tu arma de combate sera</h3>
+                    <img src="css/imagenes/iconos/zanahoria.svg" id="zanahoria" />
+                </div>
+                <div>
+                    <h3>Tu contrincante sera El Pato Lucas y su arma de combate sera</h3>
+                    <img src="css/imagenes/iconos/guante.svg" id="guante" />
+                </div>
+            </div>
+            
+            <div id="controles">
+                <h2>Controles</h2>
+                <h3>Click izquierdo para bombardear</h3>
+                <img src="css/imagenes/iconos/mouse.svg" id="mouse" />
+            </div>
+
+            <div id="comoJugar">
+                <h2>¿Como se juega?</h2>
+                <h3>Para empezar la batalla solo debes clikear en el casillero  que quieres poner tu municion </h3>
+                <img src="css/imagenes/iconos/cursor.svg" id="cursor" />
+            </div>
+
+            <div id="comoGanar">
+                <h2>¿Como ganar la partida?</h2>
+                <h3>Para vencer a tu enemigo deber lograr depositar tu arma en 4 celdas consecutivas de manera vertical, horizontal o en diagonal</h3>
+            </div>
+        </section>
+
+        <p id="descripcion"> Es una variante divertida y temática del clásico juego de conecta 4, que enfrenta a dos icónicos personajes de los Looney Tunes: Bugs Bunny y el Pato Lucas. Este juego es adecuado para dos jugadores y se juega en un tablero vertical con 7 columnas y 6 filas, similar al juego original de 4 en línea.</p>
+        <p id="descripcion"> El objetivo del juego es ser el primero en conectar cuatro fichas del mismo personaje de manera vertical, horizontal o diagonal en el tablero. Los jugadores eligen a su personaje, ya sea Bugs Bunny o el Pato Lucas, y luego toman turnos para soltar una ficha en una de las columnas vacías. La ficha caerá hasta la fila más baja disponible en esa columna.</p>
+        <p id="descripcion"> El juego continúa hasta que un jugador logra conectar cuatro fichas de su personaje de forma consecutiva en cualquier dirección o hasta que el tablero se llene por completo sin que nadie gane, en cuyo caso el juego termina en empate.
+            La estrategia, la anticipación y la planificación son clave para ganar este juego, al igual que en la versión original del 4 en línea. ¡Diviértete jugando y que gane el mejor personaje de los Looney Tunes!
+        </p>
+
+        
+        <h2>¡No te quedes sin conocer al resto de los personajes de la historia!</h2>
+        <section id="galeriaImagenes">
+            <!-- carrucel -->
+            <div class="wrapper">
+                <i id= "izq" type="button" class="btn-izq" > <img src="css/imagenes/iconos/flecha-izq.png"> </i>
+                <div class="carrucel2">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-1.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-2.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-3.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-4.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-5.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-6.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-7.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-8.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-9.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-10.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-11.jpg">
+                </div>
+                <i id= "der" type="button" class="btn-der"> <img src="css/imagenes/iconos/flecha-der.png"> </i>
+            </div>
+        </section>
+
+        <div id="conocerMas">
+        <h2>¿Queres conocer mas sobre el universo de los Looney Tunes?</h2>
+        <h3>
+            <a class="btn-terciario" href="https://youtu.be/pCJ73uSn_F8" target="_blank">Hace click  aquí</a>
+        </h3>
+        </div>
+    </div>
+
+    <article>
+        <img src="css/imagenes/publicidad3.png" alt="">
+    </article>
+
+<section class="comentarios">
+    <h2>Te invitamos a que participes en nuestra comunidad dejandonos un comentario</h2>
+
+    <form id="agregarComentario" onsubmit="return false">
+        <div class="form-puntuacion">
+            <label for="comentario">¿Que te parecio el juego?</label>
+            <div  class="estrellas">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+                <img id="estrellas" src="css/imagenes/iconos/estrella-desmacarda.png">
+        ​​</div>
+        </div>
+        <div class="form-comentario">
+            <input type="text" id="comentario" placeholder="Dejanos tu opinion">
+            <button id="enviar">Enviar</button>
+        </div>
+    </form>
+
+    <div  id="comentarioNuevo">
+        <div id="estrellas" class="estrellas">
+            </div>
+        <p id="Comentario nuevo"></p>
+    </div>
+
+    <div class="comentario">
+        <div class="perfil">
+            <img src="css/imagenes/iconos/avatar-perfil.png.png" id="perfil" />
+            <h3>Anonimo</h3>
+        </div>
+        <div class="puntuacion anonoimo">
+            <h4>⭐​⭐​⭐​⭐​⭐​</h4>
+            <p>Esta bueno</p>
+        </div>
+    </div>
+
+    <div class="comentario">
+        <div class="perfil">
+        <img src="css/imagenes/iconos/avatar-perfil.png.png" id="perfil" />
+        <h3>Pedro</h3>
+        </div>
+        <div class="puntuacion">
+            <h4>⭐​⭐​⭐​⭐​⭐​</h4>
+            <p>Muy divertido!! Me encantan los Looney Tunes</p>
+        </div>
+    </div>
+
+    <div class="comentario">
+        <div class="perfil">
+        <img src="css/imagenes/iconos/avatar-perfil.png.png" id="perfil" />
+        <h3>Maria</h3>
+        </div>
+        <div class="puntuacion">
+            <h4>⭐​</h4>
+            <p>No me gusto</p>
+        </div>
+    </div>
+    
+</section>
+
+<footer>
+    <div class="descripcion-footer">
+        <p>¡Dale un adiós definitivo al aburrimiento con Entretech! Aquí encontrarás la más extensa colección de juegos gratuitos para llevar tu entretenimiento al siguiente nivel. Sumérgete en la acción en línea sin preocuparte por descargas. Pero eso no es todo, también estamos comprometidos en brindarte una experiencia de juego excepcional con actualizaciones constantes. Nuestra biblioteca de juegos se actualiza regularmente para que siempre encuentres algo nuevo y emocionante para jugar ¡Mantente al tanto de las últimas tendencias en la industria del juego!</p>
+        <img class="logo-header" src="css/imagenes/logo.svg" alt="logo">
+    </div>
+    <div class="links">
+        <div>
+            <h3>Aprende sobre nosotros</h3>
+            <a class="btn-terciario" href="">Contacto</a>
+            <a class="btn-terciario" href="">Sobre nosotros</a>
+            <a class="btn-terciario" href="">Equipo</a>
+            <a class="btn-terciario" href="">Trabajos</a>
+        </div>
+        <div>
+            <h3>Obtener ayuda</h3>
+            <a class="btn-terciario" href="">Preguntas frecuentes</a>
+            <a class="btn-terciario" href="">Soporte</a>
+            <a class="btn-terciario" href="">Ayuda online</a>
+        </div>
+        <div>
+            <h3>Unite a nosotros</h3>
+            <a class="btn-terciario" href="">Iniciar sesion</a>
+            <a class="btn-terciario" href="">Registrarte</a>
+            <a class="btn-terciario" href="">Encontra amigos</a>
+            <a class="btn-terciario" href="">Foros</a>
+            <a class="btn-terciario" href="">Comunidades</a>
+        </div>
+        <div class="redes">
+            <h3>Seguinos en las redes</h3>
+            <div>
+                <img src="css/imagenes/iconos/redes/facebook.svg" alt="">
+                <img src="css/imagenes/iconos/redes/instagram.svg" alt="">
+                <img src="css/imagenes/iconos/redes/youtube.svg" alt="">
+            </div>
+            <div>
+                <img src="css/imagenes/iconos/redes/tiktok.svg" alt="">
+                <img src="css/imagenes/iconos/redes/twitch.svg" alt="">
+                <img src="css/imagenes/iconos/redes/twitter.svg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Todos los derechos reservados Copyright © 2023 Entretech.com · Juegos Gratis online</p>
+    </div>
+</footer>
+<script src="js/menu.js"></script>
+<script src="js/comentarios.js"></script>
+<script src="js/galeria.js"></script>
+</body>
+</html>
