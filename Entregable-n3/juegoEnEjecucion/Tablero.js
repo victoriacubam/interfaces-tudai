@@ -18,8 +18,8 @@ class Tablero {
         for (let columna = 0; columna < this.columnas; columna++) {
 
             // inicioX e inicioY permite que el tablero este centrado
-            let inicioX= ((980-700)/2); // Total ancho del canvas - ancho del tablero = lo que sobra en total /2 = lo que sobra de cada lado
-            let inicioY = ((540-500)/2); // Lo mismo pero con el alto
+            let inicioX= ((anchoCanvas-this.ancho)/2); // Total ancho del canvas - ancho del tablero = lo que sobra en total /2 = lo que sobra de cada lado
+            let inicioY = ((altoCanvas-this.alto)/2); // Lo mismo pero con el alto
             
             let x = inicioX + columna * anchoCelda;
             let y = inicioY + fila * altoCelda;
@@ -27,5 +27,8 @@ class Tablero {
             this.celdas[fila][columna].draw(); //Dibuja la celda
         }
       }
+
+      
     }
+
   }

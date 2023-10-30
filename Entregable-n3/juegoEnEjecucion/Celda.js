@@ -24,11 +24,11 @@ class Celda {
         
 
         let gradient = this.ctx.createRadialGradient(centroX, centroY, 0, centroX, centroY, radio);
-        gradient.addColorStop(0, "rgba(0, 255, 0, 0.8)"); // Verde claro en el centro
-        gradient.addColorStop(1, "rgba(0, 128, 0, 0.4)"); // Verde oscuro en los bordes
+        gradient.addColorStop(0, "rgba(0, 255, 0, 1)"); // Verde claro en el centro
+        gradient.addColorStop(1, "rgba(0, 128, 0, 0.8)"); // Verde oscuro en los bordes
 
         this.ctx.fillStyle = gradient;
-        //this.ctx.fillStyle = "rgba(13,220,34,1)"; // Cambia el color del círculo
+
         this.ctx.beginPath();
         this.ctx.arc(centroX, centroY, radio - 5, 0, Math.PI * 2);
         this.ctx.fill();
@@ -37,5 +37,13 @@ class Celda {
 
     insertarFicha(ficha){
         this.ficha = ficha;
+    }
+
+    //Podria pasarle el personaje y verificar que no lo tenga?
+    tieneFicha(){
+        if(this.ficha==null){
+            return false;
+        }
+        return true;
     }
   }

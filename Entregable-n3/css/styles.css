@@ -1035,7 +1035,8 @@ footer .redes div{
   margin: 20px;
 }
 
-#empezar-jugar-ejecucion {
+
+button#empezar-jugar-ejecucion {
   box-shadow: rgba(78, 0, 94, 0.5), rgba(255, 13, 174, 0.5), rgba(251, 255, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
@@ -1044,6 +1045,7 @@ footer .redes div{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 #empezar-jugar-ejecucion::after {
@@ -1070,7 +1072,7 @@ footer .redes div{
 
 #caratula{
   background-color: rgba(23,62,70,1);
-  width: 70%;
+  width: 1400px;
   height: 590px;
   background-size: contain;
   border-radius: 10px 10px 10px 10px;
@@ -1081,9 +1083,40 @@ footer .redes div{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   text-align: center; 
 
+}
+
+#selectorPersonaje {
+  background-image: url(imagenes/descripcion-fondo.png);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  width: 1400px;
+  height: 590px;
+}
+
+.cerrar {
+  visibility: hidden;
+}
+
+#selectorPersonaje img {
+  /* border: solid var(--colorPrimario) 6px;
+  border-radius: 100%; */
+  width: 100px;
+}
+
+.seleccionado {
+  border: solid var(--colorAcento) 6px;
+  border-radius: 100%;
+}
+
+#miCanvas {
+  position: absolute;
+  z-index: 3;
 }
 
 #instrucciones{

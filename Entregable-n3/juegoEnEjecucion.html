@@ -118,13 +118,32 @@
     
     <div class="juegoEnEjecucion">
         <div id="caratula">
-           <!-- <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button> -->
-           <canvas id="miCanvas" width= "980" height= "540"></canvas>
+            <div id="selectorPersonaje">
+                <h1>Seleccione su personaje</h1>
+                <div id="jugador1">
+                    <h2>Jugador 1</h2>
+                    <img class="jugador1 Bugsbunny" src="css/imagenes/bugsbunny.png" alt="">
+                    <img class="jugador1 PatoLucas" src="css/imagenes/patolucas.png" alt="">
+                    <img class="jugador1 Tweety" src="css/imagenes/tweety.png" alt="">
+                    <img class="jugador1 Wolf" src="css/imagenes/wolf.png" alt="">
+                </div>
+                <div id="jugador2">
+                    <h2>Jugador 2</h2>
+                    <img class="jugador2 Bugsbunny" src="css/imagenes/bugsbunny.png" alt="">
+                    <img class="jugador2 PatoLucas" src="css/imagenes/patolucas.png" alt="">
+                    <img class="jugador2 Tweety" src="css/imagenes/tweety.png" alt="">
+                    <img class="jugador2 Wolf" src="css/imagenes/wolf.png" alt="">
+                </div>
+            </div>
+            <canvas id="miCanvas" width= "1400" height= "540" style="border: black solid 2px;"></canvas>
         </div>
+        <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button>
+
+        <!-- MODIFICAR -->
         <section id="instrucciones">
             <div id="armas">
                 <div>
-                    <h3>Tu personaje sera Bugsbunny y tu arma de combate sera</h3>
+                    <h3>Tu personaje sera Bugsbunny y tu arma de combate sera</h3> 
                     <img src="css/imagenes/iconos/zanahoria.svg" id="zanahoria" />
                 </div>
                 <div>
@@ -135,13 +154,13 @@
             
             <div id="controles">
                 <h2>Controles</h2>
-                <h3>Click izquierdo para bombardear</h3>
+                <h3>Click izquierdo para arrastrar tu ficha y empezar a bombardear el campo de batalla</h3>
                 <img src="css/imagenes/iconos/mouse.svg" id="mouse" />
             </div>
 
             <div id="comoJugar">
                 <h2>¿Como se juega?</h2>
-                <h3>Para empezar la batalla solo debes clikear en el casillero  que quieres poner tu municion </h3>
+                <h3>Para empezar la batalla solo debes arrastrar la ficha de tu personaje hasta la parte superior de la columna donde quieres poner tu municion </h3>
                 <img src="css/imagenes/iconos/cursor.svg" id="cursor" />
             </div>
 
