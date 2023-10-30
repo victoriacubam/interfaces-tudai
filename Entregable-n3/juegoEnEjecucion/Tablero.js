@@ -9,6 +9,10 @@ class Tablero {
       
     }
 
+    getCeldas(){
+      return this.celdas;
+    }
+
     draw() {
       let anchoCelda = this.ancho / this.columnas;
       let altoCelda = this.alto / this.filas;

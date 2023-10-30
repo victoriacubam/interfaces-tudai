@@ -9,6 +9,26 @@ class Celda {
         this.ctx = ctx;
     }
 
+    getPosX(){
+        return this.x;
+    }
+    getPosY(){
+        return this.y;
+    }
+    setPosX(posX){
+        this.x = posX;
+    }
+    setPosY(posY){
+        this.y = posY;
+    }
+    getAncho(){
+        return this.ancho;
+    }
+    getAlto(){
+        return this.alto;
+    }
+
+
     draw() {
         // Establece el grosor del borde a cero
         this.ctx.lineWidth = 0;

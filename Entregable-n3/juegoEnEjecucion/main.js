@@ -45,6 +45,18 @@ canvas.addEventListener("click", function(event) {
     const x = event.offsetX;
     const y = event.offsetY;
     console.log("Posición en el canvas: X=" + x + ", Y=" + y);
+    // console.log(tablero6x7.getCeldas()[0][1]);
+    for(let f = 0; f<tablero6x7.filas; f++){
+        for (let c = 0; c < tablero6x7.columnas; c++) {
+            let celda = tablero6x7.getCeldas()[f][c];
+
+            if((celda.getPosX()<x)&&((celda.getPosX()+celda.getAncho())>x)){
+                if((celda.getPosY()<y)&&((celda.getPosY()+celda.getAlto())>y)){
+                    console.log(celda)
+                }
+            }
+        }
+    }
 });
 
 let anchoCanvas = 1400;
@@ -66,7 +78,8 @@ let tablero9x10 = new Tablero(ancho, alto, 9, 10, ctx);
 function dibujarFichas(j, x, array){
     for (let i=0; i<(6*7)/2; i++){
         let posX = x;
-        let posY = altoCanvas/2 + i;
+        //let posY = altoCanvas/2 + i;
+        let posY = 20*i;
         array.push(new Ficha(j));
         array[i].draw(posX, posY);
     } 
@@ -84,11 +97,14 @@ let jugar = document.querySelector("#empezar-jugar-ejecucion");
 jugar.addEventListener("click", function(){
     if(jug1!=null && jug2!=null){
         document.querySelector("#selectorPersonaje").classList.add("cerrar");
+        jugar.classList.add("cerrar");
         tablero6x7.draw();
         dibujarFichas(jugador1, 10, fichasJugador1);
-        dibujarFichas(jugador2, anchoCanvas - 100, fichasJugador2);
+        dibujarFichas(jugador2, anchoCanvas - 120, fichasJugador2);
     } else {
         console.log("Seleccionar personajes");
     }
 });
+
+console.log(tablero6x7);
 
