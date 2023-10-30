@@ -9,6 +9,7 @@ for(let i = 0; i< seleccionarJugador1.length; i++){
     seleccionarJugador1[i].addEventListener("click", function(){
         for(let i = 0; i< seleccionarJugador1.length; i++){
             seleccionarJugador1[i].classList.remove("seleccionado");
+            jug1= null;
         }
         if(!seleccionarJugador2[i].classList.contains("seleccionado")){
             seleccionarJugador1[i].classList.add("seleccionado");
@@ -25,6 +26,7 @@ for(let i = 0; i< seleccionarJugador2.length; i++){
     seleccionarJugador2[i].addEventListener("click", function(){
         for(let i = 0; i< seleccionarJugador2.length; i++){
             seleccionarJugador2[i].classList.remove("seleccionado");
+            jug2= null;
         }
         if(!seleccionarJugador1[i].classList.contains("seleccionado")){
             seleccionarJugador2[i].classList.add("seleccionado");
@@ -57,6 +59,8 @@ canvas.addEventListener("click", function(event) {
             }
         }
     }
+
+    
 });
 
 let anchoCanvas = 1400;
