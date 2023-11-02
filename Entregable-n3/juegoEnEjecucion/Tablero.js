@@ -27,7 +27,7 @@ class Tablero {
             
             let x = inicioX + columna * anchoCelda;
             let y = inicioY + fila * altoCelda;
-            this.celdas[fila][columna] = new Celda(x, y, anchoCelda, altoCelda, this.ctx);
+            this.celdas[fila][columna] = new Celda(x, y, anchoCelda, altoCelda, this.ctx, fila, columna);
             this.celdas[fila][columna].draw(); //Dibuja la celda
         }
       }

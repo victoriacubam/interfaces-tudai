@@ -1,13 +1,13 @@
 class Ficha{
-    constructor(jugador, ancho, alto){
+    constructor(jugador){
         this.jugador = jugador;
-        // this.ancho =ancho;
-        // this.alto = alto;
+        this.activa = false;
     }
 
-    draw(posX, posY) {
+    draw(posX, posY, tamaño) {
         this.posX = posX;
         this.posY = posY;
+        this.tamaño = tamaño
         // Crea una nueva instancia de la imagen
         let imagen = new Image();
 
@@ -18,7 +18,7 @@ class Ficha{
         imagen.onload = function() {
 
         // Dibuja la imagen en el canvas
-        ctx.drawImage(imagen, posX, posY, ancho/7, ancho/7); // Las coordenadas (0, 0) son la posición donde se dibujará la imagen en el canvas
+        ctx.drawImage(imagen, posX, posY, tamaño, tamaño); // Las coordenadas (0, 0) son la posición donde se dibujará la imagen en el canvas
         };
     }
 
@@ -29,5 +29,18 @@ class Ficha{
         return this.posY;
     }
 
+    setPosX(x){
+        return this.posX = x;
+    }
+    setPosY(y){
+        return this.posY = y;
+    }
 
+    getActiva(){
+        return this.activa;
+    }
+
+    setActiva(bool){
+        return this.activa = bool;
+    }
 }

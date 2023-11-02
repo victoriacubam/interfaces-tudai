@@ -51,6 +51,10 @@
 
   /*Fuentes*/
     --fuente: 'Raleway', sans-serif;
+
+  /*Canvas*/
+    --anchoCanvas: 1000px;
+    --altoCanvas: 500px
 }
 
 body {
@@ -1071,9 +1075,9 @@ button#empezar-jugar-ejecucion {
 }
 
 #caratula{
-  background-color: rgba(23,62,70,1);
-  width: 1400px;
-  height: 590px;
+  background-color: rgba(0, 128, 0, 0.8);
+  width: var(--anchoCanvas);
+  height: var(--altoCanvas);
   background-size: contain;
   border-radius: 10px 10px 10px 10px;
   border: solid var(--luz-P2) 5px;
@@ -1095,8 +1099,8 @@ button#empezar-jugar-ejecucion {
   flex-direction: column;
   justify-content: center;
   z-index: 4;
-  width: 1400px;
-  height: 590px;
+  width: var(--anchoCanvas);
+  height: var(--altoCanvas);
 }
 
 .cerrar {
@@ -1107,6 +1111,8 @@ button#empezar-jugar-ejecucion {
   /* border: solid var(--colorPrimario) 6px;
   border-radius: 100%; */
   width: 100px;
+  cursor: pointer;
+  
 }
 
 .seleccionado {

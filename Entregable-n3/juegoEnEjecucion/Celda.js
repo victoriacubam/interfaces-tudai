@@ -1,12 +1,14 @@
 class Celda {
 
-    constructor(x, y, ancho, alto, ctx) {
+    constructor(x, y, ancho, alto, ctx, fila, columna) {
         this.ficha = null;
         this.x = x;
         this.y = y;
         this.ancho = ancho;
         this.alto = alto;
         this.ctx = ctx;
+        this.fila = fila;
+        this.columna = columna;
     }
 
     getPosX(){
