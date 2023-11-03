@@ -159,16 +159,19 @@ ul {
 .btn-secundario {
   width: 153.52px;
   height: 35.55px;
+  background: none;
 
   border: 1.61603px solid var(--colorAcento);
   border-radius: 32.3207px;
 
+  font-family: var(--fuente);
   font-weight: 600;
   font-size: 16.1603px;
   line-height: 19px;
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
 
   color: var(--colorAcento);
   cursor: pointer;
@@ -1022,6 +1025,25 @@ footer .redes div{
 
 
 /*--------------------Juego en ejecucion*/
+
+h3#temporizadorJuego {
+  background-color: var(--colorSecundario);
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--blanco);
+  width: 100px;
+  height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#reiniciarJuego {
+  z-index: 10;
+  
+}
+
 
 .juegoEnEjecucion{
   display: flex;

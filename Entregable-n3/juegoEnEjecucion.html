@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Berkshire+Swash&family=Cookie&family=Dancing+Script&family=Lobster&family=Maven+Pro&family=Pacifico&family=Quicksand&family=Raleway:wght@200;300&family=Roboto+Slab:wght@200&family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 <body id="juegoEnEjecucion">
     <header>
@@ -117,7 +118,9 @@
     </div>
     
     <div class="juegoEnEjecucion">
+        <button class="btn-secundario" id="reiniciarJuego">Reiniciar juego</button>
         <div id="caratula">
+            <h3 id="temporizadorJuego">00:10</h3>
             <div id="selectorPersonaje">
                 <h1>Seleccione su personaje</h1>
                 <div id="jugador1">
@@ -135,7 +138,9 @@
                     <img class="jugador2 wolf" src="css/imagenes/wolf.png" alt="">
                 </div>
             </div>
-            <canvas id="miCanvas" width= "1000" height= "500" ></canvas>
+            <canvas id="miCanvas" width= "1000" height= "500" >
+
+            </canvas>
         </div>
         <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button>
 
@@ -323,6 +328,8 @@
 <script src="juegoEnEjecucion/Celda.js"></script>
 <script src="juegoEnEjecucion/Tablero.js"></script>
 <script src="juegoEnEjecucion/Ficha.js"></script>
+<script src="juegoEnEjecucion/pruebaTimer.js"></script>
+
 <script src="juegoEnEjecucion/main.js"></script>
 
 </body>

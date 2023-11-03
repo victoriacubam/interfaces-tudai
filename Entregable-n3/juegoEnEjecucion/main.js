@@ -94,13 +94,13 @@ let tableroSeleccionado = tablero6x7;
 let j1InicioX = 0;
 let j1FinX = ((anchoCanvas - ancho)/2)-100;
 let j1InicioY = alto/2;
-let j1FinY = alto-100;
+let j1FinY = alto;
 
 //Fichas jugador 2
 let j2InicioX = j1FinX + ancho + 100;
 let j2FinX = anchoCanvas-100;
 let j2InicioY = alto/2;
-let j2FinY = alto-100;
+let j2FinY = alto;
 
 
 
@@ -137,6 +137,8 @@ btnJugar.addEventListener("click", function(){
     if(fichaJugador1!=null && fichaJugador2!=null){
         divSelector.classList.add("cerrar");
         btnJugar.classList.add("cerrar");
+        temporizadorJuego();
+       
         tableroSeleccionado.draw();
 
         
@@ -193,3 +195,4 @@ console.log(tableroSeleccionado);
     }
   });
   
+

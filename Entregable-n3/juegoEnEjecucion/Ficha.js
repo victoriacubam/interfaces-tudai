@@ -1,7 +1,7 @@
 class Ficha{
     constructor(jugador){
         this.jugador = jugador;
-        this.activa = false;
+        this.activa = true;
     }
 
     draw(posX, posY, tamaño) {
@@ -20,6 +20,15 @@ class Ficha{
         // Dibuja la imagen en el canvas
         ctx.drawImage(imagen, posX, posY, tamaño, tamaño); // Las coordenadas (0, 0) son la posición donde se dibujará la imagen en el canvas
         };
+
+        //  // Dibuja un borde rojo si la ficha está seleccionada
+        //  if (this.activa) {
+        //     ctx.strokeStyle = "red";
+        //     ctx.lineWidth = 3; // Grosor del borde
+        //     ctx.beginPath();
+        //     ctx.arc(posX + tamaño/2, posY + tamaño/2, tamaño/2 + 10, 0, 2 * Math.PI);
+        //     ctx.stroke();
+        //  }
     }
 
     getPosX(){
