@@ -1246,7 +1246,7 @@ button#empezar-jugar-ejecucion {
   line-height: 46px;
   background-color: var(--sombra-S2);
   border-radius: 50%;
-  transform: translateY(-50%); 
+  /* transform: translateY(-50%);  */
 } 
 
 .btn-izq img{
@@ -1292,7 +1292,7 @@ button#empezar-jugar-ejecucion {
   position: absolute;
   text-align: center;
   line-height: 46px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   animation: zoom 0.5s ease-in-out;
 }
 
@@ -1321,11 +1321,11 @@ button#empezar-jugar-ejecucion {
 
 .carrucel2 img{
   height: 340px;
-  object-fit: cover;
+  /* object-fit: cover; */
   margin-left: 14px;
-  width: calc((100% - 20px) / 3);
-  transition: transform 0.5s ease-in-out;
-  transform-style: preserve-3d;
+  /* width: calc((100% - 20px) / 3); */
+  /* transition: transform 0.5s ease-in-out; */
+  /* transform-style: preserve-3d; */
   backface-visibility: hidden;
 }
 
