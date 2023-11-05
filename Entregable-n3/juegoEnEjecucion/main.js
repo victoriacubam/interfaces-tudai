@@ -9,7 +9,7 @@ let canvasHeight = canvas.height
  */
 // Fondo de menu e inicio 
 const backgroundImage = new Image();
-backgroundImage.src = "css/imagenes/Juego/fondoTablero.png";
+backgroundImage.src = "css/imagenes/Juego/inicioJuego.png";
 // Boton para elegir cantidad de fichas 
 const botonElegirJuego = new Image();
 botonElegirJuego.src = "css/imagenes/Juego/boton-seleccionar-juego.png";
@@ -812,15 +812,16 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         // Tamaño y posición del rectángulo
         const rectanguloWidth = canvas.width * 0.5;
         const rectanguloHeight = canvas.height * 0.3;
-        const rectanguloX = (canvas.width - rectanguloWidth) / 2;
-        const rectanguloY = 100;
+        
         
         // Dibujar el Letrero
-        context.drawImage(letrero, rectanguloX, rectanguloY, rectanguloWidth, rectanguloHeight);
+        context.drawImage(letrero, 220, 105, rectanguloWidth, rectanguloHeight);
         
         // Dibujar el texto del mensaje
-        context.font = "25px ''Playpen Sans'";
+        context.font = "20px 'Playpen Sans'";
         context.textAlign = "center";
+        context.fillStyle= 'white'
+        
         let x = canvas.width / 2;
         let y = 200;
         context.strokeText(mensaje, x, y);
