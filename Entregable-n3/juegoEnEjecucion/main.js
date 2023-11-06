@@ -1135,6 +1135,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         }
     }
     canvas.addEventListener("click", function (event) {
+        let listenerEnabledSelector=true;
         if(listenerEnabledSelector){
             const clickX = event.clientX - canvas.getBoundingClientRect().left;
             const clickY = event.clientY - canvas.getBoundingClientRect().top;
