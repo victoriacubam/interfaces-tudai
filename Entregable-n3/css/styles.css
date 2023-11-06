@@ -159,16 +159,19 @@ ul {
 .btn-secundario {
   width: 153.52px;
   height: 35.55px;
+  background: none;
 
   border: 1.61603px solid var(--colorAcento);
   border-radius: 32.3207px;
 
+  font-family: var(--fuente);
   font-weight: 600;
   font-size: 16.1603px;
   line-height: 19px;
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
 
   color: var(--colorAcento);
   cursor: pointer;
@@ -1023,6 +1026,7 @@ footer .redes div{
 
 /*--------------------Juego en ejecucion*/
 
+
 .juegoEnEjecucion{
   display: flex;
   flex-direction: column;
@@ -1075,9 +1079,10 @@ button#empezar-jugar-ejecucion {
 }
 
 #caratula{
-  background-color: rgba(0, 128, 0, 0.8);
+  /* background-color: rgba(0, 128, 0, 0.8); */
+  background-color: var(--luz-P2);
   width: var(--anchoCanvas);
-  height: var(--altoCanvas);
+  /* height: var(--altoCanvas); */
   background-size: contain;
   border-radius: 10px 10px 10px 10px;
   border: solid var(--luz-P2) 5px;
@@ -1089,8 +1094,47 @@ button#empezar-jugar-ejecucion {
   align-items: center;
   justify-content: end;
   text-align: center; 
-
+  position: relative;
 }
+
+#caratula div {
+  display: flex;
+  align-items: center;
+}
+
+#caratula #reiniciar {
+  position: absolute;
+  /* bottom: 5px; */
+  right: 5px;
+  background: none;
+  cursor: pointer;
+}
+
+#caratula h2 {
+  position: absolute;
+  left: 10px;
+}
+
+.ocultar {
+  visibility: hidden;
+}
+
+
+h3#temporizadorJuego, #reiniciar {
+  background-color: var(--colorSecundario);
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--blanco);
+  width: 100px;
+  height: 30px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
 
 #selectorPersonaje {
   background-image: url(imagenes/descripcion-fondo.png);
@@ -1191,6 +1235,9 @@ button#empezar-jugar-ejecucion {
 
 #armas div {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   margin: 20px 10px;
 }
 
@@ -1198,13 +1245,18 @@ button#empezar-jugar-ejecucion {
   margin-bottom: 0px;
 }
 
+#armas div img {
+  width: 15%;
+  margin: 5px;
+}
 
-#zanahoria, 
+
+/* #zanahoria, 
 #guante {
   display: flex;
   justify-content: center;
   width: 20%;
-}
+} */
 
 #mouse {
   width: 50px;

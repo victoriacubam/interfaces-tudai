@@ -24,6 +24,12 @@ class Figure {
     getPosY() {
         return this.posY;
     }
+    setPosX(x){
+        return this.posX = x;
+    }
+    setPosY(y){
+        return this.posY = y;
+    }
     getFill() {
         return this.fill;
     }
