@@ -1,8 +1,8 @@
 //Se toma del DOM el canvas 
-let canvas = document.getElementById('canvas');
-let context = canvas.getContext('2d');
-let canvasWidth = canvas.width;
-let canvasHeight = canvas.height;
+let canvas = document.getElementById('canvas')
+let context = canvas.getContext('2d')
+let canvasWidth = canvas.width
+let canvasHeight = canvas.height
 
 /**
  * CARGA DE IMAGENES PARA EJECUTAR EL JUEGO
@@ -15,10 +15,10 @@ const botonElegirJuego = new Image();
 botonElegirJuego.src = "css/imagenes/Juego/boton-seleccionar-juego.png";
 //Boton para iniciar el juego 
 const botonIniciarJuego= new Image();
-botonIniciarJuego.src= "css/imagenes/Juego/boton-inicio-juego.png";
+botonIniciarJuego.src= "css/imagenes/Juego/boton-inicio-juego.png"
 //Fondo de juego
 const background2 = new Image();
-background2.src = "css/imagenes/Juego/caratula.png";
+background2.src = "css/imagenes/Juego/fondoTablero.png";
 //Fondo tablero
 const fondoTablero = new Image();
 fondoTablero.src = "css/imagenes/Juego/fondoBlanco.png";
@@ -60,30 +60,33 @@ function CargarImagenes() {
         // Título e instrucciones
         context.font = "45px 'Playpen Sans'";
         context.fillStyle = "lightyellow";
-        context.strokeStyle = "black";
-        context.lineWidth = 4;
+        //context.strokeStyle = "black";
+        //context.lineWidth = 4;
         context.textAlign = "center";
-        let texto = "Preparate para la diversion!";
+        let texto = "¡Preparate para la diversión!";
         //Posicion X e Y en el canvas 
         let x = canvas.width / 2;
         let y = 100;
-        context.strokeText(texto, x, y);
+        //context.strokeText(texto, x, y);
         context.fillText(texto, x, y); 
 
-        context.font = "20px 'Playpen Sans'";
+        context.font = "25px 'Playpen Sans'";
         context.fillStyle = "lightyellow";
-        context.strokeStyle = "black";
-        context.lineWidth = 4;
+        //context.strokeStyle = "black";
+        //context.lineWidth = 4;
         context.textAlign = "center";
-        texto = "Selecciona la cantidad de fichas en línea:";
-         y = 200;
-        context.strokeText(texto, x, y);
+        texto = "Selecciona el tablero con el que quieras jugar";
+        y = 200;
+        //context.strokeText(texto, x, y);
         context.fillText(texto, x, y);
         // Dibuja los botones con imágenes
         y = 300;//alinea los botones en la misma pos en Y 
         context.drawImage(botonElegirJuego, 200, y, 200, 50);
         context.drawImage(botonElegirJuego, 400, y, 200, 50);
         context.drawImage(botonElegirJuego, 600, y, 200, 50);
+        context.font = "20px 'Playpen Sans'";
+        context.strokeStyle = "black";
+        context.lineWidth = 4;
         texto = "4 en línea";
         y = 330;
         x = 300;
@@ -110,6 +113,7 @@ function CargarImagenes() {
                     console.log("4 en línea "+y)
                     // Inicia juego de 4 en línea
                     modoJuego = 4;
+                    instrucciones.innerHTML = 4
                     mostrarSeleccionBandos(); 
                 } else if (clickX >= 400 && clickX <= 600 && clickY >= y && clickY <= y+100) {
                     // Inicia juego de 5 en línea
@@ -120,7 +124,6 @@ function CargarImagenes() {
                     modoJuego = 6;
                     mostrarSeleccionBandos(); 
                 }
-                instrucciones.innerHTML = modoJuego;
             }
         });
     }
@@ -141,7 +144,7 @@ function CargarImagenes() {
         let y = 170;
         let size = 90;
         let radius = size/2;
-        let color = `rgba(0,0,0,255)`;
+        let color = `rgba(0,0,0,0)`;
         //Dibuja las opciones de ficha que tiene el jugador 1 
         let image = fichaBugsBunny;
         let f1 = new Ficha(200, y, radius, color, context, 1, image);
@@ -157,7 +160,7 @@ function CargarImagenes() {
         bando1.push(f4);
         // Bando 2
         y = 350;
-         //Dibuja las opciones de ficha que tiene el jugador 1 
+         //Dibuja las opciones de ficha que tiene el jugador 2
         image = fichaBugsBunny;
         let f5 = new Ficha(200, y, radius, color, context, 1, image);
         bando2.push(f5);
@@ -180,17 +183,16 @@ function CargarImagenes() {
         context.fillStyle = "lightyellow";
         let x = canvas.width / 2;
         let y = 80;
-        context.strokeStyle = "black";
-        context.lineWidth = 4;
+        //context.strokeStyle = "black";
+        //context.lineWidth = 4;
         context.textAlign = "center";
         let texto = "Selecciona tu personaje";
-        context.strokeText(texto, x, y);
+        //context.strokeText(texto, x, y);
         context.fillText(texto, x, y); 
 
         context.font = "25px 'Playpen Sans'";
         
         y = 170;
-        
         
         texto = "VS";
         y = 270;
@@ -205,8 +207,7 @@ function CargarImagenes() {
         context.fillText(texto, x, y);
 
         // Dibuja los botones con imágenes
-        bando1.forEach(function (ficha) {
-            
+        bando1.forEach(function (ficha) {  
             ficha.draw();
         });
         bando2.forEach(function (ficha) {
@@ -247,20 +248,21 @@ function CargarImagenes() {
                 for (let i = 0; i < bando1.length; i++) {
                     const ficha = bando1[i];
                     // Verifica si la ficha es dibujable y si se hizo clic en ella
-                    if (ficha.draweable && Math.sqrt((ficha.posX - clickX) ** 2 + (ficha.posY - clickY) ** 2) <= ficha.radius) {
+                    if (ficha.getDibujable() && Math.sqrt((ficha.getPosX() - clickX) ** 2 + (ficha.getPosY() - clickY) ** 2) <= ficha.getRadius()) {
                         // Comprueba si hay una ficha del bando 2 seleccionada y su imagen coincide con la ficha actual
-                        if(ficha2 != null && ficha.image == ficha2.image){
-                            
-                        }else{
+                        if(ficha2 != null && ficha.getImage() == ficha2.getImage()){
+                            console.log("holaaaa");
+                        }else {
                             // Itera sobre las demás fichas del bando 1 para desactivarlas y resaltar la ficha seleccionada.
                             for (let j = 0; j < bando1.length; j++) {
                                 if (j != i) {
+                                    
                                     bando1[j].fill = "rgba(0,0,0,255)";
-                                    bando2[j].draweable = true;
+                                    bando2[j].setDibujable(true);
                                 }else{
                                     bando1[j].fill = "rgba(255,255,0,255)";
                                     ficha1 = bando1[j];
-                                    bando2[j].draweable = false;
+                                    bando2[j].setDibujable(false);
                                 }      
                             }
                         }
@@ -269,20 +271,20 @@ function CargarImagenes() {
                 for (let i = 0; i < bando2.length; i++) {
                     const ficha = bando2[i];
                     // Verifica si la ficha es dibujable y si se hizo clic en ella.
-                    if (ficha.draweable && Math.sqrt((ficha.posX - clickX) ** 2 + (ficha.posY - clickY) ** 2) <= ficha.radius) {
+                    if (ficha.getDibujable() && Math.sqrt((ficha.getPosX() - clickX) ** 2 + (ficha.getPosY() - clickY) ** 2) <= ficha.getRadius()) {
                         // Comprueba si hay una ficha del bando 1 seleccionada y su imagen coincide con la ficha actual.
-                        if (ficha1 != null && ficha.image == ficha1.image) {
+                        if (ficha1 != null && ficha.getImage() == ficha1.getImage()) {
                             
                             } else {
                             // Itera sobre las demás fichas del bando 2 para desactivarlas y resaltar la ficha seleccionada.
                                 for (let j = 0; j < bando2.length; j++) {
                                     if (j != i) {
                                         bando2[j].fill = "rgba(0,0,0,255)";
-                                        bando1[j].draweable = true;
+                                        bando1[j].setDibujable(true);
                                     } else {
                                         bando2[j].fill = "rgba(255,0,0,255)";
                                         ficha2 = bando2[j];
-                                        bando1[j].draweable = false;
+                                        bando1[j].setDibujable(false);
                                     }     
                                         }
                         }    
@@ -341,16 +343,15 @@ function clearCanvas() {
 //cuando todas las imágenes estén listas.
 CargarImagenes();
 
-// //temporizador
+//temporizador
 const tiempoInicial = 10/60;
+let tiempo = tiempoInicial * 60;
 let temporizador = document.querySelector("#temporizadorJuego");
 let intervalo = null;
 
 //temporizadorJuego();
 
-function temporizadorJuego(){
-    clearInterval(intervalo);
-    let tiempo = tiempoInicial * 60;
+function temporizadorJuego(terminoJuego){
     intervalo = setInterval(()=>{
         let minutes = Math.floor(tiempo / 60);
         let seconds = tiempo % 60;
@@ -364,39 +365,33 @@ function temporizadorJuego(){
             tiempo--;
         } else {
             clearInterval(intervalo);
-            //terminoJuego = true;
+            terminoJuego = true;
             //Llamar a la funcion que dice el ganador o mostrar un mensaje
         }
     }, 1000);
 
 }
-
-
+//
 
 
 /**
  * LOGICA DE JUEGO DE CANTIDAD DE FICHAS EN LINEA 
-*/
-
+  */
+ 
 function iniciarJuego(cantEnLinea, imagen1, imagen2) {
-    document.querySelector("#temporizadorJuego").classList.remove("ocultar");
-    document.querySelector("#reiniciar").classList.remove("ocultar");
-    temporizadorJuego();
     let fichasTotales = (cantEnLinea+2)*(cantEnLinea+3)
     let tamanioFicha = 100/cantEnLinea;
-    let fichasJ1 = [];
-    let fichasJ2 = [];
-    let tablero = new Tablero(context, cantEnLinea, 'rgba(0, 0, 255, 1)', backgroundImage, tamanioFicha);
+    let fichasJ1 = []
+    let fichasJ2 = []
+    let tablero = new Tablero(context, cantEnLinea, 'rgba(0, 0, 255, 1)', backgroundImage, tamanioFicha)
     let turnoJugador = 1; // Maneja cual es el jugador que le toca el turno, Inicia jugador 1 
     //Se crea la ficha que va a estar en juego 
     let fichaEnJuego =  new Ficha(getXInicialFicha(), getYInicialFicha(), tamanioFicha,`rgba(255,0,0,255)`, context, 2, imagen2);
     let terminoJuego = false;
     
-    
-  
-
     function play() {
-        if(!terminoJuego){
+        temporizadorJuego(terminoJuego);
+        if(terminoJuego){
             if(definirGanador(1)){
                 //Muestra mensaje ganador al final del juego
                 setTimeout(function(){ mostrarMsj("El ganador es el Jugador 1"); }, 100);//Tarda 0.1 segundos en paraecer el mensaje 
@@ -727,7 +722,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         if (mousePresionado && !animacion)  {
              // Verifica si hay una entrada disponible en el tablero y si es dibujable
             if(getEntrada()>=0
-            && tablero.entradaFichas[getEntrada()].drawable){
+            && tablero.entradaFichas[getEntrada()].getDibujable()){
                 // Si hay una entrada disponible y es dibujable
                 // inicia la animación de la ficha cayendo en el tablero
                 animateFichaFall(); 
@@ -871,12 +866,6 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     console.log("Fichas dibujadas");
     play();
     console.log("Inicia Juego");
-
-    document.querySelector("#reiniciar").addEventListener('click', function(){
-        // iniciarJuego();
-        temporizadorJuego();
-        
-    });
 }
 
 

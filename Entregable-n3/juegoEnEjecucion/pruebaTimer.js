@@ -47,9 +47,9 @@ function temporizadorJuego(){
 //Boton de reiniciar juego:
 //Cuando se toca el boton se borra el tablero y se vuelve a dibujar
 
-let btnReiniciar = document.querySelector("#reiniciarJuego");
-btnReiniciar.addEventListener('click', function(){
-   // temporizadorJuego();
-    console.log("hola");
-});
+// let btnReiniciar = document.querySelector("#reiniciarJuego");
+// btnReiniciar.addEventListener('click', function(){
+//    // temporizadorJuego();
+//     console.log("hola");
+// });
 

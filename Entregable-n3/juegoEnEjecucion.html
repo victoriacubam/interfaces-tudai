@@ -119,53 +119,26 @@
     </div>
     
     <div class="juegoEnEjecucion">
-<<<<<<< HEAD
-        <button class="btn-secundario" id="reiniciarJuego">Reiniciar juego</button>
+        <!-- <button class="btn-secundario" id="reiniciarJuego">Reiniciar juego</button> -->
         <div id="caratula">
-            <h3 id="temporizadorJuego">00:10</h3>
-=======
-        <!-- <div id="caratula">
->>>>>>> cfadeab6cbf83d1dccb08808b9d5feb6e808c74e
-            <div id="selectorPersonaje">
-                <h1>Seleccione su personaje</h1>
-                <div id="jugador1">
-                    <h2>Jugador 1</h2>
-                    <img class="jugador1 bugsbunny" src="css/imagenes/bugsbunny.png" alt="">
-                    <img class="jugador1 patolucas" src="css/imagenes/patolucas.png" alt="">
-                    <img class="jugador1 tweety" src="css/imagenes/tweety.png" alt="">
-                    <img class="jugador1 wolf" src="css/imagenes/wolf.png" alt="">
-                </div>
-                <div id="jugador2">
-                    <h2>Jugador 2</h2>
-                    <img class="jugador2 bugsbunny" src="css/imagenes/bugsbunny.png" alt="">
-                    <img class="jugador2 patolucas" src="css/imagenes/patolucas.png" alt="">
-                    <img class="jugador2 tweety" src="css/imagenes/tweety.png" alt="">
-                    <img class="jugador2 wolf" src="css/imagenes/wolf.png" alt="">
-                </div>
-<<<<<<< HEAD
+            <div>
+                <h2>Cuatro en linea</h2>
+                <h3 id="temporizadorJuego"class="ocultar">00:10</h3>
+                <h3 id="reiniciar"class="ocultar">Reiniciar</h3>
             </div>
-            <canvas id="miCanvas" width= "1000" height= "500" >
-
-            </canvas>
-        </div>
-        <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button>
-=======
-            </div> -->
             <canvas class="canvas" id="canvas" width="1000" height="500"></canvas>
-        <!-- </div>
-        <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button> -->
->>>>>>> cfadeab6cbf83d1dccb08808b9d5feb6e808c74e
+        </div>
+        <!-- <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button> -->
 
         <!-- MODIFICAR -->
         <section id="instrucciones">
             <div id="armas">
+                <h3>Tienen que elegir 2 de sus personajes favoritos</h3> 
                 <div>
-                    <h3>Tu personaje sera Bugsbunny y tu arma de combate sera</h3> 
-                    <img src="css/imagenes/iconos/zanahoria.svg" id="zanahoria" />
-                </div>
-                <div>
-                    <h3>Tu contrincante sera El Pato Lucas y su arma de combate sera</h3>
-                    <img src="css/imagenes/iconos/guante.svg" id="guante" />
+                    <img src="css/imagenes/Juego/patolucas.png"/>
+                    <img src="css/imagenes/Juego/bugsbunny.png"/>
+                    <img src="css/imagenes/Juego/tweety.png"/>
+                    <img src="css/imagenes/Juego/wolf.png"/>
                 </div>
             </div>
             
@@ -183,7 +156,7 @@
 
             <div id="comoGanar">
                 <h2>¿Como ganar la partida?</h2>
-                <h3>Para vencer a tu enemigo deber lograr depositar tu arma en 4 celdas consecutivas de manera vertical, horizontal o en diagonal</h3>
+                <h3>Para vencer a tu enemigo deber lograr depositar tu arma en <span id="cantCeldas">4, 5 o 6</span> celdas consecutivas de manera vertical, horizontal o en diagonal</h3>
             </div>
         </section>
 
@@ -339,13 +312,9 @@
 <script src="js/galeria.js"></script>
 <script src="juegoEnEjecucion/Figure.js"></script>
 <script src="juegoEnEjecucion/Ficha.js"></script>
-<<<<<<< HEAD
-<script src="juegoEnEjecucion/pruebaTimer.js"></script>
 
-=======
 <script src="juegoEnEjecucion/Tablero.js"></script>
 <script src="juegoEnEjecucion/Casilla.js"></script>
->>>>>>> cfadeab6cbf83d1dccb08808b9d5feb6e808c74e
 <script src="juegoEnEjecucion/main.js"></script>
 
 
