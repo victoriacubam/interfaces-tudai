@@ -19,7 +19,7 @@ const botonIniciarJuego= new Image();
 botonIniciarJuego.src= "css/imagenes/Juego/boton-inicio-juego.png";
 //Fondo de juego
 const background2 = new Image();
-background2.src = "css/imagenes/Juego/caratula.png";
+background2.src = "css/imagenes/Juego/fondoTablero.png";
 //Fondo tablero
 const fondoTablero = new Image();
 fondoTablero.src = "css/imagenes/Juego/fondoBlanco.png";
@@ -42,6 +42,8 @@ letrero.src = "css/imagenes/Juego/anuncia-ganador.png";
 /**
  * MOSTRAR MENU DE INSTRUCCIONES , CANTIDAD DE FICHAS EN LINEA Y CON QUE FICHAS JUGAR 
  */
+CargarImagenes();
+
 function CargarImagenes() {    
     let contador = 0;
     // Variables para controlar los estados del listener del mouse.
@@ -480,9 +482,11 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     }
     function getYInicialFicha(){
         if(turnoJugador == 1){
-            return canvasHeight-20-fichasJ2.length*11; //Ubica la ficha que va a estar en juego en Y
+            return 100;
+            //return canvasHeight-10-fichasJ2.length*11; //Ubica la ficha que va a estar en juego en Y
         }else{
-            return canvasHeight-20-fichasJ1.length*11;
+            //return canvasHeight-10-fichasJ1.length*11;
+            return 100; 
         }
     }
     
@@ -684,18 +688,67 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
 
     
     //Dibujar todas las fichas 
-    function dibujarFichasJuagadores(){
-        for (let i = 1; i < (fichasTotales/2)+1; i++) {
-            fichaPila =  new Ficha(getXInicialFicha, getYInicialFicha, tamanioFicha,`rgba(255,0,0,255)`, context, 2, imagen2);
-            fichasJ1.push(fichaPila)
+    // function dibujarFichasJuagadores(){
+    //     for (let i = 1; i < (fichasTotales/2)+1; i++) {
+    //         fichaPila =  new Ficha(getXInicialFicha, getYInicialFicha, tamanioFicha,`rgba(255,0,0,255)`, context, 2, imagen2);
+    //         fichasJ1.push(fichaPila)
+            
+    //     }
+    //     for (let i = 1; i < (fichasTotales/2)+1; i++) {
+    //         fichaPila2 =  new Ficha(getXInicialFicha, getYInicialFicha, tamanioFicha,`rgba(255,0,0,255)`, context, 1, imagen1)
+    //         fichasJ2.push(fichaPila2);
+            
+    //     }
+     
+    //     drawAll();
+    // }
+
+    function dibujarFichasJuagadores() {
+        // Crear y dibujar fichas para el jugador 1
+        for (let i = 1; i <= (fichasTotales / 2); i++) {
+            let minX = 50;
+            let maxX = 200;
+            let numeroAleatorioX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+
+            let minY = 300;
+            let maxY = 450;
+            let numeroAleatorioY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+
+
+            let fichaPila = new Ficha(numeroAleatorioX,numeroAleatorioY, tamanioFicha, `rgba(255, 0, 0, 255)`, context, 1, imagen1);
+            
+            fichasJ1.push(fichaPila);
+
+            console.log(fichasJ1);
         }
-        for (let i = 1; i < (fichasTotales/2)+1; i++) {
-            fichaPila2 =  new Ficha(getXInicialFicha, getYInicialFicha, tamanioFicha,`rgba(255,0,0,255)`, context, 1, imagen1)
-            fichasJ2.push(fichaPila2)
+    
+        // Crear y dibujar fichas para el jugador 2
+        for (let i = 1; i <= (fichasTotales / 2); i++) {
+            let minX = 950;
+            let maxX = 800;
+            let numeroAleatorioX = Math.floor(Math.random() * (maxX - minX + 1)) + minX;
+
+            let minY = 300;
+            let maxY = 450;
+            let numeroAleatorioY = Math.floor(Math.random() * (maxY - minY + 1)) + minY;
+
+
+            let fichaPila2 = new Ficha(numeroAleatorioX,numeroAleatorioY, tamanioFicha, `rgba(255, 0, 0, 255)`, context, 2, imagen2);
+            
+            fichasJ2.push(fichaPila2);
+
+            console.log(fichasJ2);
         }
+    
         drawAll();
     }
+   
     
+    
+    
+    
+    
+   
     
     let mousePresionado = false;
     let animacion = false;
@@ -941,7 +994,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
          
         // Event listener del boton 
         canvas.addEventListener("click", function (event) {
-            let listenerEnabled = true; 
+             
             listenerEnabledSelector = true;
             if(listenerEnabledSelector){
                 const clickX = event.clientX - canvas.getBoundingClientRect().left;
@@ -1418,9 +1471,9 @@ CargarImagenes();
 
 // function dibujarFichas(j, array, inicioX, inicioY, finX, finY){
 //     for (let i=0; i<(6*7)/2; i++){
-//         //let posX = x;
-//         //let posY = altoCanvas/2 + i;
-//         //let posY = 20*i;
+//         let posX = x;
+//         let posY = altoCanvas/2 + i;
+//         let posY = 20*i;
 
 //         let difX = finX - inicioX;
 //         let difY = finY - inicioY;
