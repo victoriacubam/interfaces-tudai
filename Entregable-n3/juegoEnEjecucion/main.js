@@ -242,7 +242,7 @@ function CargarImagenes() {
             const clickX = event.clientX - canvas.getBoundingClientRect().left;
             const clickY = event.clientY - canvas.getBoundingClientRect().top;
 
-            if (clickX <= 100 && clickY >= 200) {
+            if (clickX <= 250 && clickY >= 0) {
                 // Si el click ocurre en ese rango se vuelve al menu de elejir fichas
                  
                 listenerEnabledSelector = false;
@@ -1191,7 +1191,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             const clickX = event.clientX - canvas.getBoundingClientRect().left;
             const clickY = event.clientY - canvas.getBoundingClientRect().top;
 
-            if (clickX <= 100 && clickY >= 200) {
+            if (clickX <= 250 && clickY >= 0) {
                 // Si el click ocurre en ese rango se vuelve al menu de elejir fichas 
                 listenerEnabledSelector = false;
                 listenerEnabled = true;
