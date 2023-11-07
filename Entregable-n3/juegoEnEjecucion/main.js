@@ -66,7 +66,7 @@ function CargarImagenes() {
         context.strokeStyle = "black";
         context.lineWidth = 4;
         context.textAlign = "center";
-        let texto = "Preparate para la divercion!";
+        let texto = "Preparate para la diversión!";
         //Posicion X e Y en el canvas 
         let x = canvas.width / 2;
         let y = 100;
@@ -347,7 +347,7 @@ function clearCanvas() {
 CargarImagenes();
 
 // //temporizador
-const tiempoInicial = 10/60;
+const tiempoInicial = 60/60;
 let temporizador = document.querySelector("#temporizadorJuego");
 let intervalo = null;
 
@@ -416,7 +416,6 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             } else {
                 temporizador.innerHTML = `0${minutes}:${seconds}`;
             }
-            console.log(tiempo);
             if (tiempo > 0) {
                 tiempo--;
             } else {
@@ -959,13 +958,13 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     console.log("Inicia Juego");
 
     document.querySelector("#reiniciar").addEventListener('click', function(){
-        console.log("Se reinicia juego")
-        temporizadorActivo=false
-        console.log("Se detiene el tiempo")
+        console.log("Se reinicia juego");
+        temporizadorActivo=false;
+        console.log("Se detiene el tiempo");
         mostrarMenu();
+        document.querySelector("#temporizadorJuego").classList.add("ocultar");
+        document.querySelector("#reiniciar").classList.add("ocultar");
     });
-
-  
 
     function mostrarBtnReiniciar(texto) {
         listenerEnabledSelector = false;
@@ -1007,7 +1006,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         context.strokeStyle = "black";
         context.lineWidth = 4;
         context.textAlign = "center";
-        let texto = "Preparate para la divercion!";
+        let texto = "Preparate para la diversión!";
         //Posicion X e Y en el canvas 
         let x = canvas.width / 2;
         let y = 100;
@@ -1065,7 +1064,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                     modoJuego = 6;
                     mostrarSeleccionBandos(); 
                 }
-                instrucciones.innerHTML = modoJuego;
+                //instrucciones.innerHTML = modoJuego;
             }
         });
     }
@@ -1174,8 +1173,9 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             context.fillText(texto, x, y);
         }
     }
+    let listenerEnabledSelector;
     canvas.addEventListener("click", function (event) {
-        let listenerEnabledSelector=true;
+        console.log("*");
         if(listenerEnabledSelector){
             const clickX = event.clientX - canvas.getBoundingClientRect().left;
             const clickY = event.clientY - canvas.getBoundingClientRect().top;
