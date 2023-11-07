@@ -1136,15 +1136,22 @@ h3#temporizadorJuego, #reiniciar {
 
 
 
-#selectorPersonaje {
+#div-inicio {
   background-image: url(imagenes/descripcion-fondo.png);
   position: absolute;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   z-index: 4;
   width: var(--anchoCanvas);
   height: var(--altoCanvas);
+}
+
+#empezar-jugar-ejecucion {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  z-index: 10;
 }
 
 .cerrar {
@@ -1167,7 +1174,9 @@ h3#temporizadorJuego, #reiniciar {
 #miCanvas {
   position: absolute;
   z-index: 3;
+  display: none;
 }
+
 
 #instrucciones{
   display: flex;
