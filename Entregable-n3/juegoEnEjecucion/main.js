@@ -4,6 +4,10 @@ let context = canvas.getContext('2d');
 let canvasWidth = canvas.width;
 let canvasHeight = canvas.height;
 
+// canvas.addEventListener('click', function(event){
+//     event.preventDefault();
+// })
+
 /**
  * CARGA DE IMAGENES PARA EJECUTAR EL JUEGO
  */
@@ -66,7 +70,7 @@ function CargarImagenes() {
         context.strokeStyle = "black";
         context.lineWidth = 4;
         context.textAlign = "center";
-        let texto = "Preparate para la divercion!";
+        let texto = "Preparate para la diversion!";
         //Posicion X e Y en el canvas 
         let x = canvas.width / 2;
         let y = 100;
@@ -232,13 +236,15 @@ function CargarImagenes() {
             context.fillText(texto, x, y);
         }
     }
+    
     canvas.addEventListener("click", function (event) {
         if(listenerEnabledSelector){
             const clickX = event.clientX - canvas.getBoundingClientRect().left;
             const clickY = event.clientY - canvas.getBoundingClientRect().top;
 
-            if (clickX <= 100 && clickY >= -canvasHeight -30) {
-                // Si el click ocurre en ese rango se vuelve al menu de elejir fichas 
+            if (clickX <= 100 && clickY >= 200) {
+                // Si el click ocurre en ese rango se vuelve al menu de elejir fichas
+                 
                 listenerEnabledSelector = false;
                 listenerEnabled = true;
                 mostrarMenu();
@@ -293,6 +299,7 @@ function CargarImagenes() {
                         }    
                     }
                 }
+                
                 mostrarBandos();
                 
             }
@@ -347,7 +354,7 @@ function clearCanvas() {
 CargarImagenes();
 
 // //temporizador
-const tiempoInicial = 10/60;
+const tiempoInicial = 90/60;
 let temporizador = document.querySelector("#temporizadorJuego");
 let intervalo = null;
 
@@ -443,13 +450,13 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 //Muestra mensaje ganador al final del juego
                 setTimeout(function(){ mostrarMsj("El ganador es el Jugador 1"); }, 100);//Tarda 0.1 segundos en paraecer el mensaje 
                 terminoJuego = true;
-                mostrarBtnReiniciar("Volver a jugar");
+                temporizadorActivo=false; 
                 
             }else if(definirGanador(2)){
                  //Muestra mensaje ganador al final del juego
                 setTimeout(function(){ mostrarMsj("El ganador es el Jugador 2"); }, 100);//Tarda 0.1 segundos en paraecer el mensaje 
                 terminoJuego = true;
-                mostrarBtnReiniciar("Volver a jugar");
+                temporizadorActivo=false;
                 
             }
             if(fichasJ1.length+fichasJ2.length>0){
@@ -675,6 +682,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         // Dibuja  la entrada del tablero(por donde entran las fichas)  y el fondo del juego.
         drawEntradaTablero();
         drawFondo();
+        
     }
 
     //Dibuja el fondo del tablero con el mismo color del fondo de las celdas, para que no se vean espacios en blanco 
@@ -988,12 +996,13 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 const clickX = event.clientX - canvas.getBoundingClientRect().left;
                 const clickY = event.clientY - canvas.getBoundingClientRect().top;
     
-                if (clickX >= 450 && clickX <= 500 && clickY >= 115 && clickY <= 315) {
+                if (clickX >= 350 && clickX <= 600 && clickY >= 115 && clickY <= 415) {
                     // Si el click ocurre en ese rango se vuelve al menu de elegir fichas 
                     listenerEnabledSelector = false;
                     listenerEnabled = true;
-                    console.log("Clickeado");
                     mostrarMenu();
+                    console.log("Clickeado");
+                    
                 }
             }
         });
@@ -1007,7 +1016,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         context.strokeStyle = "black";
         context.lineWidth = 4;
         context.textAlign = "center";
-        let texto = "Preparate para la divercion!";
+        let texto = "Preparate para la diversion!";
         //Posicion X e Y en el canvas 
         let x = canvas.width / 2;
         let y = 100;
@@ -1174,13 +1183,15 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             context.fillText(texto, x, y);
         }
     }
+
+    let listenerEnabledSelector;
     canvas.addEventListener("click", function (event) {
-        let listenerEnabledSelector=true;
+        
         if(listenerEnabledSelector){
             const clickX = event.clientX - canvas.getBoundingClientRect().left;
             const clickY = event.clientY - canvas.getBoundingClientRect().top;
 
-            if (clickX <= 100 && clickY >= -canvasHeight -30) {
+            if (clickX <= 100 && clickY >= 200) {
                 // Si el click ocurre en ese rango se vuelve al menu de elejir fichas 
                 listenerEnabledSelector = false;
                 listenerEnabled = true;
