@@ -144,6 +144,7 @@ function CargarImagenes() {
         bando2 = [];
         // Arreglo de bandos
         console.log("Cargando bandos");
+       
         //Bando 1
         let y = 170;
         let size = 90;
@@ -162,6 +163,7 @@ function CargarImagenes() {
         image = fichaWolf;
         let f4 = new Ficha(800, y, radius, color, context, 1, image);
         bando1.push(f4);
+        
         // Bando 2
         y = 350;
          //Dibuja las opciones de ficha que tiene el jugador 1 
@@ -179,6 +181,7 @@ function CargarImagenes() {
         bando2.push(f8);
         mostrarBandos();
     }
+
     function mostrarBandos() {
         clearCanvas();
         context.drawImage(backgroundImage, -15, 0, canvas.width+15, canvas.height);
@@ -198,13 +201,11 @@ function CargarImagenes() {
         
         y = 170;
         
-        
         texto = "VS";
         y = 270;
         context.strokeText(texto, x, y);
         context.fillText(texto, x, y);
 
-        
         texto = "Volver";
         x = 60;
         y = canvasHeight - (canvasHeight-30);
@@ -380,37 +381,35 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     let temporizadorActivo = true; // Variable de control para el temporizador
 
     function temporizadorJuego() {
-    clearInterval(intervalo);
-    let tiempo = tiempoInicial * 60;
-    intervalo = setInterval(() => {
-        if (temporizadorActivo) {
-            let minutes = Math.floor(tiempo / 60);
-            let seconds = tiempo % 60;
-            if (seconds < 10) {
-                temporizador.innerHTML = `0${minutes}:0${seconds}`;
+        clearInterval(intervalo);
+        let tiempo = tiempoInicial * 60;
+        intervalo = setInterval(() => {
+            if (temporizadorActivo) {
+                let minutes = Math.floor(tiempo / 60);
+                let seconds = tiempo % 60;
+                if (seconds < 10) {
+                    temporizador.innerHTML = `0${minutes}:0${seconds}`;
+                } else {
+                    temporizador.innerHTML = `0${minutes}:${seconds}`;
+                }
+                if (tiempo > 0) {
+                    tiempo--;
+                } else {
+                    clearInterval(intervalo);
+                    terminoJuego = true;
+                    // Llamar a la función que dice el ganador o mostrar un mensaje
+                    console.log("Se terminó el tiempo");
+                    mostrarMsj("Se terminó el tiempo");
+                    mostrarBtnReiniciar("Reiniciar");
+                    temporizadorActivo = false; // Desactivar el temporizador
+                }
             } else {
-                temporizador.innerHTML = `0${minutes}:${seconds}`;
+                clearInterval(intervalo); // Detener el temporizador si la variable de control es falsa
             }
-            if (tiempo > 0) {
-                tiempo--;
-            } else {
-                clearInterval(intervalo);
-                terminoJuego = true;
-                // Llamar a la función que dice el ganador o mostrar un mensaje
-                console.log("Se terminó el tiempo");
-                mostrarMsj("Se terminó el tiempo");
-                mostrarBtnReiniciar("Reiniciar");
-                temporizadorActivo = false; // Desactivar el temporizador
-            }
-        } else {
-            clearInterval(intervalo); // Detener el temporizador si la variable de control es falsa
-        }
-    }, 1000);
-}
+        }, 1000);
+    }
     
     
- 
-
     function play() {
         if(!terminoJuego){
             if(definirGanador(1)){
@@ -420,7 +419,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 temporizadorActivo=false; 
                 
             }else if(definirGanador(2)){
-                 //Muestra mensaje ganador al final del juego
+                //Muestra mensaje ganador al final del juego
                 setTimeout(function(){ mostrarMsj("El ganador es el Jugador 2"); }, 100);//Tarda 0.1 segundos en paraecer el mensaje 
                 terminoJuego = true;
                 temporizadorActivo=false;
@@ -461,9 +460,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     function getYInicialFicha(){
         if(turnoJugador == 1){
             return 100;
-            //return canvasHeight-10-fichasJ2.length*11; //Ubica la ficha que va a estar en juego en Y
         }else{
-            //return canvasHeight-10-fichasJ1.length*11;
             return 100; 
         }
     }
@@ -481,7 +478,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             }
             return false;
         }
-        //Controla fichas de forma vertical recorriendo x colomnas 
+        //Controla fichas de forma vertical recorriendo x columnas 
         function verificaVerticalFila(fila, columna, cont){
             // Si la casilla actual está vacía no hay secuencia.
             if(tablero.casillas[fila][columna].getTeam() == null){
@@ -509,6 +506,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 }
             }
         }
+
         function verificaHorizontal(){
             for (let i = 0; i < tablero.filas; i++) {
                 for(let j = 0; j < tablero.columnas-cantEnLinea+1; j++){
@@ -519,6 +517,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             }
             return false;
         }
+
         function verificaHorizontalFila(fila, columna, cont){
             // Si la casilla actual está vacía no hay secuencia 
             if(tablero.casillas[fila][columna].getTeam() == null){
@@ -546,6 +545,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 }
             }
         }
+
         function verificaDiagonal(){
             for (let i = 0; i < tablero.filas; i++) {
                 for(let j = 0; j < tablero.columnas; j++){
@@ -557,6 +557,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             }
             return false;
         }
+
         function verificaDiagonalDerechaAbajo(fila, columna, cont){
             // Verificar si la casilla actual está vacía.
             if(tablero.casillas[fila][columna].getTeam() == null){
@@ -567,7 +568,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                     tablero.casillas[fila][columna].setColorFicha(`rgba(0,255,0,255)`);
                     return true;
                 }else{
-                      // Si las fichas no pertenecen al mismo equipo, no hay secuencia ganadora.
+                    // Si las fichas no pertenecen al mismo equipo, no hay secuencia ganadora.
                     return false;
                 }
             }else{
@@ -584,6 +585,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 }
             }
         }
+
         function verificaDiagonalDerechaArriba(fila, columna, cont){
             // Verificar si la casilla actual está vacía.
             if(tablero.casillas[fila][columna].getTeam() == null){
@@ -611,6 +613,8 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
                 }
             }
         }
+
+        //Si encontró 4/5/6 en linea
         if(verificaHorizontal() || verificaVertical() || verificaDiagonal()){
             return true;
         }else{
@@ -708,11 +712,6 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     }
    
     
-    
-    
-    
-    
-   
     
     let mousePresionado = false;
     let animacion = false;
@@ -926,6 +925,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         context.strokeText(mensaje, x, y);
         context.fillText(mensaje, x, y);
     }
+
     tablero.draw();
     console.log("Tablero Listo ");
     dibujarFichasJugadores();
@@ -974,6 +974,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
             }
         });
     }
+
     function mostrarMenu() {
         listenerEnabledSelector = false;
         context.drawImage(backgroundImage, -15, 0, canvas.width+15, canvas.height);
@@ -1095,6 +1096,7 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
         bando2.push(f8);
         mostrarBandos();
     }
+    
     function mostrarBandos() {
         clearCanvas();
         context.drawImage(backgroundImage, -15, 0, canvas.width+15, canvas.height);

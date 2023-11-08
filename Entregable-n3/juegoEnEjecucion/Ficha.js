@@ -17,7 +17,7 @@ class Ficha extends Figure {
             if (this.draweable) {
                 this.context.fillStyle = this.fill;
             } else {
-                //Si el personaje ya fue elejido anteriormente, se pinta la imagen de color rojo 
+                //Si el personaje ya fue elegido anteriormente, se pinta la imagen de color rojo 
                 this.context.fillStyle = 'rgba(255, 0, 0, 0.4)';
                 
             }

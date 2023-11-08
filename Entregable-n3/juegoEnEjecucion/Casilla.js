@@ -36,9 +36,6 @@ class Casilla extends Figure {
         }
     }
 
-    
-
-
     setColorFicha(color){
         if(this.ficha){
             this.ficha.fill = color;
@@ -61,6 +58,7 @@ class Casilla extends Figure {
     setFicha(ficha){
         this.ficha = ficha;
     }
+
     darkness(color, factor) {
         const rgba = color.match(/\d+/g); // Extraer los componentes R, G, B y A
         if (rgba) {
@@ -73,9 +71,11 @@ class Casilla extends Figure {
             return color; // Si el color no es válido, devolverlo sin cambios
         }
     }
+
     getX(){
         return this.posX;
     }
+    
     getY(){
         return this.posY;
     }
