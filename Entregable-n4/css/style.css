@@ -1,15 +1,17 @@
-/* body {
+body {
   background-color: #5499F8;
-} */
+}
 
 /* Header */
 header {
-  background: linear-gradient(to bottom,#5499F8 40%, #5498f800 45%);
+  background: linear-gradient(to bottom,#5499F8 36%, #5498f800 42%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 227px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Menu hamburguesa */
@@ -27,7 +29,7 @@ header {
 #linea2,
 #linea3 {
   display: block;
-  width: 34;
+  width: 34px;
   height: 4px;
   background-color: #FFE901;
   border-radius: 30px;
@@ -53,3 +55,23 @@ header {
   box-shadow:none;
 }
 
+#logo {
+  width: 590px;
+  height: 301px;
+  margin-top: 91px;
+}
+
+#btn-comprar {
+  margin-right: 100px;
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  background-color: #FFE901;
+  border-radius: 30px;
+  border: solid 4px #2981FF;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: #02187E;
+  box-shadow: 5px 5px rgba(2, 24, 126, 1);
+  -webkit-text-stroke: 1px #02187E;
+}
