@@ -872,6 +872,8 @@ function iniciarJuego(cantEnLinea, imagen1, imagen2) {
     play();
     console.log("Inicia Juego");
 
+
+    //Hasta ahora solo reinicia el temporizador
     document.querySelector("#reiniciar").addEventListener('click', function(){
         // iniciarJuego();
         temporizadorJuego();
