@@ -21,9 +21,11 @@ class Figure {
     getPosX() {
         return this.posX;
     }
+
     getPosY() {
         return this.posY;
     }
+    
     getFill() {
         return this.fill;
     }

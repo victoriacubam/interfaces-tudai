@@ -1136,15 +1136,22 @@ h3#temporizadorJuego, #reiniciar {
 
 
 
-#selectorPersonaje {
+#div-inicio {
   background-image: url(imagenes/descripcion-fondo.png);
   position: absolute;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   z-index: 4;
   width: var(--anchoCanvas);
   height: var(--altoCanvas);
+}
+
+#empezar-jugar-ejecucion {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  z-index: 10;
 }
 
 .cerrar {
@@ -1167,7 +1174,9 @@ h3#temporizadorJuego, #reiniciar {
 #miCanvas {
   position: absolute;
   z-index: 3;
+  display: none;
 }
+
 
 #instrucciones{
   display: flex;
@@ -1298,7 +1307,7 @@ h3#temporizadorJuego, #reiniciar {
   line-height: 46px;
   background-color: var(--sombra-S2);
   border-radius: 50%;
-  transform: translateY(-50%); 
+  /* transform: translateY(-50%);  */
 } 
 
 .btn-izq img{
@@ -1344,7 +1353,7 @@ h3#temporizadorJuego, #reiniciar {
   position: absolute;
   text-align: center;
   line-height: 46px;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   animation: zoom 0.5s ease-in-out;
 }
 
@@ -1373,11 +1382,11 @@ h3#temporizadorJuego, #reiniciar {
 
 .carrucel2 img{
   height: 340px;
-  object-fit: cover;
+  /* object-fit: cover; */
   margin-left: 14px;
-  width: calc((100% - 20px) / 3);
-  transition: transform 0.5s ease-in-out;
-  transform-style: preserve-3d;
+  /* width: calc((100% - 20px) / 3); */
+  /* transition: transform 0.5s ease-in-out; */
+  /* transform-style: preserve-3d; */
   backface-visibility: hidden;
 }
 

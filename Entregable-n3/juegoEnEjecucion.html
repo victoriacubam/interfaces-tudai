@@ -119,15 +119,20 @@
     </div>
     
     <div class="juegoEnEjecucion">
+        
         <div id="caratula">
             <div>
-                <h2>Bugs Bunny vs El Pato Lucas</h2>
-                <h3 id="temporizadorJuego"class="ocultar">00:10</h3>
+                <h2>Cuatro en linea</h2>
+                <h3 id="temporizadorJuego"class="ocultar"></h3>
                 <h3 id="reiniciar"class="ocultar">Reiniciar</h3>
             </div>
+            <div id="div-inicio"></div>
             <canvas class="canvas" id="canvas" width="1000" height="500"></canvas>
+            <button class="btn-primario" id="empezar-jugar-ejecucion" >Empezar a jugar</button>
         </div>
+       
 
+        
         <section id="instrucciones">
             <div id="armas">
                 <h3>Tienen que elegir 2 de sus personajes favoritos</h3> 
@@ -164,27 +169,26 @@
         </p>
 
         
-        <h2>¡No te quedes sin conocer al resto de los personajes de la historia!</h2>
+        <h2>¡Te invitamos a que conozcas un poco el juego!</h2>
         <section id="galeriaImagenes">
             <!-- carrucel -->
             <div class="wrapper">
                 <i id= "izq" type="button" class="btn-izq" > <img src="css/imagenes/iconos/flecha-izq.png"> </i>
                 <div class="carrucel2">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-1.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-2.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-3.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-4.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-5.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-6.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-7.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-8.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-9.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-10.jpg">
-                    <img class="carousel-item" src="css/imagenes/galeria/img-galeria-11.jpg">
+                    <img class="carousel-item" src="css/imagenes/galeria/img1-galeria.png">
+                    <img class="carousel-item" src="css/imagenes/galeria/img2-galeria.png">
+                    <img class="carousel-item" src="css/imagenes/galeria/img3-galeria.png">
+                    <img class="carousel-item" src="css/imagenes/galeria/img4-galeria.png">
+                    <img class="carousel-item" src="css/imagenes/galeria/img5-galeria.png">
+                    <img class="carousel-item" src="css/imagenes/galeria/img6-galeria.png">
+                    <img class="carousel-item" src="css/imagenes/galeria/img7-galeria.png">
+                    
                 </div>
                 <i id= "der" type="button" class="btn-der"> <img src="css/imagenes/iconos/flecha-der.png"> </i>
             </div>
         </section>
+
+        
 
         <div id="conocerMas">
         <h2>¿Queres conocer mas sobre el universo de los Looney Tunes?</h2>
@@ -307,6 +311,7 @@
 <script src="js/menu.js"></script>
 <script src="js/comentarios.js"></script>
 <script src="js/galeria.js"></script>
+<script src="js/btnEmpezarJuego.js"></script>
 <script src="juegoEnEjecucion/Figure.js"></script>
 <script src="juegoEnEjecucion/Ficha.js"></script>
 
