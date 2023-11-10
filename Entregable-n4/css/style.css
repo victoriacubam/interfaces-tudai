@@ -17,6 +17,7 @@ body {
 
 /**************** HEADER ****************/
 header {
+  z-index: 2;
   background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
   position: absolute;
   top: 0;
@@ -25,11 +26,11 @@ header {
   height: 227px;
   display: flex;
   justify-content: center;
-  z-index: 2;
   transition: all 0.3s ease;
 }
 
 header.fixed {
+  z-index: 100000;
   position: fixed;
   top: 0;
   height: 103px;
@@ -114,22 +115,102 @@ header.fixed {
 /**************** SECCION 1 SPIDEYS ****************/
 
 #seccion-1 {
-  background: url('imagenes/Seccion1/fondo1.png');
-  background-size: cover;
+  position: relative;
+  /* z-index: 1; */
+  /* background: url('imagenes/Seccion1/fondo1.png');
+  background-size: cover; */
   height: 720px;
   margin-top: 126px;
-  z-index: 1;
+  display: flex;
+}
 
+#seccion-1 img#fondo1 {
+  width: 100%;
+  height: 720px;
+}
+
+#seccion-1 img#edificio1, 
+#seccion-1 img#edificio2,
+#seccion-1 img#edificio3 {
+  position: absolute;
+  z-index: 3;
+}
+
+#seccion-1 img#edificio1 {
+  height: 720px;
+  width: 460px;
+  bottom: 0;
+  left: -55px;
+}
+
+#seccion-1 img#edificio2 {
+  height: 727.5;
+  width: 390px;
+  bottom: 0px;
+  right: -7px;
+}
+
+#seccion-1 img#edificio3 {
+  left: 29.5%;
+  height: 213.5px;
+  width: 560px;
+  bottom: -10px;
+}
+
+#seccion-1 img#personaje1,
+#seccion-1 img#personaje2,
+#seccion-1 img#personaje3 {
+  position: absolute;
+  z-index: 6;
+
+}
+
+#seccion-1 img#personaje1 {
+  width: 360px;
+  height: 444px;
+  left: 91px;
+  top: 262px;
+}
+
+#seccion-1 img#personaje2 {
+  width: 465px;
+  height: 465px;
+  left: 33.3%;
+  top: 277px;
+}
+
+#seccion-1 img#personaje3 {
+  width: 393px;
+  height: 393px;
+  right: 170px;
+  top: 209px;
+}
+
+#seccion-1 img#tela-araña-izq,
+#seccion-1 img#tela-araña-der {
+  position: absolute;
+  z-index: 100;
+}
+
+#seccion-1 img#tela-araña-izq {
+  left: -170px;
+  bottom: -200px;
+}
+
+#seccion-1 img#tela-araña-der {
+  right: -170px;
+  bottom: 70px;
 }
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
 
  #seccion-2 {
   position: relative;
+  top: -70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 5;
 }
 
 #seccion-2 div.full-width {
@@ -154,16 +235,17 @@ header.fixed {
 
 #seccion-2 div.width-1080 div.personaje {
   position: absolute;
-  right: -40px;
-  top: 70px;
+  right: -65px;
+  top: 150px;
 }  
+
 #seccion-2 div.width-1080 div.texto h2 {
   color: white;
   font-size: 60px;
   font-weight: 400;
   width: 585px;
   margin: 0;
-  margin-top: 150px;
+  margin-top: 200px;
 }
 
 #seccion-2 div.width-1080 div.texto p {
@@ -191,7 +273,7 @@ header.fixed {
   position: relative;
   width: 100%;
   height: 1085px;
-  background-color: white;
+  /* background-color: white; */
   z-index: 0;
   display: flex;
   justify-content: center;
