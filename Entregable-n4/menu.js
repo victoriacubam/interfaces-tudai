@@ -1,5 +1,22 @@
 'use strict'
 
+// Header fijo al hacer scroll
+
+let header = document.querySelector("#header");
+let logo = document.querySelector("#logo");
+let seccion1 = document.querySelector("#seccion-1");
+
+window.onscroll = function() {
+    if (window.scrollY > 0) { // Cambia 100 por el valor que prefieras para activar el cambio
+        header.classList.add("fixed");
+        logo.classList.add("fixed-img");
+
+      } else {
+        header.classList.remove("fixed");
+        logo.classList.remove("fixed-img");
+      }
+}
+
 //Menu hamburguesa
 
 document.querySelector("#btn-menu").addEventListener("click", activarMenu);
@@ -13,4 +30,6 @@ function activarMenu(){
     linea2.classList.toggle("activar-linea-2");
     linea3.classList.toggle("activar-linea-3");
 }
+
+
 

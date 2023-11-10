@@ -1,27 +1,65 @@
 body {
-  background-color: #5499F8;
+  /* background-color: #5499F8; */
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/**************** GENERAL ****************/
+
+.full-width {
+  width: 100%;
+}
+
+.width-1080 {
+  width: 1080px;
+  height: 720px;
 }
 
 /**************** HEADER ****************/
 header {
-  background: linear-gradient(to bottom,#5499F8 36%, #5498f800 42%);
+  background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 227px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+header.fixed {
+  position: fixed;
+  top: 0;
+  height: 103px;
+  background: linear-gradient(to bottom,#5499F8 85%, #5498f800 95%);
+}
+
+#logo {
+  width: 590px;
+  height: 301px;
+  margin-top: 91px;
+  transition: all 0.5s ease-in-out;
+}
+
+#logo.fixed-img {
+  position: absolute;
+  top: 16px;
+  width: 133px;
+  height: 68px;
+  margin-top: 0px;
 }
 
 /* Menu hamburguesa */
 #btn-menu {
-    width: 42px;
-    height: 36px;
-    translate: (-50%, -50%);
-    cursor: pointer;
-    margin-left: 100px;
-    margin-top: 20px;
+  position: absolute;
+  width: 42px;
+  height: 36px;
+  translate: (-50%, -50%);
+  cursor: pointer;
+  left: 100px;
+  top: 20px;
 }
 
 
@@ -55,21 +93,17 @@ header {
   box-shadow:none;
 }
 
-#logo {
-  width: 590px;
-  height: 301px;
-  margin-top: 91px;
-}
-
 #btn-comprar {
-  margin-right: 100px;
-  margin-top: 20px;
+  position: absolute;
+  right: 100px;
+  top: 20px;
   width: 200px;
   height: 50px;
   background-color: #FFE901;
   border-radius: 30px;
   border: solid 4px #2981FF;
   font-family: 'Lato', sans-serif;
+  font-weight: bolder;
   font-size: 20px;
   color: #02187E;
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
@@ -78,11 +112,85 @@ header {
 
 /**************** SECCION 1 SPIDEYS ****************/
 
+#seccion-1 {
+  background: url('imagenes/Seccion1/fondo1.png');
+  background-size: cover;
+  height: 720px;
+  margin-top: 126px;
+  z-index: 1;
+
+}
+
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
+
+#seccion-2 {
+  position: relative;
+  top: -71px;
+  background-color: #8F6AA6;
+  width: 100%;
+  height: 844px;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+#seccion-2 div.width-1080 {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+#seccion-2 div div {
+  flex-direction: column;
+  align-items: start;
+}
+
+#seccion-2 div h2 {
+  color: white;
+  font-size: 60px;
+  font-weight: 400;
+  width: 585px;
+  margin: 0;
+  margin-top: 219px;
+}
+
+#seccion-2 div p {
+  color: white;
+  font-size: 20px;
+  width: 580px;
+}
+
+#seccion-2 #spideys-edificio {
+  width: 751.65px;
+  height: 413.13px;
+}
+
+#seccion-2 div div img#personaje4 {
+  position: absolute;
+  top: 0;
+  right: 62px;
+  margin-top: 132px;
+  width: 553px;
+  height: 921px;
+}
 
 /**************** SECCION 3 Introduccion de los Spidey ****************/
 
+#seccion-3 {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+}
+
 /**************** SECCION 4 Pistas ****************/
+
+#seccion-4 {
+  background: url('imagenes/Seccion4/fondo2.png');
+}
 
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 
