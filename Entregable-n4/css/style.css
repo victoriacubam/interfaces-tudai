@@ -108,6 +108,7 @@ header.fixed {
   color: #02187E;
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
   -webkit-text-stroke: 1px #02187E;
+  cursor: pointer;
 }
 
 /**************** SECCION 1 SPIDEYS ****************/
@@ -123,59 +124,66 @@ header.fixed {
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
 
-#seccion-2 {
+ #seccion-2 {
   position: relative;
-  top: -71px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+#seccion-2 div.full-width {
+  position: absolute;
+  z-index: 0;
   background-color: #8F6AA6;
   width: 100%;
   height: 844px;
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
-  overflow: visible;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%);
 }
 
 #seccion-2 div.width-1080 {
+  z-index: 1;
+  position: relative;
   display: flex;
-  align-items: center;
-  z-index: 2;
 }
 
-#seccion-2 div div {
-  flex-direction: column;
-  align-items: start;
+#seccion-2 div.width-1080 div.texto {
+  position: absolute;
 }
 
-#seccion-2 div h2 {
+#seccion-2 div.width-1080 div.personaje {
+  position: absolute;
+  right: -40px;
+  top: 70px;
+}  
+#seccion-2 div.width-1080 div.texto h2 {
   color: white;
   font-size: 60px;
   font-weight: 400;
   width: 585px;
   margin: 0;
-  margin-top: 219px;
+  margin-top: 150px;
 }
 
-#seccion-2 div p {
+#seccion-2 div.width-1080 div.texto p {
   color: white;
   font-size: 20px;
   width: 580px;
 }
 
-#seccion-2 #spideys-edificio {
+#seccion-2 div.width-1080 div.texto img#spideys-edificio {
   width: 751.65px;
   height: 413.13px;
+  /* z-index: 1; */
 }
 
-#seccion-2 div div img#personaje4 {
-  position: absolute;
-  top: 0;
-  right: 62px;
-  margin-top: 132px;
+#seccion-2 div.width-1080 div.pesonaje img#personaje{
+  
   width: 553px;
   height: 921px;
+  z-index: 2;
 }
+
 
 /**************** SECCION 3 Introduccion de los Spidey ****************/
 
