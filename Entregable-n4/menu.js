@@ -4,13 +4,13 @@
 
 document.querySelector("#btn-menu").addEventListener("click", activarMenu);
 
-let linea1 = document.querySelector("#linea1");
-let linea2 = document.querySelector("#linea2");
-let linea3 = document.querySelector("#linea3");
+let linea1 = document.querySelector("#linea-1");
+let linea2 = document.querySelector("#linea-2");
+let linea3 = document.querySelector("#linea-3");
 
 function activarMenu(){
-    linea1.classList.toggle("activar-linea1");
-    linea2.classList.toggle("activar-linea2");
-    linea3.classList.toggle("activar-linea3");
+    linea1.classList.toggle("activar-linea-1");
+    linea2.classList.toggle("activar-linea-2");
+    linea3.classList.toggle("activar-linea-3");
 }
 

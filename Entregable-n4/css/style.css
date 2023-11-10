@@ -2,7 +2,7 @@ body {
   background-color: #5499F8;
 }
 
-/* Header */
+/**************** HEADER ****************/
 header {
   background: linear-gradient(to bottom,#5499F8 36%, #5498f800 42%);
   position: absolute;
@@ -25,9 +25,9 @@ header {
 }
 
 
-#linea1,
-#linea2,
-#linea3 {
+#linea-1,
+#linea-2,
+#linea-3 {
   display: block;
   width: 34px;
   height: 4px;
@@ -39,18 +39,18 @@ header {
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
 }
 
-#linea1.activar-linea1 {
+#linea-1.activar-linea-1 {
   transform: rotate(45deg) translate(-2px, -5px);
   box-shadow:none;
   
 }
 
-#linea2.activar-linea2 {
+#linea-2.activar-linea-2 {
   opacity: 0;
   margin-left: -30px;
 }
 
-#linea3.activar-linea3 {
+#linea-3.activar-linea-3 {
   transform: rotate(-45deg) translate(7px, 7px);
   box-shadow:none;
 }
@@ -75,3 +75,22 @@ header {
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
   -webkit-text-stroke: 1px #02187E;
 }
+
+/**************** SECCION 1 SPIDEYS ****************/
+
+/**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
+
+/**************** SECCION 3 Introduccion de los Spidey ****************/
+
+/**************** SECCION 4 Pistas ****************/
+
+/**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
+
+/**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
+
+/**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
+
+/**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
+
+/**************** FOOTER ****************/
+
