@@ -127,9 +127,9 @@ header.fixed {
  #seccion-2 {
   position: relative;
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 #seccion-2 div.full-width {
@@ -174,7 +174,6 @@ header.fixed {
 #seccion-2 div.width-1080 div.texto img#spideys-edificio {
   width: 751.65px;
   height: 413.13px;
-  /* z-index: 1; */
 }
 
 #seccion-2 div.width-1080 div.pesonaje img#personaje{
@@ -191,7 +190,7 @@ header.fixed {
   position: relative;
   width: 100%;
   background-color: white;
-  z-index: 1;
+  z-index: 0;
 }
 
 /**************** SECCION 4 Pistas ****************/
