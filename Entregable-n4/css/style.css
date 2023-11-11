@@ -2,6 +2,7 @@ body {
   /* background-color: #5499F8; */
   margin: 0;
   font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
 
 /**************** GENERAL ****************/
@@ -305,6 +306,7 @@ header.fixed {
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
 
+
 #seccion-6{
   display: flex;
   justify-content: center;
@@ -330,13 +332,12 @@ header.fixed {
   display: flex;
   justify-content: space-between;
   height: 460px;
-  overflow: hidden;
-  overflow-y: scroll;
-  padding-right: 15px;
 }
 
 #col-img {
   width: 556px;
+  position: sticky;
+  top: 200px;
 }
 
 #col-textos .col-texto {
@@ -350,9 +351,15 @@ header.fixed {
   margin-top: 10px;
   width: 556px;
   height: 301px;
-  transition: transform 0.5s ease-in-out;
+  /* transition: transform 0.5s ease-in-out; */
+
 }
 
+/* .sticky {
+  position: fixed;
+  top: 50%;
+  transform: translate(0%, -50%);
+} */
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
 
