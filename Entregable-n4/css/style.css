@@ -305,6 +305,55 @@ header.fixed {
 
 /**************** SECCION 6 "Mas amigos, mas diversión!" ****************/
 
+#seccion-6{
+  display: flex;
+  justify-content: center;
+}
+
+#seccion-6 h2 {
+  font-size: 60px;
+}
+
+#seccion-6 h3{
+  font-size: 40px;
+  font-weight: 500;
+  margin: 0;
+  width: 467px;
+}
+
+#seccion-6 p {
+  font-size: 20px;
+  width: 467px;
+}
+
+#seccion-6 div.container-scroll{
+  display: flex;
+  justify-content: space-between;
+  height: 460px;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding-right: 15px;
+}
+
+#col-img {
+  width: 556px;
+}
+
+#col-textos .col-texto {
+  height: 460px;
+  margin-top: 10px;
+  /* margin: 10px 10px; */
+}
+
+#col-img img{
+  margin-bottom: 159px;
+  margin-top: 10px;
+  width: 556px;
+  height: 301px;
+  transition: transform 0.5s ease-in-out;
+}
+
+
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
 
 /**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
