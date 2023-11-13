@@ -297,8 +297,26 @@ header.fixed {
 
 /**************** SECCION 4 Pistas ****************/
 
-#seccion-4 {
-  background: url('imagenes/Seccion4/fondo2.png');
+#fondo{
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#pista1 , #pista2 , #pista3{
+  position: absolute;
+  z-index: 1;
+  margin-left: 100px;
+}
+#pista1{
+  border: none;
+  margin-top: -60px;
+}
+#pista2{
+  padding-top: 40px;
+}
+#pista3{
+  padding-top: 200px;
 }
 
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
