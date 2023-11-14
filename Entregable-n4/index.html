@@ -92,9 +92,9 @@
         </section>
         <section id="seccion-4">
             <img id="fondo" src="css/imagenes/Seccion4/fondo2.png" alt="">
-            <img id="pista1"src="css/imagenes/Seccion4/pista1.png" alt="">
-            <img id="pista2"src="css/imagenes/Seccion4/pista2.png" alt="">
-            <img id="pista3"src="css/imagenes/Seccion4/pista3.png" alt="">
+            <img  class="pistas" id="pista1"src="css/imagenes/Seccion4/pista1.png" alt="">
+            <img  class="pistas" id="pista2"src="css/imagenes/Seccion4/pista2.png" alt="">
+            <img  class="pistas" id="pista3"src="css/imagenes/Seccion4/pista3.png" alt="">
         </section>
         
         <section id="seccion-5"></section>
@@ -109,17 +109,17 @@
             </div>
 
             <div id="personajes" class="container">
-                <img id= "personaje-1" class="personaje" onclick="mostrarPopUp1()" src="css/imagenes/Seccion7/personaje8.png" alt="" data-color="rosa">
-                <img id= "personaje-2" class="personaje" onclick="mostrarPopUp2()"src="css/imagenes/Seccion7/personaje9.png" alt="" data-color="celeste">
-                <img id= "personaje-3" class="personaje" onclick="mostrarPopUp3()"src="css/imagenes/Seccion7/personaje10.png" alt="" data-color="azul">
+                <img id= "personaje-1" class="personaje" src="css/imagenes/Seccion7/personaje8.png" alt="" onclick="mostrarPopUp('pop-up-1')" data-color="rosa">
+                <img id= "personaje-2" class="personaje" src="css/imagenes/Seccion7/personaje9.png" alt="" onclick="mostrarPopUp('pop-up-2')" data-color="celeste">
+                <img id= "personaje-3" class="personaje" src="css/imagenes/Seccion7/personaje10.png" alt="" onclick="mostrarPopUp('pop-up-3')" data-color="azul">
             </div>
 
-            <div class="popUp" id="pop-up-1">
+           <div class="popUp" id="pop-up-1">
                 <div class="imagen-container">
                   <img src="css/imagenes/pop-ups/gwenstacy.png" alt="">
                 </div>
                 <div class="contenido">
-                  <button id="cerrar" onclick="ocultarPopUp1()"  >X</button>
+                  <button class="cerrar" onclick="ocultarPopUp('pop-up-1')"  >X</button>
                   <h2>Gwen Stacy</h2>
                   <p>También conocida como Spider-Woman o Spider-Gwen, es un personaje de cómic de Marvel Comics que proviene de una realidad alternativa en el multiverso de Spider-Man. Sus poderes son en gran medida similares a los de otros Spider-Personajes, pero Gwen tiene algunas variaciones específicas. Los poderes de Spider-Gwen incluyen:
                     <br>
@@ -144,12 +144,12 @@
                 </p>
             </div>
 
-            <div class="popUp" id="pop-up-2">
+              <div class="popUp" id="pop-up-2">
                 <div class="imagen-container">
                   <img src="css/imagenes/pop-ups/peterparker.png" alt="">
                 </div>
                 <div class="contenido">
-                  <button id="cerrar" onclick="ocultarPopUp2()" >X</button>
+                    <button class="cerrar" onclick="ocultarPopUp('pop-up-2')">X</button>
                   <h2>Peter Parker</h2>
                   <p>también conocido como Spider-Man, es un personaje de ficción de Marvel Comics. Los poderes de Spider-Man son el resultado de una picadura de araña radiactiva que le otorgó habilidades especiales. Sus poderes incluyen:
                     <br>
@@ -171,14 +171,14 @@
                     <br>
                     Estos son los poderes principales de Spider-Man en los cómics y en varias adaptaciones cinematográficas y televisivas. Cabe destacar que a lo largo de la historia de los cómics, Spider-Man ha adquirido o perdido temporalmente otros poderes y habilidades debido a diferentes tramas y eventos.t
                 </p>
-            </div>
+            </div> 
 
             <div class="popUp" id="pop-up-3">
                 <div class="imagen-container">
                   <img src="css/imagenes/pop-ups/milesmorales.png" alt="">
                 </div>
                 <div class="contenido">
-                  <button id="cerrar" onclick="ocultarPopUp1()" >X</button>
+                    <button class="cerrar" onclick="ocultarPopUp('pop-up-3')">X</button>
                   <h2>Miles Morales</h2>
                   <p>Sus poderes son en gran medida similares a los de Peter Parker, el Spider-Man original, pero Miles tiene algunas diferencias notables. Los poderes de Miles Morales incluyen:
                     <br>
@@ -201,7 +201,7 @@
                     Estos son los poderes principales de Miles Morales en los cómics y en las adaptaciones cinematográficas y de videojuegos. El personaje de Miles Morales ha ganado popularidad y es conocido por su origen diverso y sus habilidades únicas en el universo de Spider-Man.
                 </p>
             </div>
-        
+         
         </section>
         <section id="seccion-6" class="full-width">
             <div class="width-1080">
@@ -239,9 +239,10 @@
         <footer></footer>
     </div>
 </div>
-    <script src="menu.js"></script>
-    <script src="personajes.js"></script>
-    <script src="scroll.js"></script>
-    <script src="loading.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/personajes.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/pistas.js"></script>
 </body>
 </html>

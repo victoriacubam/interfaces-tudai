@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+
     let loader = document.querySelector('.loading');
     let contenido= document.querySelector('#contenido');
     // Mostrar el loader
