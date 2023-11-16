@@ -1,18 +1,13 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const stickyImage = document.getElementById('img-1');
-//     const scrollContent = document.getElementById('seccion-6');
-  
-//     window.addEventListener('scroll', function() {
-//         const scrollContentRect = scrollContent.getBoundingClientRect();
-//         const centerY = window.innerHeight / 2;
-    
-//         // Verifica si el centro vertical de la sección está en el centro de la ventana
-//         if (scrollContentRect.top <= centerY && scrollContentRect.bottom >= centerY) {
-//           stickyImage.classList.add('sticky'); // Agrega la clase 'sticky'
-//           console.log("if")
+let posPersonaje4Top = document.querySelector("#personaje-4").getBoundingClientRect().top;
+let posPersonaje4Bottom = document.querySelector("#personaje-4").getBoundingClientRect().bottom;
 
-//         } else {
-//           stickyImage.classList.remove('sticky'); // Quita la clase 'sticky'
-//         }
-//       });
-// });
+
+window.onscroll = function(){
+    // console.log(posPersonaje4Top,window.scrollY, (window.scrollY + screen.height))
+    if ((window.scrollY >= posPersonaje4Top)&&(posPersonaje4Bottom>=window.scrollY)){
+        // console.log("hola");
+    }
+}
+// document.querySelector("#personaje-4").onscroll = function(){
+//     console.log("hola")
+// }
