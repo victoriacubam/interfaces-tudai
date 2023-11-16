@@ -2,6 +2,7 @@ body {
   /* background-color: #5499F8; */
   margin: 0;
   font-family: 'Lato', sans-serif;
+  /* overflow-x: hidden; */
 }
 
 /**************** GENERAL ****************/
@@ -20,20 +21,24 @@ header {
   z-index: 2;
   background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
-  height: 227px;
+  /* height: 227px; */
+  height: 103px;
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
 }
 
 header.fixed {
-  z-index: 100000;
+  z-index: 10000;
   position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
-  height: 103px;
+  /* height: 103px; */
   background: linear-gradient(to bottom,#5499F8 85%, #5498f800 95%);
 }
 
@@ -168,21 +173,24 @@ header.fixed {
 #seccion-1 img#personaje1 {
   width: 360px;
   height: 444px;
-  left: 91px;
+  /* left: 91px; */
+  left: 10%;
   top: 262px;
 }
 
 #seccion-1 img#personaje2 {
   width: 465px;
   height: 465px;
-  left: 33.3%;
+  /* left: 33.3%; */
+  left: 33%;
   top: 277px;
 }
 
 #seccion-1 img#personaje3 {
   width: 393px;
   height: 393px;
-  right: 170px;
+  right: 10%;
+  /* right: 170px; */
   top: 209px;
 }
 
