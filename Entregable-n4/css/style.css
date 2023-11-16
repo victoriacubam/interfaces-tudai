@@ -1,5 +1,5 @@
 body {
-  /* background-color: #5499F8; */
+  background-color: #5499F8;
   margin: 0;
   font-family: 'Lato', sans-serif;
   /* overflow-x: hidden; */
@@ -11,10 +11,12 @@ body {
   width: 100%;
 }
 
+
 .width-1080 {
   width: 1080px;
   height: 720px;
 }
+
 
 /**************** HEADER ****************/
 header {
@@ -25,8 +27,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  /* height: 227px; */
-  height: 103px;
+  height: 227px;
+  /* height: 103px; */
   display: flex;
   justify-content: center;
   transition: all 0.3s ease;
@@ -38,7 +40,7 @@ header.fixed {
   left: 0;
   right: 0;
   top: 0;
-  /* height: 103px; */
+  height: 103px;
   background: linear-gradient(to bottom,#5499F8 85%, #5498f800 95%);
 }
 
@@ -126,8 +128,8 @@ header.fixed {
 #seccion-1 {
   position: relative;
   /* z-index: 1; */
-  /* background: url('imagenes/Seccion1/fondo1.png');
-  background-size: cover; */
+  background: url('imagenes/Seccion1/fondo1.png');
+  background-size: cover;
   height: 720px;
   margin-top: 126px;
   display: flex;
@@ -156,11 +158,11 @@ header.fixed {
   height: 727.5;
   width: 390px;
   bottom: 0px;
-  right: -7px;
+  right: 0px;
 }
 
 #seccion-1 img#edificio3 {
-  left: 29.5%;
+  left: 31%;
   height: 213.5px;
   width: 560px;
   bottom: -10px;
@@ -186,14 +188,14 @@ header.fixed {
   width: 465px;
   height: 465px;
   /* left: 33.3%; */
-  left: 33%;
+  left: 35%;
   top: 277px;
 }
 
 #seccion-1 img#personaje3 {
   width: 393px;
   height: 393px;
-  right: 10%;
+  right: 13%;
   /* right: 170px; */
   top: 209px;
 }
@@ -205,21 +207,21 @@ header.fixed {
 }
 
 #seccion-1 img#tela-araña-izq {
-  left: -170px;
+  left: 0%;
   bottom: -200px;
 }
 
 #seccion-1 img#tela-araña-der {
-  right: -170px;
+  right: 0px;
   bottom: 70px;
 }
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
 
  #seccion-2 {
-  position: relative;
-  top: -70px;
-  display: flex;
+   position: relative;
+   top: -70px;
+   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 5;
@@ -229,16 +231,16 @@ header.fixed {
   position: absolute;
   top: 3px;
   z-index: 0;
-  background-color: #8F6AA6;
   width: 100%;
   height: 844px;
+  background-color: #8F6AA6;
   clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 85%);
 }
 
 #seccion-2 div.width-1080 {
   z-index: 1;
   position: relative;
-  display: flex;
+  /* display: flex; */
 }
 
 #seccion-2 div.width-1080 div.texto {
@@ -283,9 +285,10 @@ header.fixed {
 
 #seccion-3 {
   position: relative;
+  margin-top: -70px;
   width: 100%;
   height: 1085px;
-  /* background-color: white; */
+  background-color: white;
   z-index: 0;
   display: flex;
   justify-content: center;
@@ -295,7 +298,7 @@ header.fixed {
 #seccion-3 div.width-1080 {
   display: flex;
   justify-content: space-between;
-  margin-top: 200px;
+  margin-top: 330px;
 }
 
 #seccion-3 div div.card-personaje {
@@ -321,6 +324,8 @@ header.fixed {
 #seccion-6{
   display: flex;
   justify-content: center;
+  background-color: white;
+  height: 2000px;
 }
 
 #seccion-6 h2 {
@@ -342,7 +347,6 @@ header.fixed {
 #seccion-6 div.container-scroll{
   display: flex;
   justify-content: space-between;
-  height: 460px;
 }
 
 #col-img {
@@ -373,6 +377,11 @@ header.fixed {
 } */
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
+
+#seccion-7 {
+  background-color: white;
+}
+
 #negro{
   background-color: black;
   clip-path: polygon(100% 10%, 100% 85%, 0 100%, 0 0);

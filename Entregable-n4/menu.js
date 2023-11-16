@@ -1,4 +1,4 @@
-'use strict'
+// 'use strict'
 
 // Header fijo al hacer scroll
 
@@ -7,10 +7,9 @@ let logo = document.querySelector("#logo");
 let seccion1 = document.querySelector("#seccion-1");
 
 window.onscroll = function() {
-    if (window.scrollY > 0) { // Cambia 100 por el valor que prefieras para activar el cambio
+    if (window.scrollY > 0) {
         header.classList.add("fixed");
         logo.classList.add("fixed-img");
-
       } else {
         header.classList.remove("fixed");
         logo.classList.remove("fixed-img");
