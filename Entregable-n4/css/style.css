@@ -96,11 +96,14 @@ header.fixed {
 }
 
 #btn-comprar {
-  position: absolute;
   right: 100px;
   top: 20px;
   width: 200px;
   height: 50px;
+}
+
+.btn {
+  position: absolute;
   background-color: #FFE901;
   border-radius: 30px;
   border: solid 4px #2981FF;
@@ -111,6 +114,7 @@ header.fixed {
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
   -webkit-text-stroke: 1px #02187E;
   cursor: pointer;
+
 }
 
 /**************** SECCION 1 SPIDEYS ****************/
@@ -382,14 +386,6 @@ header.fixed {
   background-color: #FFE901;
   width: 240px;
   height: 50px;
-  border-radius: 30px;
-  border: solid 4px #2981FF;
-  font-family: 'Lato', sans-serif;
-  font-weight: bolder;
-  font-size: 20px;
-  color: #02187E;
-  box-shadow: 5px 5px rgba(2, 24, 126, 1);
-  -webkit-text-stroke: 1px #02187E;
 }
 
 .container {
