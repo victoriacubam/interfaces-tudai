@@ -21,51 +21,24 @@ contenedorPersonajes.addEventListener('mouseover', function(event) {
 });
 
 
-// Función para mostrar el popup correspondiente al personaje seleccionado
-// function mostrarPopup(idPersonaje) {
-//   var popupId = 'pop-up-' + idPersonaje.split('-')[1];
-//   document.getElementById(popupId).style.display = 'block';
-//  }
+
  
- // Función para ocultar todos los popups
- function ocultarPopups() {
-  var popups = document.getElementsByClassName('popUp');
-  for (var i = 0; i < popups.length; i++) {
-     popups[i].style.display = 'none';
-  }
- }
+
  
- // Asignar eventos de clic a las imágenes
- document.getElementById('personaje-1').addEventListener('click', function() {
-  ocultarPopups();
-  // mostrarPopup(this.id);
- });
- 
- document.getElementById('personaje-2').addEventListener('click', function() {
-  ocultarPopups();
-  mostrarPopUp(this.id);
- });
- 
- document.getElementById('personaje-3').addEventListener('click', function() {
-  ocultarPopups();
-  // mostrarPopup(this.id);
- });
+let personaje1 = document.getElementById('personaje-1');
+let popUp1= document.getElementById('pop-up-1'); 
+personaje1.addEventListener("click" , function(popUp1){
+  console.log("Mostrar popUp 1");
+    popUp1.target.classList.add('popUpMostrar');
+})
 
 
 
-function mostrarPopUp(id) {
-  console.log("Mostrar pop-up: " + id);
-  let popUp = document.getElementById(id);
-  
-  if (popUp) {
-    popUp.style.display = 'flex';
-  } else {
-    console.error("El elemento con ID " + id + " no fue encontrado.");
-  }
-}
+
 
 function ocultarPopUp(id) {
-  var popUp = document.getElementById(id);
+  let popUp = document.getElementById(id);
+  console.log("Ocultar pop-up: " + id);
   popUp.style.display = 'none';
 }
   
