@@ -103,7 +103,7 @@ header.fixed {
   background-color: #FFE901;
   border: solid 1px #FFE901;
 
-  transform: rotate(-45deg) translate(-1px, 18px);
+  transform: rotate(-45deg) translate(-2px, 18px);
 }
 
 #btn-comprar {
@@ -322,6 +322,41 @@ header.fixed {
   font-size: 20px;
 }
 
+#card-1.fade-in {
+  animation: fadeIn 2s ease-in;
+}
+#card-2.fade-in {
+  animation: fadeIn 4s ease-in; 
+}
+#card-3.fade-in {
+  animation: fadeIn 6s ease-in; 
+}
+
+@keyframes fadeIn {  
+  from {  
+      opacity:0;  
+  }  
+
+  to {  
+      opacity:1;  
+  }  
+}
+
+#card-1,
+#card-2, 
+#card-3 {
+  opacity: 1;  
+}
+
+/* #card-2.fade-in {
+  opacity: 0;
+  transition: opacity 7s;
+}
+
+#card-3.fade-in {
+  opacity: 0;
+  transition: opacity 9s;
+} */
 
 /**************** SECCION 4 Pistas ****************/
 
@@ -339,6 +374,7 @@ header.fixed {
   justify-content: center;
   background-color: white;
   height: 2000px;
+  margin-top: -1px;
 }
 
 #seccion-6 .width-1080 {

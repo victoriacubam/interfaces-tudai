@@ -10,3 +10,31 @@
 //     //     posPersonaje4.style.transform = 'translateY(' + scrolled * 0.3 + 'px)';
 //     // }
 // }
+
+ // Función para agregar o quitar la clase según la posición del scroll
+ function toggleSectionClass() {
+    let seccion3 = document.getElementById('seccion-3');
+    let card = seccion3.getBoundingClientRect();
+    //Mitad de la altura de la ventana visible
+    let offset = window.innerHeight * 0.5;
+
+    let card1 = document.querySelector("#card-1");
+    let card2 = document.querySelector("#card-2");
+    let card3 = document.querySelector("#card-3");
+
+    if (card.top < offset && card.bottom > offset) {
+      card1.classList.add('fade-in');
+      card2.classList.add('fade-in');
+      card3.classList.add('fade-in');
+    } else {
+      card1.classList.remove('fade-in');
+      card2.classList.remove('fade-in');
+      card3.classList.remove('fade-in');
+    }
+  }
+
+  // Agrega un event listener para la función al hacer scroll
+  document.addEventListener('scroll', toggleSectionClass);
+
+  // Llama a la función inicialmente para aplicar clases si es necesario al cargar la página
+  toggleSectionClass();

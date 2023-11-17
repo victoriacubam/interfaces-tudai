@@ -17,16 +17,28 @@ window.onscroll = function() {
 
       //Cuando se hace scroll se ejecuta la funcion que pregunta si la posicion del scroll 
       //esta dentro de la posicion del personaje
-      let posPersonaje4Top = document.querySelector("#personaje-4").getBoundingClientRect().top;
-      let posPersonaje4Bottom = document.querySelector("#personaje-4").getBoundingClientRect().bottom;
       let posPersonaje4 = document.querySelector("#personaje-4")
-      if (((window.scrollY >= posPersonaje4Top+200))&&(posPersonaje4Bottom>=window.scrollY)){
+      let posPersonaje4Top = posPersonaje4.getBoundingClientRect().top;
+      let posPersonaje4Bottom = posPersonaje4.getBoundingClientRect().bottom;
+      if (((window.scrollY >= posPersonaje4Top+200))&&((posPersonaje4Bottom+100)>=window.scrollY)){
           const scrolled = window.scrollY;
-          console.log("hola")
 
           posPersonaje4.style.transform = 'translateY(' + scrolled * 0.2 + 'px)';
       }
-}
+      // //Cards fade-in
+      // let card1 = document.querySelector("#card-1");
+      // let card2 = document.querySelector("#card-2");
+      // let card3 = document.querySelector("#card-3");
+  
+      // let cardTop = card1.getBoundingClientRect().top;
+      // let catdBottom = card1.getBoundingClientRect().bottom;
+  
+      // if (((window.scrollY >= cardTop))&&(catdBottom>=window.scrollY)){
+      //   card1.classList.add(".fade-in");
+      //   console.log("jeje")
+      // }
+
+    }
 
 //Menu hamburguesa
 
