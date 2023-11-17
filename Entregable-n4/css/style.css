@@ -516,11 +516,74 @@ h2 {
   position: relative;
   height: 1296px;
   background-image: url(imagenes/Seccion8/fondo4.png);
+  display: flex;
+  justify-content: center;
 }
 
-#seccion-8 img {
+#seccion-8 div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+#seccion-8 #fondo-s8 {
   position: absolute;
   bottom: 0;
+}
+
+#seccion-8 h1 {
+  font-size: 60px;
+  font-weight: 600;
+  width: 816px;
+  margin-top: 152px;
+  text-align: center;
+
+}
+
+#seccion-8 p {
+  height: 95px;
+  width: 578px;
+  margin: 45px;
+  font-size: 20px;
+}
+
+#seccion-8 p span {
+  text-decoration: underline;
+}
+
+#adv {
+  width: 231px;
+  margin-left: 45px;
+}
+
+#suscribirse {
+ /* width: 780px; */
+ display: flex;
+}
+
+#suscribirse input{
+  background-color: #FFFF;
+  border-radius:  50px 0 0 50px;
+  border: solid 9px #2981FF;
+  border-right: none;
+  width: 510px;
+  height: 82px;
+  letter-spacing: 2px;
+  padding: 0px 0px 0px 50px;
+  color: #02187E;
+  box-shadow: 5px 5px rgba(2, 24, 126, 1);
+}
+
+#suscribirse button {
+  background-color: #FFE901;
+  box-shadow: 5px 5px rgba(2, 24, 126, 1);
+  border: solid 9px #2981FF;
+  border-radius: 0 50px 50px 0;
+  height: 100px;
+  width: 216px;
+  font-weight:900;
+  color: #02187E;
+  cursor: pointer;
+
 }
 
 /**************** FOOTER ****************/
