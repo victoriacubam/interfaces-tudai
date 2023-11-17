@@ -14,6 +14,18 @@ window.onscroll = function() {
         header.classList.remove("fixed");
         logo.classList.remove("fixed-img");
       }
+
+      //Cuando se hace scroll se ejecuta la funcion que pregunta si la posicion del scroll 
+      //esta dentro de la posicion del personaje
+      let posPersonaje4Top = document.querySelector("#personaje-4").getBoundingClientRect().top;
+      let posPersonaje4Bottom = document.querySelector("#personaje-4").getBoundingClientRect().bottom;
+      let posPersonaje4 = document.querySelector("#personaje-4")
+      if (((window.scrollY >= posPersonaje4Top+200))&&(posPersonaje4Bottom>=window.scrollY)){
+          const scrolled = window.scrollY;
+          console.log("hola")
+
+          posPersonaje4.style.transform = 'translateY(' + scrolled * 0.2 + 'px)';
+      }
 }
 
 //Menu hamburguesa

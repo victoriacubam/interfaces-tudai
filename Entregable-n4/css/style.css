@@ -86,9 +86,11 @@ header.fixed {
 }
 
 #linea-1.activar-linea-1 {
-  transform: rotate(45deg) translate(-2px, -5px);
   box-shadow:none;
-  
+  background-color: #FFE901;
+  border: solid 1px #FFE901;
+
+  transform: rotate(45deg) translate(10px, 0px);
 }
 
 #linea-2.activar-linea-2 {
@@ -97,8 +99,11 @@ header.fixed {
 }
 
 #linea-3.activar-linea-3 {
-  transform: rotate(-45deg) translate(7px, 7px);
   box-shadow:none;
+  background-color: #FFE901;
+  border: solid 1px #FFE901;
+
+  transform: rotate(-45deg) translate(-1px, 18px);
 }
 
 #btn-comprar {
@@ -121,6 +126,13 @@ header.fixed {
   -webkit-text-stroke: 1px #02187E;
   cursor: pointer;
 
+}
+
+.btn:hover {
+  background-color: #2981FF;
+  color: #FFE901;
+  border-color: #FFE901;
+  -webkit-text-stroke: 1px #FFE901;
 }
 
 /**************** SECCION 1 SPIDEYS ****************/
@@ -248,7 +260,9 @@ header.fixed {
 #seccion-2 div.width-1080 div.personaje {
   position: absolute;
   right: -65px;
-  top: 150px;
+  top: 0px;
+  transform-origin: top;
+  transform: translateY(0);
 }  
 
 #seccion-2 div.width-1080 div.texto h2 {
@@ -296,7 +310,7 @@ header.fixed {
 #seccion-3 div.width-1080 {
   display: flex;
   justify-content: space-between;
-  margin-top: 330px;
+  margin-top: 500px;
   height: 720px;
 }
 
@@ -400,9 +414,9 @@ header.fixed {
   color: #FFFF;
   font-size: 50px;
 }
+
 #btn-comprar-ahora {
   position: absolute;
-  background-color: #FFE901;
   width: 240px;
   height: 50px;
 }
@@ -578,12 +592,21 @@ h2 {
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
   border: solid 9px #2981FF;
   border-radius: 0 50px 50px 0;
-  height: 100px;
+  height: 99.5px;
   width: 216px;
-  font-weight:900;
-  color: #02187E;
   cursor: pointer;
+  
+  color: #02187E;
+  -webkit-text-stroke: 1px #02187E;
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+}
 
+#suscribirse button:hover {
+  background-color: #2981FF;
+  color: #FFE901;
+  -webkit-text-stroke: 1px #FFE901;
 }
 
 /**************** FOOTER ****************/
