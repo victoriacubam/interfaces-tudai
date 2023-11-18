@@ -96,3 +96,23 @@ document.addEventListener('scroll', fadeIn);
 
 // Llama a la función inicialmente para aplicar clases si es necesario al cargar la página
 fadeIn();
+
+
+// function castParallax() {
+
+// 	window.addEventListener("scroll", function(event){
+
+// 		var top = this.scrollY;
+
+// 		let posPersonaje4 = document.querySelector("#personaje-4");
+// 		var speed, yPos;
+//       console.log("hola")
+// 			speed = posPersonaje4.getAttribute('data-speed');
+// 			var yPos = -(top * speed / 100);
+// 			posPersonaje4.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+
+
+// 	});
+// }
+
+// castParallax();

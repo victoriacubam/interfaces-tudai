@@ -148,7 +148,17 @@ header.fixed {
   margin-top: 126px;
   display: flex;
   overflow: hidden;
+
+  background-repeat: repeat-x;
+  /* background-size: cover; */
+  animation: scroll 40s infinite linear;
 }
+
+@keyframes scroll {
+  0% {background-position-x: 0px;}
+  100% {background-position-x: -1240px;}
+}
+
 
 
 #seccion-1 img#edificio1, 
@@ -262,7 +272,8 @@ header.fixed {
 #seccion-2 div.width-1080 div.personaje {
   position: absolute;
   right: -65px;
-  top: 0px;
+  /* top: 100px; */
+  top: 0;
   transform-origin: top;
   transform: translateY(0);
 }  
@@ -293,6 +304,11 @@ header.fixed {
   height: 921px;
   z-index: 2;
 }
+
+/* .parallax {
+  position: fixed;
+
+} */
 
 
 /**************** SECCION 3 Introduccion de los Spidey ****************/
