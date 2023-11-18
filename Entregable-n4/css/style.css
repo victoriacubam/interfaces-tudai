@@ -111,6 +111,7 @@ header.fixed {
   top: 20px;
   width: 200px;
   height: 50px;
+  
 }
 
 .btn {
@@ -125,6 +126,7 @@ header.fixed {
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
   -webkit-text-stroke: 1px #02187E;
   cursor: pointer;
+  transition: 0.3s ease all;
 
 }
 
@@ -297,7 +299,7 @@ header.fixed {
 
 #seccion-3 {
   position: relative;
-  margin-top: -200px;
+  margin-top: -250px;
   width: 100%;
   height: 1085px;
   background-color: white;
@@ -322,14 +324,19 @@ header.fixed {
   font-size: 20px;
 }
 
+/* .oculto {
+  visibility: hidden;
+  transition: 0.3s ease all;
+} */
+
 #card-1.fade-in {
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 2s ease-in, moverDesdeAbajo 2s ease-in;
 }
 #card-2.fade-in {
-  animation: fadeIn 4s ease-in; 
+  animation: fadeIn 4s ease-in, moverDesdeAbajo 4s ease-in;
 }
 #card-3.fade-in {
-  animation: fadeIn 6s ease-in; 
+  animation: fadeIn 6s ease-in, moverDesdeAbajo 6s ease-in;
 }
 
 @keyframes fadeIn {  
@@ -342,11 +349,23 @@ header.fixed {
   }  
 }
 
+@keyframes moverDesdeAbajo {
+  from {
+    transform: translateY(100px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 #card-1,
 #card-2, 
 #card-3 {
-  opacity: 1;  
+  transform: translateY(0);
 }
+
+
 
 /* #card-2.fade-in {
   opacity: 0;
@@ -592,7 +611,7 @@ h2 {
 #seccion-8 p {
   height: 95px;
   width: 578px;
-  margin: 45px;
+  margin: 20px 45px 45px 45px;
   font-size: 20px;
 }
 
@@ -608,7 +627,7 @@ h2 {
 #suscribirse {
  /* width: 780px; */
  display: flex;
- align-items: center;
+ justify-content: center;
 }
 
 #suscribirse input{
@@ -638,6 +657,7 @@ h2 {
   font-family: 'Lato', sans-serif;
   font-weight: bolder;
   font-size: 20px;
+  transition: 0.3s ease all;
 }
 
 #suscribirse button:hover {
@@ -655,8 +675,6 @@ h2 {
 
 footer {
   background-color: #5E5E5D;
-  /* position: absolute;
-  bottom: 0; */
   height: 678px;
   color: white;
 }
@@ -664,7 +682,6 @@ footer {
 footer #publicidad {
   display: flex;
   justify-content: center;
-  /* top: 0; */
   background-color: #242424;
   height: 80px;
   width: 100%;

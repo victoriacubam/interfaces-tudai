@@ -59,15 +59,35 @@ function fadeIn() {
   //Si el borde superior de la seccion 3 es menor a la mitad de la altura de la ventana 
   // y el borde superior es mayor, agrega la clase
   if (cards.top < offset && cards.bottom > offset) {
-    card1.classList.add('fade-in');
-    card2.classList.add('fade-in');
-    card3.classList.add('fade-in');
+      card1.classList.add('fade-in');
+      card2.classList.add('fade-in');
+      card3.classList.add('fade-in');
+
+
+      // card1.classList.remove('oculto');
+      // card1.classList.add('fade-in');
+      // setTimeout(function() {
+      //   card2.classList.remove('oculto');
+      //   card2.classList.add('fade-in');
+      // }, 2000);
+      
+      // setTimeout(function() {
+      //   card3.classList.remove('oculto');
+      //   card3.classList.add('fade-in');
+      // }, 4000);
   } 
+
+  
   // Cuando ya no se cumple (ya no es visible la sección), se le quita la clase
   else {
     card1.classList.remove('fade-in');
+    // card1.classList.add('oculto');
+    
     card2.classList.remove('fade-in');
+    // card2.classList.add('oculto');
+    
     card3.classList.remove('fade-in');
+    // card3.classList.add('oculto');
   }
 }
 
