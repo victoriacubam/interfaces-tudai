@@ -608,6 +608,7 @@ h2 {
 #suscribirse {
  /* width: 780px; */
  display: flex;
+ align-items: center;
 }
 
 #suscribirse input{
@@ -628,7 +629,7 @@ h2 {
   box-shadow: 5px 5px rgba(2, 24, 126, 1);
   border: solid 9px #2981FF;
   border-radius: 0 50px 50px 0;
-  height: 99.5px;
+  height: 100px;
   width: 216px;
   cursor: pointer;
   
@@ -643,6 +644,11 @@ h2 {
   background-color: #2981FF;
   color: #FFE901;
   -webkit-text-stroke: 1px #FFE901;
+}
+
+#mensaje {
+  text-align: center;
+  color: #2981FF;
 }
 
 /**************** FOOTER ****************/
