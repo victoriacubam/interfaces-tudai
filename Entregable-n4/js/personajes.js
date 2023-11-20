@@ -25,23 +25,7 @@ contenedorPersonajes.addEventListener('mouseover', function(event) {
  
 
  
-let personaje1 = document.getElementById('personaje-1');
-let popUp1= document.getElementById('pop-up-1'); 
-personaje1.addEventListener("click" , function(popUp1){
-  console.log("Mostrar popUp 1");
-    popUp1.target.classList.add('popUpMostrar');
-})
 
-
-
-
-
-function ocultarPopUp(id) {
-  let popUp = document.getElementById(id);
-  console.log("Ocultar pop-up: " + id);
-  popUp.style.display = 'none';
-}
-  
   
   
   
