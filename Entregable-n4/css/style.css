@@ -532,6 +532,7 @@ header.fixed {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
+
 }
 
 #pista1 {
@@ -604,6 +605,7 @@ header.fixed {
   margin-left: 63%;
   margin-top: 15%;
 }
+
 #capa3-MsMarvel{
   z-index: 10;
   position: absolute;
