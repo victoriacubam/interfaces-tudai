@@ -14,3 +14,13 @@ function activarMenu(){
   linea2.classList.toggle("activar-linea-2");
   linea3.classList.toggle("activar-linea-3");
 }
+
+// Al hacer click se despliega el menu 
+document.addEventListener('DOMContentLoaded', function() {
+  const btnMenu = document.getElementById('btn-menu');
+  const menu = document.getElementById('menu');
+
+  btnMenu.addEventListener('click', function() {
+      menu.classList.toggle('mostrar'); 
+  });
+});

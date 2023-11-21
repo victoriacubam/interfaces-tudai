@@ -80,6 +80,7 @@ body {
   height: 100%;
   width: 100%;
   background: #FFFF;
+  border-radius: 3px;
   -webkit-border-radius: 100%;
   clip: rect(0px, 100px, 100px, 50px);
 }
@@ -88,6 +89,7 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
+  border-radius: 3px;
   -webkit-border-radius: 100%;
   clip: rect(0px, 50px, 100px, 0px);
 }
@@ -269,6 +271,7 @@ header.fixed {
   -webkit-text-stroke: 1px #02187E;
   cursor: pointer;
   transition: 0.3s ease all;
+  -webkit-text-stoke : 2px; 
 
 }
 
@@ -277,6 +280,91 @@ header.fixed {
   color: #FFE901;
   border-color: #FFE901;
   -webkit-text-stroke: 1px #FFE901;
+}
+
+.menu-deplegable {
+  display: none;
+  opacity: 0;
+  transform: translateY(-20px);
+  position: absolute;
+  z-index: 9999;
+}
+
+.menu-deplegable.mostrar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 9999;
+  width: 30%;
+  height: 600px;
+  background-color: #FFE901;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  color: #000000;
+  margin-left: 0px;
+  margin-top: 80px;
+  margin-right: 70%;
+  opacity: 1;
+  transform: translateY(0);
+  animation: aparecerMenu 0.5s forwards; 
+}
+
+.menu-deplegable ul {
+  list-style: none;
+  padding: 50px;
+  margin-bottom: 50px;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.menu-deplegable li {
+  opacity: 0;
+  margin-bottom: 40px;
+  transform: translateX(-20px);
+  animation: aparecerElemento 0.5s ease forwards; 
+}
+
+.menu-deplegable li:nth-child(1) {
+  animation-delay: 0.1s; 
+}
+.menu-deplegable li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.menu-deplegable li:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.menu-deplegable li:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.menu-deplegable li:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.menu-deplegable li:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+
+@keyframes aparecerMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aparecerElemento {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /**************** SECCION 1 SPIDEYS ****************/
@@ -746,6 +834,7 @@ header.fixed {
 
 #btn-comprar-ahora {
   position: absolute;
+  -webkit-text-stoke : 2px; 
   width: 240px;
   height: 50px;
 }
@@ -825,26 +914,11 @@ header.fixed {
   font-size: 15px;
   z-index: 1000000;
 }
-.popUpMostrar {
-  /* visibility: hidden; */
-  /* display: none; */
-  display: flex; 
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  color: #fff;
-  width: 70%;
-  height: 600px;
-  font-size: 15px;
-  z-index: 1000000;
-}
-
-
 .popUp h2 {
   font-size: 50px;
 }
+
+
 
 .imagen-container {
   flex: 0 0 30%;
@@ -880,6 +954,9 @@ header.fixed {
 h2 {
   margin-top: 0;
 }
+
+
+
 
 
 /**************** SECCION 8 "Lo último de SPIDEY Y SUS AMIGOS en tu buzón de correo electrónico" ****************/
