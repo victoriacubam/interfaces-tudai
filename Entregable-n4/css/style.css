@@ -164,7 +164,7 @@ body {
 
 /**************** HEADER ****************/
 header {
-  z-index: 2;
+  z-index: 100000;
   background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
   position: absolute;
   width: 100%;
@@ -425,7 +425,8 @@ header.fixed {
 #seccion-1 img#personaje3 {
   position: absolute;
   z-index: 6;
-
+  /* transform: translate(0px, 0px);*/
+  transition: transform 0.5s; 
 }
 
 #seccion-1 img#personaje1 {
@@ -451,11 +452,29 @@ header.fixed {
   top: 209px;
 }
 
+/* #personaje1.mover {
+  transform: translate(-40px, 20px);
+  transition: transform 0.5s;
+
+}
+#personaje2.mover {
+  transform: translate(0px, 20px);
+  transition: transform 0.5s;
+
+}
+
+#personaje3.mover {
+  transform: translate(40px, 20px);
+  transition: transform 0.5s;
+} */
+
 #seccion-1 img#tela-araña-izq,
 #seccion-1 img#tela-araña-der {
   position: absolute;
   z-index: 10;
   display: block;
+  transition: transform 0.5s; 
+
 }
 
 #seccion-1 img#tela-araña-izq {
@@ -785,7 +804,6 @@ header.fixed {
 
 #col-img {
   width: 556px;
-  position: sticky;
   top: 200px;
 }
 
@@ -793,6 +811,7 @@ header.fixed {
   height: 460px;
   margin-top: 10px;
   /* margin: 10px 10px; */
+  /* transition: transform 1s ease-in; */
 }
 
 #col-img img{
@@ -801,8 +820,29 @@ header.fixed {
   width: 556px;
   height: 301px;
   /* transition: transform 0.5s ease-in-out; */
-
+  
 }
+
+.activar {
+  visibility: visible;
+}
+
+.desactivar {
+  visibility: hidden;
+}
+
+.fijado {
+  visibility: visible;
+  position: fixed;
+  top: 30%;
+  left: 10%;
+}
+
+.noFijado {
+  visibility: hidden;
+}
+
+
 
 /* .sticky {
   position: fixed;
