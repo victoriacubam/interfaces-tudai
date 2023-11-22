@@ -164,7 +164,7 @@ body {
 
 /**************** HEADER ****************/
 header {
-  z-index: 100000;
+  z-index: 10000;
   background: linear-gradient(to bottom,#5499F8 75%, #5498f800 95%);
   position: absolute;
   width: 100%;
@@ -1090,6 +1090,45 @@ h2 {
 #mensaje {
   text-align: center;
   color: #2981FF;
+}
+
+
+#spiderMan1{
+  /* Tamaño de la viñeta individual */
+  width:75px;
+  height:88px;
+  top: 89%;
+  background:url(imagenes/Seccion8/spidermanPrueba2.png) repeat-x;
+ /* cambiar cada 6 seg infinitamente */
+  animation :cambiar.8s steps(4) infinite;
+  position:absolute;
+  right: 950px;
+}
+
+/* mueve el spritesheet a la izquierda */
+@keyframes cambiar {
+   0% { background-position:0 }
+  /* El tamaño total de ancho del sprite */
+  100% { background-position:300px }
+}
+
+#spiderMan2{
+  /* Tamaño de la viñeta individual */
+  width:35px;
+  height:51px;
+  top: 89%;
+  background:url(imagenes/Seccion8/spiderMan2.png) repeat-x;
+ /* cambiar cada 6 seg infinitamente */
+  animation :escalar.8s steps(4) infinite;
+  position:absolute;
+  right: 50px;
+}
+
+/* mueve el spritesheet a la izquierda */
+@keyframes escalar {
+   0% { background-position:0 }
+  /* El tamaño total de ancho del sprite */
+  100% { background-position:389px }
 }
 
 /**************** FOOTER ****************/
