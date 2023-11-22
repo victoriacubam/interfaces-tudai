@@ -107,9 +107,9 @@ function fadeIn() {
   let texto3 = document.querySelector("#texto-3");
   let texto4 = document.querySelector("#texto-4");
 
-  if (seccion6.top < offset2 && seccion6.bottom > offset2) {
-    console.log("text1");
+  if (posSeccion6.top < offset2 && posSeccion6.bottom > offset2) {
     if((texto1.getBoundingClientRect().top < offset2)&&(texto1.getBoundingClientRect().bottom > offset2)){
+      console.log("text1");
     }
   }
 }
