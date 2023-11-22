@@ -35,6 +35,14 @@ window.onscroll = function() {
     posPersonaje4.style.transform = 'translateY(' + scrolled * 0.2 + 'px)';
   }
 
+  // //SECCION 6
+  // let posSeccion6 = document.querySelector("#seccion-6");
+  // let posSeccion6Top = posSeccion6.getBoundingClientRect().top;
+  // let posSeccion6Bottom = posSeccion6.getBoundingClientRect().bottom;
+  // if(((window.scrollY >= posSeccion6Top+460))&&((posSeccion6Bottom)>=window.scrollY)){
+  //   console.log(posSeccion6Top, posSeccion6Bottom);
+  // }
+
 }  
 
 
@@ -88,6 +96,21 @@ function fadeIn() {
     
     card3.classList.remove('fade-in');
     // card3.classList.add('oculto');
+  }
+
+  let seccion6 = document.getElementById('seccion-6');
+  let posSeccion6 = seccion6.getBoundingClientRect();
+  let offset2 = window.innerHeight * 0.5;
+
+  let texto1 = document.querySelector("#texto-1");
+  let texto2 = document.querySelector("#texto-2");
+  let texto3 = document.querySelector("#texto-3");
+  let texto4 = document.querySelector("#texto-4");
+
+  if (seccion6.top < offset2 && seccion6.bottom > offset2) {
+    console.log("text1");
+    if((texto1.getBoundingClientRect().top < offset2)&&(texto1.getBoundingClientRect().bottom > offset2)){
+    }
   }
 }
 
