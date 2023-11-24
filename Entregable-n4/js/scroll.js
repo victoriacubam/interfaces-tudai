@@ -7,42 +7,71 @@ window.onscroll = function() {
 
   let header = document.querySelector("#header");
   let logo = document.querySelector("#logo");
-  // let seccion1 = document.querySelector("#seccion-1");
   
+  //SECCION 1 - HERO
+
   let personaje1 = document.querySelector("#personaje1");
   let personaje2 = document.querySelector("#personaje2");
   let personaje3 = document.querySelector("#personaje3");
 
   let telaArañaIzq = document.querySelector("#tela-araña-izq");
   let telaArañaDer = document.querySelector("#tela-araña-der");
-  //Si se scrolleó se fija el header
+
+  let edificio1 = document.querySelector("#edificio1");
+  let edificio2 = document.querySelector("#edificio2");
+  let edificio3 = document.querySelector("#edificio3");
+   
   
   if (window.scrollY > 0) {
+      
+      //HEADER - Si se scrolleó se fija el header
       header.classList.add("fixed");
       logo.classList.add("fixed-img");
-      //SECCION 1
+      
+      
+      //SECCION 1 - HERO -- cuando se scrollea se le da movimiento a los personajes
 
+      personaje1.style.transform = 'translate(-40px, 20px) scale(1.1)';
+      personaje2.style.transform = 'translate(0px, 40px) scale(1.2)';
+      personaje3.style.transform = 'translate(40px, 20px) scale(1.1)';
 
-      personaje1.style.transform = 'translate(-40px, 20px)';
-      personaje2.style.transform = 'translate(0px, 40px)';
-      personaje3.style.transform = 'translate(40px, 20px)';
+      telaArañaIzq.style.transform = 'scale(1.2) translate(-70px, -30px) rotate(20deg)';
 
-      telaArañaIzq.style.transform = 'translate(-40px, 20px)';
-      telaArañaDer.style.transform = 'translate(40px, 30px)';
+      telaArañaDer.style.transform = 'scale(1.2) translate(70px, 70px) rotate(20deg)';
 
+      edificio1.style.transform = 'scale(1.1)';
+      edificio1.style.left = '-35px';
+      
+      edificio2.style.transform = 'scale(1.1)';
+      edificio2.style.bottom = '150px';
+      edificio2.style.right = '10px';
+      
 
-
+      edificio3.style.transform = 'scale(0.9)';
+      edificio3.style.left = '30%';
   } 
-  //Sino, lo deja grande
   else {
+      //Deja el header sin fijar en su tamaño original
       header.classList.remove("fixed");
       logo.classList.remove("fixed-img");
+      
       personaje1.style.transform = 'translate(0px, 0px)';
       personaje2.style.transform = 'translate(0px, 0px)';
       personaje3.style.transform = 'translate(0px, 0px)';
 
       telaArañaIzq.style.transform = 'translate(0px, 0px)';
       telaArañaDer.style.transform = 'translate(0px, 0px)';
+
+      edificio1.style.transform = 'scale(1)';
+      edificio1.style.left = '-55px';
+      
+      edificio2.style.transform = 'scale(1)';
+      edificio2.style.bottom = '150px';
+      edificio2.style.right = '0px';
+      
+
+      edificio3.style.transform = 'scale(1)';
+      edificio3.style.left = '31%';
 
   }
 

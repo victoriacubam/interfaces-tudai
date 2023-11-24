@@ -175,7 +175,7 @@ header {
   /* height: 103px; */
   display: flex;
   justify-content: center;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
 }
 
 header.fixed {
@@ -192,7 +192,7 @@ header.fixed {
   width: 590px;
   height: 301px;
   margin-top: 91px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 #logo.fixed-img {
@@ -383,6 +383,7 @@ header.fixed {
   background-repeat: repeat-x;
   /* background-size: cover; */
   animation: scroll 40s infinite linear;
+  /**/
 }
 
 @keyframes scroll {
@@ -397,6 +398,7 @@ header.fixed {
 #seccion-1 img#edificio3 {
   position: absolute;
   z-index: 3;
+  transition: all 2s; 
 }
 
 #seccion-1 img#edificio1 {
@@ -404,6 +406,7 @@ header.fixed {
   width: 460px;
   bottom: 120px;
   left: -55px;
+  z-index: 2;
 }
 
 #seccion-1 img#edificio2 {
@@ -411,6 +414,7 @@ header.fixed {
   width: 390px;
   bottom: 150px;
   right: 0px;
+  z-index: 2;
 }
 
 #seccion-1 img#edificio3 {
@@ -418,6 +422,7 @@ header.fixed {
   height: 213.5px;
   width: 560px;
   bottom: 120px;
+  z-index: 1;
 }
 
 #seccion-1 img#personaje1,
@@ -425,8 +430,7 @@ header.fixed {
 #seccion-1 img#personaje3 {
   position: absolute;
   z-index: 6;
-  /* transform: translate(0px, 0px);*/
-  transition: transform 0.5s; 
+  
 }
 
 #seccion-1 img#personaje1 {
@@ -434,6 +438,8 @@ header.fixed {
   height: 444px;
   left: 8%;
   top: 262px;
+  transition: all 2.5s;  
+
 }
 
 #seccion-1 img#personaje2 {
@@ -442,6 +448,7 @@ header.fixed {
   /* left: 33.3%; */
   left: 35%;
   top: 277px;
+  transition: all 1s;  
 }
 
 #seccion-1 img#personaje3 {
@@ -450,6 +457,8 @@ header.fixed {
   right: 10%;
   /* right: 170px; */
   top: 209px;
+  transition: all 2.5s;  
+
 }
 
 /* #personaje1.mover {
@@ -473,19 +482,20 @@ header.fixed {
   position: absolute;
   z-index: 10;
   display: block;
-  transition: transform 0.5s; 
-
+  
 }
 
 #seccion-1 img#tela-araña-izq {
   left: 0;
   bottom: -70px;
+  /* transform: scale(1); */
+  transition: all 1s; 
 }
 
 #seccion-1 img#tela-araña-der {
   right: -40px;
   bottom: 200px;
-
+  transition: all 2.5s; 
 }
 
 /**************** SECCION 2 "Conoce a Spidey y sus sorprendentes amigos" ****************/
