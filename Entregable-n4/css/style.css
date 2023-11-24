@@ -430,7 +430,7 @@ header.fixed {
 #seccion-1 img#personaje3 {
   position: absolute;
   z-index: 6;
-  
+
 }
 
 #seccion-1 img#personaje1 {
@@ -600,19 +600,14 @@ header.fixed {
   font-size: 20px;
 }
 
-/* .oculto {
-  visibility: hidden;
-  transition: 0.3s ease all;
-} */
-
 #card-1.fade-in {
-  animation: fadeIn 2s ease-in, moverDesdeAbajo 2s ease-in;
+  animation: fadeIn 0.7s ease-in, moverDesdeAbajo 0.7s ease-in;
 }
 #card-2.fade-in {
-  animation: fadeIn 4s ease-in, moverDesdeAbajo 4s ease-in;
+  animation: fadeIn 1.4s ease-in, moverDesdeAbajo 1.4s ease-in;
 }
 #card-3.fade-in {
-  animation: fadeIn 6s ease-in, moverDesdeAbajo 6s ease-in;
+  animation: fadeIn 2.8s ease-in, moverDesdeAbajo 2.8s ease-in;
 }
 
 @keyframes fadeIn {  
@@ -641,17 +636,6 @@ header.fixed {
   transform: translateY(0);
 }
 
-
-
-/* #card-2.fade-in {
-  opacity: 0;
-  transition: opacity 7s;
-}
-
-#card-3.fade-in {
-  opacity: 0;
-  transition: opacity 9s;
-} */
 
 /**************** SECCION 4 Pistas ****************/
 #seccion-4{

@@ -24,54 +24,54 @@ window.onscroll = function() {
   
   if (window.scrollY > 0) {
       
-      //HEADER - Si se scrolleó se fija el header
-      header.classList.add("fixed");
-      logo.classList.add("fixed-img");
+    //HEADER - Si se scrolleó se fija el header
+    header.classList.add("fixed");
+    logo.classList.add("fixed-img");
       
       
-      //SECCION 1 - HERO -- cuando se scrollea se le da movimiento a los personajes
+    //SECCION 1 - HERO -- cuando se scrollea se le da movimiento a los personajes
 
-      personaje1.style.transform = 'translate(-40px, 20px) scale(1.1)';
-      personaje2.style.transform = 'translate(0px, 40px) scale(1.2)';
-      personaje3.style.transform = 'translate(40px, 20px) scale(1.1)';
+    personaje1.style.transform = 'translate(-40px, 20px) scale(1.1)';
+    personaje2.style.transform = 'translate(0px, 40px) scale(1.2)';
+    personaje3.style.transform = 'translate(40px, 20px) scale(1.1)';
 
-      telaArañaIzq.style.transform = 'scale(1.2) translate(-70px, -30px) rotate(20deg)';
+    telaArañaIzq.style.transform = 'scale(1.2) translate(-70px, -30px) rotate(20deg)';
+    telaArañaDer.style.transform = 'scale(1.2) translate(70px, 70px) rotate(20deg)';
 
-      telaArañaDer.style.transform = 'scale(1.2) translate(70px, 70px) rotate(20deg)';
-
-      edificio1.style.transform = 'scale(1.1)';
-      edificio1.style.left = '-35px';
+    edificio1.style.transform = 'scale(1.1)';
+    edificio1.style.left = '-35px';
       
-      edificio2.style.transform = 'scale(1.1)';
-      edificio2.style.bottom = '150px';
-      edificio2.style.right = '10px';
+    edificio2.style.transform = 'scale(1.1)';
+    edificio2.style.bottom = '150px';
+    edificio2.style.right = '10px';
       
 
-      edificio3.style.transform = 'scale(0.9)';
-      edificio3.style.left = '30%';
+    edificio3.style.transform = 'scale(0.9)';
+     edificio3.style.left = '30%';
   } 
   else {
-      //Deja el header sin fijar en su tamaño original
-      header.classList.remove("fixed");
-      logo.classList.remove("fixed-img");
       
-      personaje1.style.transform = 'translate(0px, 0px)';
-      personaje2.style.transform = 'translate(0px, 0px)';
-      personaje3.style.transform = 'translate(0px, 0px)';
+    //HEADER - Deja el header sin fijar en su tamaño original
+    header.classList.remove("fixed");
+    logo.classList.remove("fixed-img");
 
-      telaArañaIzq.style.transform = 'translate(0px, 0px)';
-      telaArañaDer.style.transform = 'translate(0px, 0px)';
+    //SECCION 1 - Deja los elementos de la seccion 1 con sus estilos originales      
+    personaje1.style.transform = 'translate(0px, 0px)';
+    personaje2.style.transform = 'translate(0px, 0px)';
+    personaje3.style.transform = 'translate(0px, 0px)';
 
-      edificio1.style.transform = 'scale(1)';
-      edificio1.style.left = '-55px';
+    telaArañaIzq.style.transform = 'translate(0px, 0px)';
+    telaArañaDer.style.transform = 'translate(0px, 0px)';
+
+    edificio1.style.transform = 'scale(1)';
+    edificio1.style.left = '-55px';
       
-      edificio2.style.transform = 'scale(1)';
-      edificio2.style.bottom = '150px';
-      edificio2.style.right = '0px';
+    edificio2.style.transform = 'scale(1)';
+    edificio2.style.bottom = '150px';
+    edificio2.style.right = '0px';
       
-
-      edificio3.style.transform = 'scale(1)';
-      edificio3.style.left = '31%';
+    edificio3.style.transform = 'scale(1)';
+    edificio3.style.left = '31%';
 
   }
 
@@ -125,32 +125,14 @@ function fadeIn() {
       card1.classList.add('fade-in');
       card2.classList.add('fade-in');
       card3.classList.add('fade-in');
-
-
-      // card1.classList.remove('oculto');
-      // card1.classList.add('fade-in');
-      // setTimeout(function() {
-      //   card2.classList.remove('oculto');
-      //   card2.classList.add('fade-in');
-      // }, 2000);
-      
-      // setTimeout(function() {
-      //   card3.classList.remove('oculto');
-      //   card3.classList.add('fade-in');
-      // }, 4000);
   } 
 
   
   // Cuando ya no se cumple (ya no es visible la sección), se le quita la clase
   else {
-    card1.classList.remove('fade-in');
-    // card1.classList.add('oculto');
-    
-    card2.classList.remove('fade-in');
-    // card2.classList.add('oculto');
-    
+    card1.classList.remove('fade-in');    
+    card2.classList.remove('fade-in');    
     card3.classList.remove('fade-in');
-    // card3.classList.add('oculto');
   }
 
   let seccion6 = document.getElementById('seccion-6');
