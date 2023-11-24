@@ -656,7 +656,6 @@ header.fixed {
   z-index: 1;
 }
 
-
 @keyframes aparecer {
   from {
     opacity: 0;
@@ -675,7 +674,6 @@ header.fixed {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
-
 }
 
 #pista1 {
@@ -690,6 +688,16 @@ header.fixed {
 #pista3 {
   padding-top: 200px;
 }
+
+.rotar {
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.rotar:hover {
+  transform: perspective(1000px) rotateY(10deg);
+}
+
 
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 #seccion-5{
@@ -728,12 +736,26 @@ header.fixed {
   padding-top: 370px;
 }
 
-#capa1{
+#capa1 {
   z-index: 1;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  
+  width: 1078px; 
+  height: 528px; 
+  overflow: hidden;
+}
+
+.parallax-nubes img {
+  /* width: 100%; Doble del ancho de la imagen para crear repetición */
+  animation: movimiento-nubes 60s linear infinite; /* Animación para mover las nubes */
+}
+
+@keyframes movimiento-nubes {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%); /* Desplazamiento horizontal para repetir la imagen */
+  }
 }
 #capa2{
   z-index: 3;
@@ -753,7 +775,7 @@ header.fixed {
   z-index: 10;
   position: absolute;
   margin-right: 50%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 #capa4{
   z-index: 15;
@@ -895,7 +917,7 @@ header.fixed {
 
 .personaje {
   
-  transition: transform 0.3s, filter 0.3s, opacity 0.3s;
+  transition: transform 0.6s, filter 0.6s, opacity 0.6s;
 }
 .grande {
   transform: scale(1.4);
