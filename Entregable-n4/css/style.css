@@ -1109,43 +1109,173 @@ h2 {
 }
 
 
-#spiderMan1{
-  /* Tamaño de la viñeta individual */
-  width:75px;
-  height:88px;
-  top: 89%;
-  background:url(imagenes/Seccion8/spidermanPrueba2.png) repeat-x;
- /* cambiar cada 6 seg infinitamente */
-  animation :cambiar.8s steps(4) infinite;
-  position:absolute;
-  right: 950px;
+
+:root{
+  --posMax:907.188px;
+  --posMin:622.078px;
+  --x:150px;
 }
 
-/* mueve el spritesheet a la izquierda */
-@keyframes cambiar {
-   0% { background-position:0 }
-  /* El tamaño total de ancho del sprite */
-  100% { background-position:300px }
+
+
+.animacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5 ;
+  position: absolute;
+  bottom: 30px;
+  top: 70%;
+  width: 40px;
+  height: 63px;
+  background: url(imagenes/Seccion8/sprites.png);
+  transform: scale(1.5);
+  background-position: -22px -56px;
+  animation:
+      vuelta .8s steps(5),
+      avansar 1.6s steps(4) .8s;
 }
 
-#spiderMan2{
-  /* Tamaño de la viñeta individual */
-  width:35px;
-  height:51px;
-  top: 89%;
-  background:url(imagenes/Seccion8/spiderMan2.png) repeat-x;
- /* cambiar cada 6 seg infinitamente */
-  animation :escalar.8s steps(4) infinite;
-  position:absolute;
-  right: 50px;
+@keyframes avansar {
+  from{
+      left: 100px;
+      bottom: 60%;
+      background-position: -337px -56px;
+      transform:rotate(10deg);
+  }
+  25%{
+      left: 250px;
+      transform: scale(1.5) rotate(20deg);
+      bottom: 45%;
+  }
+  35%{
+      left: 400px;
+      bottom: 45%;
+      transform:scale(1.5) rotate(10deg);
+  }
+  50%{
+      transform:scale(1.5) rotate(-20deg);
+      left: 650px;
+      bottom: 75%;
+  }
+  75%{
+      left: 900px;
+      bottom: 80%;
+  }
+
+  87%{
+      left: 1100px;
+      bottom: 58%;
+  }
+  to{
+      left: 1280px;
+      bottom: 52%;
+      background-position: -523px -56px;
+  }
 }
 
-/* mueve el spritesheet a la izquierda */
-@keyframes escalar {
-   0% { background-position:0 }
-  /* El tamaño total de ancho del sprite */
-  100% { background-position:389px }
+@keyframes vuelta{
+  from{
+      left: -50px;
+      bottom: 70%;
+      background-position: -22px -56px;
+  }
+  to{
+      left: 100px;
+      bottom: 60%;
+      background-position: -228px -56px;
+  }
 }
+
+.caida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 5 ;
+  position: absolute;
+  bottom: var(--posMax);
+  left: var(--x);
+  width: 40px;
+  height: 63px;
+  background: url(imagenes/Seccion8/sprites.png);
+  transform: scale(1.5);
+  background-position: -178px -190px;
+  animation: 
+      golpe .5s steps(3) 1,
+      caida 2s .4s ;
+}
+
+
+
+@keyframes golpe {
+  from{
+      background-position: -178px -190px;
+  }
+  25%{
+      transform: rotate(-22deg) scale(1.5);
+  }
+  50%{
+      transform: rotate(-45deg) scale(1.5);
+  }
+  75%{
+      transform: rotate(-67deg) scale(1.5);
+  }
+  85%{
+      transform: rotate(-85deg) scale(1.5);
+  }
+  to{
+      background-position: -320px -190px;
+      transform: rotate(-100deg) scale(1.5);
+  }
+}
+
+@keyframes caida {
+  from{
+      background-position: -320px -190px;
+      transform: rotate(-110deg) scale(1.5);
+      bottom: var(--posMax);
+      left: var(--x);
+      opacity: 0.9;
+  }
+  12%{
+      background-position: -320px -190px;
+      transform: rotate(-130deg) scale(1.5);
+      left: calc(var(--x) - (var(--x)*0.02));
+      opacity: 0.5;
+  }
+  25%{
+      background-position: -320px -190px;
+      transform: rotate(-160deg) scale(1.5); 
+      opacity: 0.2;
+  }
+  30%{
+      background-position: -320px -190px;
+      transform: rotate(-160deg) scale(1.5); 
+      opacity: 0;
+  }
+  50%{
+      background-position: -320px -190px;
+      transform: rotate(-180deg) scale(1.5);
+      bottom: 50%;
+      opacity: 0;
+  }
+  51%{
+      opacity: 0;
+  }
+  to{
+      background-position: -320px -190px;
+      transform: rotate(-180deg) scale(1.5);
+      opacity: 0;
+      bottom: var(--posMin);
+      left: var(--x);
+  }
+}
+
+
+
 
 /**************** FOOTER ****************/
 
