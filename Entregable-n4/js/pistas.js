@@ -14,15 +14,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  elementos.forEach(function (imagen) {
-    imagen.addEventListener('mouseenter', function () {
-      this.style.transition = 'transform 0.5s';
-      this.style.transform = 'perspective(1000px) rotateY(10deg)';
-    });
 
-    imagen.addEventListener('mouseleave', function () {
-      this.style.transition = 'transform 0.5s';
-      this.style.transform = 'perspective(1000px) rotateY(0deg)';
-    });
-  });
 });
