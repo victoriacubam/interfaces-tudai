@@ -78,33 +78,35 @@ window.onscroll = function() {
 
   // SECCION 2  *CONOCE A SPIDEY Y SUS SORPRENDENTES AMIGOS*
 
-  let posPersonaje4 = document.querySelector("#personaje-4");
-  let posPersonaje4Top = posPersonaje4.getBoundingClientRect().top;
-  let posPersonaje4Bottom = posPersonaje4.getBoundingClientRect().bottom;
+  let personaje4 = document.querySelector("#personaje-4");
+  let posPersonaje4 = personaje4.getBoundingClientRect();
     
   //Si la posicion del scroll esta dentro de la posicion del personaje de la sección
-  if (((window.scrollY >= posPersonaje4Top+200))&&((posPersonaje4Bottom+100)>=window.scrollY)){
-    let scrolled = window.scrollY;
+  if (((window.scrollY >= posPersonaje4.top+200))&&((posPersonaje4.bottom+100)>=window.scrollY)){
+    let velocidad = (window.scrollY - posPersonaje4.top) * 0.2;
+    personaje4.style.transform = 'translateY(' + velocidad + 'px)';
 
-    posPersonaje4.style.transform = 'translateY(' + scrolled * 0.2 + 'px)';
   }
 
 
   //SECCION 6 - SCROLL con imagen fijada
  
+  //Imagenes del scroll
   const img1 = document.querySelector('#img-1');
   const img2 = document.querySelector('#img-2');
   const img3 = document.querySelector('#img-3');
   const img4 = document.querySelector('#img-4');
 
+  //Textos del scroll
   const texto1 = document.querySelector('#texto-1');
   const texto2 = document.querySelector('#texto-2');
   const texto3 = document.querySelector('#texto-3');
   const texto4 = document.querySelector('#texto-4');
 
+  //Scroll actual de la ventana
   let scrollY = this.window.scrollY;
-  
-  
+
+  //Si el scroll se encuentra en la primer imagen
   if(scrollY >= 4060 && scrollY < 4210){
     img2.classList.remove('fijado');
     img2.classList.add('desactivar');
@@ -118,6 +120,8 @@ window.onscroll = function() {
     texto1.classList.add('activar');
 
   } 
+
+  //Si el scroll se encuentra en la segunda imagen
   else if(scrollY >= 4210 && scrollY < 4684){
     img1.classList.remove('fijado');
     img1.classList.add('desactivar');
@@ -136,6 +140,8 @@ window.onscroll = function() {
     
     texto2.classList.add('activar');
   } 
+
+  //Si el scroll se encuentra en la tercer imagen
   else if(scrollY >= 4684 && scrollY < 5244){
 
     img2.classList.remove('fijado');
@@ -156,7 +162,9 @@ window.onscroll = function() {
     texto3.classList.add('activar');
 
   } 
-  else if(scrollY >= 5244 && scrollY < 5475){
+
+  //Si el scroll se encuentra en la cuarta imagen
+  else if(scrollY >= 5244 && scrollY < 5573){
 
     img3.classList.remove('fijado');
     img3.classList.add('desactivar');
@@ -170,16 +178,18 @@ window.onscroll = function() {
     texto4.classList.add('activar');
 
   }
-  else if(scrollY >= 5474 && scrollY < 5628){
+  else if(scrollY >= 5573 && scrollY < 5628){
     img4.classList.remove('fijado');
   } 
+
+  //Si no se encuentra en los rangos establecidos (el scroll esta por encima o por debajo del contenedor), 
+  // deja a la primer y ultima imagen sin fijar (sticky)
   else {
     img1.classList.remove('fijado');
     img4.classList.remove('fijado');
-  }
+  }  
 
 
-  
 }  
 
 
@@ -226,21 +236,3 @@ document.addEventListener('scroll', fadeIn);
 fadeIn();
 
 
-// function castParallax() {
-
-// 	window.addEventListener("scroll", function(event){
-
-// 		var top = this.scrollY;
-
-// 		let posPersonaje4 = document.querySelector("#personaje-4");
-// 		var speed, yPos;
-//       console.log("hola")
-// 			speed = posPersonaje4.getAttribute('data-speed');
-// 			var yPos = -(top * speed / 100);
-// 			posPersonaje4.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-
-
-// 	});
-// }
-
-// castParallax();

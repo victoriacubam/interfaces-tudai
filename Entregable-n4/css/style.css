@@ -563,19 +563,13 @@ header.fixed {
   height: 413.13px;
 }
 
-#seccion-2 div.width-1080 div.pesonaje img#personaje{
+#seccion-2 div.width-1080 div.pesonaje img#personaje-4{
   
   width: 553px;
   height: 921px;
   z-index: 2;
+  transform: translateY(0);
 }
-
-
-
-/* .parallax {
-  position: fixed;
-
-} */
 
 
 /**************** SECCION 3 Introduccion de los Spidey ****************/
@@ -865,7 +859,7 @@ header.fixed {
 }
 
 .fijado {
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   opacity:1;
   position: fixed;
   top: 33%;
@@ -879,6 +873,12 @@ header.fixed {
 img#img-4 {
   margin-top: 100px;
 }
+
+img#img-4.fijado {
+  margin-top: 0;
+}
+
+
 
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
