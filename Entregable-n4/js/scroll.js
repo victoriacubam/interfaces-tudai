@@ -90,30 +90,96 @@ window.onscroll = function() {
   }
 
 
-  //Seccion 6 - SCROLL con imagen fijada
+  //SECCION 6 - SCROLL con imagen fijada
+  let container = document.querySelector('.container-scroll');
+  let colImg = document.querySelector('#col-img');
+ 
+  const img1 = document.querySelector('#img-1');
+  const img2 = document.querySelector('#img-2');
+  const img3 = document.querySelector('#img-3');
+  const img4 = document.querySelector('#img-4');
 
-  let seccion6 = document.getElementById('seccion-6');
-  let posSeccion6 = seccion6.getBoundingClientRect();
-  //Mitad de la pantalla
-  let offset2 = window.innerHeight * 0.5; 
-  let bottom = window.innerHeight;
+  const texto1 = document.querySelector('#texto-1');
+  const texto2 = document.querySelector('#texto-2');
+  const texto3 = document.querySelector('#texto-3');
+  const texto4 = document.querySelector('#texto-4');
 
-  let texto1 = document.querySelector("#texto-1");
-  let texto2 = document.querySelector("#texto-2");
-  let texto3 = document.querySelector("#texto-3");
-  let texto4 = document.querySelector("#texto-4");
-
-  let img1 = document.querySelector("#img-1");
-  let img2 = document.querySelector("#img-2");
-  let img3 = document.querySelector("#img-3");
-  let img4 = document.querySelector("#img-4");
-
-  let topWindow = window.scrollY;
-  let bottomWindow = topWindow+ window.innerHeight;
-
-  let posImg = img1.getBoundingClientRect();
-  let offsetImg = posImg.top + (posImg.height * 0.5);
+  let scrollY = this.window.scrollY;
   
+  
+  if(scrollY >= 4060 && scrollY < 4210){
+    img2.classList.remove('fijado');
+    img2.classList.add('desactivar');
+        
+    img1.classList.remove('desactivar');
+    img1.classList.add('fijado');
+        
+    texto2.classList.remove('activar');
+    texto2.classList.add('desactivar');
+        
+    texto1.classList.add('activar');
+
+  } 
+  else if(scrollY >= 4210 && scrollY < 4684){
+    img1.classList.remove('fijado');
+    img1.classList.add('desactivar');
+       
+    img3.classList.remove('fijado');
+    img3.classList.add('desactivar');
+        
+    img2.classList.remove('desactivar');
+    img2.classList.add('fijado');
+        
+    texto1.classList.remove('activar');
+    texto1.classList.add('desactivar');
+
+    texto3.classList.remove('activar');
+    texto3.classList.add('desactivar');
+    
+    texto2.classList.add('activar');
+  } 
+  else if(scrollY >= 4684 && scrollY < 5244){
+
+    img2.classList.remove('fijado');
+    img2.classList.add('desactivar');
+        
+    img4.classList.remove('fijado');
+    img4.classList.add('desactivar');
+        
+    img3.classList.remove('desactivar');
+    img3.classList.add('fijado');
+        
+    texto2.classList.remove('activar');
+    texto2.classList.add('desactivar');
+        
+    texto4.classList.remove('activar');
+    texto4.classList.add('desactivar');
+
+    texto3.classList.add('activar');
+
+  } 
+  else if(scrollY >= 5244 && scrollY < 5623){
+
+    img3.classList.remove('fijado');
+    img3.classList.add('desactivar');
+        
+    img4.classList.remove('desactivar');
+    img4.classList.add('fijado');
+        
+    texto3.classList.remove('activar');
+    texto3.classList.add('desactivar');
+        
+    texto4.classList.add('activar');
+
+  }
+  else if(scrollY >= 5623 && scrollY < 5628){
+    img4.classList.remove('fijado');
+  } 
+  else {
+    img1.classList.remove('fijado');
+    img4.classList.remove('fijado');
+  }
+
 
   
 }  
