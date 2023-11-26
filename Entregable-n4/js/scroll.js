@@ -76,8 +76,7 @@ window.onscroll = function() {
   }
 
 
-  // SECCION 2 
-  // *CONOCE A SPIDEY Y SUS SORPRENDENTES AMIGOS*
+  // SECCION 2  *CONOCE A SPIDEY Y SUS SORPRENDENTES AMIGOS*
 
   let posPersonaje4 = document.querySelector("#personaje-4");
   let posPersonaje4Top = posPersonaje4.getBoundingClientRect().top;
@@ -90,14 +89,33 @@ window.onscroll = function() {
     posPersonaje4.style.transform = 'translateY(' + scrolled * 0.2 + 'px)';
   }
 
-  // //SECCION 6
-  // let posSeccion6 = document.querySelector("#seccion-6");
-  // let posSeccion6Top = posSeccion6.getBoundingClientRect().top;
-  // let posSeccion6Bottom = posSeccion6.getBoundingClientRect().bottom;
-  // if(((window.scrollY >= posSeccion6Top+460))&&((posSeccion6Bottom)>=window.scrollY)){
-  //   console.log(posSeccion6Top, posSeccion6Bottom);
-  // }
 
+  //Seccion 6 - SCROLL con imagen fijada
+
+  let seccion6 = document.getElementById('seccion-6');
+  let posSeccion6 = seccion6.getBoundingClientRect();
+  //Mitad de la pantalla
+  let offset2 = window.innerHeight * 0.5; 
+  let bottom = window.innerHeight;
+
+  let texto1 = document.querySelector("#texto-1");
+  let texto2 = document.querySelector("#texto-2");
+  let texto3 = document.querySelector("#texto-3");
+  let texto4 = document.querySelector("#texto-4");
+
+  let img1 = document.querySelector("#img-1");
+  let img2 = document.querySelector("#img-2");
+  let img3 = document.querySelector("#img-3");
+  let img4 = document.querySelector("#img-4");
+
+  let topWindow = window.scrollY;
+  let bottomWindow = topWindow+ window.innerHeight;
+
+  let posImg = img1.getBoundingClientRect();
+  let offsetImg = posImg.top + (posImg.height * 0.5);
+  
+
+  
 }  
 
 
@@ -135,78 +153,8 @@ function fadeIn() {
     card3.classList.remove('fade-in');
   }
 
-  let seccion6 = document.getElementById('seccion-6');
-  let posSeccion6 = seccion6.getBoundingClientRect();
-  let offset2 = window.innerHeight * 0.5;
-  let bottom = window.innerHeight;
-
-  let texto1 = document.querySelector("#texto-1");
-  let texto2 = document.querySelector("#texto-2");
-  let texto3 = document.querySelector("#texto-3");
-  let texto4 = document.querySelector("#texto-4");
-
-  let img1 = document.querySelector("#img-1");
-  let img2 = document.querySelector("#img-2");
-  let img3 = document.querySelector("#img-3");
-  let img4 = document.querySelector("#img-4");
-
-  if (posSeccion6.top < offset2 && posSeccion6.bottom > offset2) {
-    
-    if((texto1.getBoundingClientRect().top < offset2)&&(texto1.getBoundingClientRect().bottom > offset2)){
-      texto1.classList.remove('desactivar');
-      texto1.classList.add('activar');
-      img1.classList.remove('noFijado');
-      img1.classList.add('fijado');
-
-    } else {
-      texto1.classList.add('desactivar');
-      texto1.classList.remove('activar');
-      img1.classList.remove('fijado');
-      img1.classList.add('noFijado');
-
-    }
-    if((texto2.getBoundingClientRect().top < offset2)&&(texto2.getBoundingClientRect().bottom > offset2)){
-      texto2.classList.remove('desactivar');
-      texto2.classList.add('activar');
-      img2.classList.remove('noFijado');
-      img2.classList.add('fijado');
-
-    } else {
-      texto2.classList.add('desactivar');
-      texto2.classList.remove('activar');
-      img2.classList.remove('fijado');
-      img2.classList.add('noFijado');
-    }
-    if((texto3.getBoundingClientRect().top < offset2)&&(texto3.getBoundingClientRect().bottom > offset2)){
-      texto3.classList.remove('desactivar');
-      texto3.classList.add('activar');
-      img3.classList.remove('noFijado');
-      img3.classList.add('fijado');
-
-    } else {
-      texto3.classList.add('desactivar');
-      texto3.classList.remove('activar');
-      img3.classList.remove('fijado');
-      img3.classList.add('noFijado');
-    }
-    if((texto4.getBoundingClientRect().top < offset2)&&(texto4.getBoundingClientRect().bottom > offset2)){
-      texto4.classList.remove('desactivar');
-      texto4.classList.add('activar');
-      img4.classList.remove('noFijado');
-      img4.classList.add('fijado');
-
-    } else {
-      texto4.classList.add('desactivar');
-      texto4.classList.remove('activar');
-      img4.classList.remove('fijado');
-      img4.classList.add('noFijado');
-    }
-  } else {
-      img4.classList.remove('fijado');
-      img4.classList.add('noFijado');
-  }
 }
-
+  
 // Agrega un event listener para la función al hacer scroll
 document.addEventListener('scroll', fadeIn);
 
