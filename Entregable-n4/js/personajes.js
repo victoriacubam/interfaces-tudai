@@ -22,44 +22,6 @@ contenedorPersonajes.addEventListener('mouseover', function(event) {
 
 
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   const botonesPersonajes = document.querySelectorAll('.personaje');
-//   const popUps = document.querySelectorAll('.popUp');
-
-//   botonesPersonajes.forEach(boton => {
-//     boton.addEventListener('click', function() {
-//       // Obtener el número del personaje desde el ID del botón
-//       const personajeNum = this.id.split('-')[1];
-      
-//       // Ocultar todos los pop-ups excepto el correspondiente al personaje clicado
-//       popUps.forEach(popUp => {
-//         const popUpNum = popUp.id.split('-')[2];
-//         if (popUpNum === personajeNum) {
-//           popUp.style.display = 'flex'; // Muestra el pop-up del personaje clicado
-//           console.log("Hola");
-//         } else {
-//           popUp.style.display = 'none'; // Oculta los otros pop-ups
-//         }
-//       });
-//     });
-//   });
-// });
-
-//   // Código para cerrar solo el pop-up correspondiente al botón de cerrar presionado
-//   const botonesCerrar = document.querySelectorAll('.cerrar');
-//   botonesCerrar.forEach(botonCerrar => {
-//     botonCerrar.addEventListener('click', function() {
-//       const popUpToClose = this.parentElement.parentElement;
-//       if (popUpToClose) {
-//         popUpToClose.style.display = 'none';
-//       } else {
-//         console.error(`No se encontró el pop-up correspondiente al botón de cerrar`);
-//       }
-//     });
-//   });
-
-
-  
 
  
 

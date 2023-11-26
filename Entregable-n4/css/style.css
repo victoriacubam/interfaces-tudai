@@ -640,52 +640,70 @@ header.fixed {
 
 
 /**************** SECCION 4 Pistas ****************/
-#seccion-4{
+#seccion-4 {
   display: flex;
   flex-direction: column;
   background-color: #fff;
-
-  
 }
-#fondo{
+
+#fondo {
   width: 100%;
   z-index: 1;
 }
 
-
 @keyframes aparecer {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+      opacity: 0;
+      transform: translateY(20px);
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
   }
 }
 
 .pistas {
-  position: absolute;
-  z-index: 10;
   margin-left: 100px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
-
+  position: relative;
+  
 }
 
+.rotate {
+  transition: transform 0.6s ease;
+}
+
+/* Estilos específicos para cada pista */
 #pista1 {
   border: none;
+  z-index: 10;
   margin-top: -150px;
+  position: absolute;
+}
+
+#pista1:hover .rotate{
+  transform: rotateZ(16deg);
 }
 
 #pista2 {
   padding-top: 10px;
+  z-index: 15;
+  position: absolute;
+}
+
+#pista2:hover .rotate{
+  transform: rotateZ(16deg);
 }
 
 #pista3 {
   padding-top: 200px;
+  z-index: 20;
+  position: absolute;
 }
+#pista3:hover .rotate{
+  transform: rotateZ(16deg);
+}
+
 
 /**************** SECCION 5 "Los vengadores acompañando tu aventura" ****************/
 #seccion-5{
@@ -724,12 +742,26 @@ header.fixed {
   padding-top: 370px;
 }
 
-#capa1{
+#capa1 {
   z-index: 1;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  
+  width: 1078px; 
+  height: 528px; 
+  overflow: hidden;
+}
+
+.parallax-nubes img {
+  /* width: 100%; Doble del ancho de la imagen para crear repetición */
+  animation: movimiento-nubes 60s linear infinite; /* Animación para mover las nubes */
+}
+
+@keyframes movimiento-nubes {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%); /* Desplazamiento horizontal para repetir la imagen */
+  }
 }
 #capa2{
   z-index: 3;
@@ -749,7 +781,7 @@ header.fixed {
   z-index: 10;
   position: absolute;
   margin-right: 50%;
-  margin-bottom: 5%;
+  margin-bottom: 1%;
 }
 #capa4{
   z-index: 15;
@@ -895,7 +927,7 @@ header.fixed {
 
 .personaje {
   
-  transition: transform 0.3s, filter 0.3s, opacity 0.3s;
+  transition: transform 0.6s, filter 0.6s, opacity 0.6s;
 }
 .grande {
   transform: scale(1.4);
@@ -920,86 +952,17 @@ header.fixed {
   background-image: url('imagenes/Seccion7/Rectangle10.png'); 
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  /* border-top: 20px solid rgba(201, 43, 148, 1);
-  border-bottom: 20px solid rgba(201, 43, 148, 1);
-  background-color:rgba(201, 43, 148, 0.476);  */
-  z-index: 1000;
 }
 .celeste{
   background-image: url('imagenes/Seccion7/Rectangle11.png'); 
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  /* border-top: 20px solid rgba(37, 82, 200, 1);
-  border-bottom: 20px solid rgba(37, 82, 200, 1);
-  background-color: #2553c858; */
 }
 .azul{
   background-image: url('imagenes/Seccion7/Rectangle12.png'); 
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  /* border-top: 20px solid rgba(48, 76, 113, 1);
-  border-bottom: 20px solid rgba(48, 76, 113, 1);
-  background-color: #304c7163; */
-
 }
-
-.popUp {
-  /* visibility: hidden; */
-  display: none;
-  /* display: flex;  */
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: black;
-  color: #fff;
-  width: 70%;
-  height: 600px;
-  font-size: 15px;
-  z-index: 1000000;
-}
-.popUp h2 {
-  font-size: 50px;
-}
-
-
-
-.imagen-container {
-  flex: 0 0 30%;
-}
-
-.imagen-container img {
-  /* width: 90%;*/
-  height: 550px;
-  margin: 20px;
-}
-
-.contenido {
-  color: #fff;
-  flex: 1;
-  padding: 20px;
-  position: relative;
-}
-
-.cerrar {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  background-color: #fff;
-  color: black;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-h2 {
-  margin-top: 0;
-}
-
-
 
 
 
@@ -1098,43 +1061,174 @@ h2 {
 }
 
 
-#spiderMan1{
-  /* Tamaño de la viñeta individual */
-  width:75px;
-  height:88px;
-  top: 89%;
-  background:url(imagenes/Seccion8/spidermanPrueba2.png) repeat-x;
- /* cambiar cada 6 seg infinitamente */
-  animation :cambiar.8s steps(4) infinite;
-  position:absolute;
-  right: 950px;
+
+/* Estilos animacion Spiderman  */
+:root{
+  --posMax:907.188px; /* Posición máxima en el eje Y para la animación 'caida' */
+  --posMin:622.078px; /* Posición minima en el eje Y para la animación 'caida' */
+  --x:150px;          /* Posición inicial en el eje X para la animación 'caida' */
 }
 
-/* mueve el spritesheet a la izquierda */
-@keyframes cambiar {
-   0% { background-position:0 }
-  /* El tamaño total de ancho del sprite */
-  100% { background-position:300px }
+.animacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5 ;
+  position: absolute;
+  bottom: 30px;
+  top: 70%;
+  width: 40px;
+  height: 63px;
+  background: url(imagenes/Seccion8/spiderman.png);
+  transform: scale(1.5);
+  background-position: -22px -56px;
+  animation:
+      vuelta .8s steps(5),
+      avansar 1.6s steps(4) .8s;
 }
 
-#spiderMan2{
-  /* Tamaño de la viñeta individual */
-  width:35px;
-  height:51px;
-  top: 89%;
-  background:url(imagenes/Seccion8/spiderMan2.png) repeat-x;
- /* cambiar cada 6 seg infinitamente */
-  animation :escalar.8s steps(4) infinite;
-  position:absolute;
-  right: 50px;
+/* Animacion para avanzar a lo largo de la pantalla  */
+@keyframes avansar {
+  from{
+      left: 100px;
+      bottom: 60%;
+      background-position: -337px -56px;
+      transform:rotate(10deg);
+  }
+  25%{
+      left: 250px;
+      transform: scale(1.5) rotate(20deg);
+      bottom: 45%;
+  }
+  35%{
+      left: 400px;
+      bottom: 45%;
+      transform:scale(1.5) rotate(10deg);
+  }
+  50%{
+      transform:scale(1.5) rotate(-20deg);
+      left: 650px;
+      bottom: 75%;
+  }
+  75%{
+      left: 900px;
+      bottom: 80%;
+  }
+
+  87%{
+      left: 1100px;
+      bottom: 58%;
+  }
+  to{
+      left: 1280px;
+      bottom: 52%;
+      background-position: -523px -56px;
+  }
+}
+/* Animacion de la vulta que da al principio  */
+@keyframes vuelta{
+  from{
+      left: -50px;
+      bottom: 70%;
+      background-position: -22px -56px;
+  }
+  to{
+      left: 100px;
+      bottom: 60%;
+      background-position: -228px -56px;
+  }
 }
 
-/* mueve el spritesheet a la izquierda */
-@keyframes escalar {
-   0% { background-position:0 }
-  /* El tamaño total de ancho del sprite */
-  100% { background-position:389px }
+.caida{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  z-index: 5 ;
+  position: absolute;
+  bottom: var(--posMax);
+  left: var(--x);
+  width: 40px;
+  height: 63px;
+  background: url(imagenes/Seccion8/spiderman.png);
+  transform: scale(1.5);
+  background-position: -178px -190px;
+  animation: 
+      golpe .5s steps(3) 1,
+      caida 2s .4s ;
 }
+
+
+/* Animacion de golpe cuando es interseptado por el mouse */
+@keyframes golpe {
+  from{
+      background-position: -178px -190px;
+  }
+  25%{
+      transform: rotate(-22deg) scale(1.5);
+  }
+  50%{
+      transform: rotate(-45deg) scale(1.5);
+  }
+  75%{
+      transform: rotate(-67deg) scale(1.5);
+  }
+  85%{
+      transform: rotate(-85deg) scale(1.5);
+  }
+  to{
+      background-position: -320px -190px;
+      transform: rotate(-100deg) scale(1.5);
+  }
+}
+
+/* Animacion de caida cuando ya fue golpeado por el mouse */
+@keyframes caida {
+  from{
+      background-position: -320px -190px;
+      transform: rotate(-110deg) scale(1.5);
+      bottom: var(--posMax);
+      left: var(--x);
+      opacity: 0.9;
+  }
+  12%{
+      background-position: -320px -190px;
+      transform: rotate(-130deg) scale(1.5);
+      left: calc(var(--x) - (var(--x)*0.02));
+      opacity: 0.5;
+  }
+  25%{
+      background-position: -320px -190px;
+      transform: rotate(-160deg) scale(1.5); 
+      opacity: 0.2;
+  }
+  30%{
+      background-position: -320px -190px;
+      transform: rotate(-160deg) scale(1.5); 
+      opacity: 0;
+  }
+  50%{
+      background-position: -320px -190px;
+      transform: rotate(-180deg) scale(1.5);
+      bottom: 50%;
+      opacity: 0;
+  }
+  51%{
+      opacity: 0;
+  }
+  to{
+      background-position: -320px -190px;
+      transform: rotate(-180deg) scale(1.5);
+      opacity: 0;
+      bottom: var(--posMin);
+      left: var(--x);
+  }
+}
+
+
+
 
 /**************** FOOTER ****************/
 
