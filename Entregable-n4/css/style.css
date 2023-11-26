@@ -328,7 +328,7 @@ header.fixed {
 }
 
 .menu-deplegable ul li:hover {
-  font-weight: 900;
+  font-weight: bolder;
 }
 
 .menu-deplegable li:nth-child(1) {
@@ -865,7 +865,7 @@ header.fixed {
 }
 
 .fijado {
-  transition: opacity 0.1s ease-in;
+  transition: opacity 0.3s ease-in-out;
   opacity:1;
   position: fixed;
   top: 33%;
@@ -876,13 +876,17 @@ header.fixed {
   margin-top: 100px;
 }
 
+img#img-4 {
+  margin-top: 100px;
+}
+
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
 
-#seccion-7 {
-  /* background-color: white; */
+/* #seccion-7 {
+     background-color: white; 
  
-}
+} */
 
 #negro{
   background-color: black;

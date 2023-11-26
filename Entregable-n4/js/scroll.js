@@ -91,8 +91,6 @@ window.onscroll = function() {
 
 
   //SECCION 6 - SCROLL con imagen fijada
-  let container = document.querySelector('.container-scroll');
-  let colImg = document.querySelector('#col-img');
  
   const img1 = document.querySelector('#img-1');
   const img2 = document.querySelector('#img-2');
@@ -158,7 +156,7 @@ window.onscroll = function() {
     texto3.classList.add('activar');
 
   } 
-  else if(scrollY >= 5244 && scrollY < 5623){
+  else if(scrollY >= 5244 && scrollY < 5475){
 
     img3.classList.remove('fijado');
     img3.classList.add('desactivar');
@@ -172,7 +170,7 @@ window.onscroll = function() {
     texto4.classList.add('activar');
 
   }
-  else if(scrollY >= 5623 && scrollY < 5628){
+  else if(scrollY >= 5474 && scrollY < 5628){
     img4.classList.remove('fijado');
   } 
   else {
