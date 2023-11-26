@@ -297,10 +297,10 @@ header.fixed {
   z-index: 9999;
   width: 30%;
   height: 600px;
-  background-color: #FFE901;
+  background: linear-gradient(to top,#FFE901 98%, #ffea0100 99%);
   font-size: 20px;
   font-family: 'Lato', sans-serif;
-  color: #000000;
+  color: #02187E;
   margin-left: 0px;
   margin-top: 80px;
   margin-right: 70%;
@@ -324,6 +324,11 @@ header.fixed {
   transform: translateX(-20px);
   animation: aparecerElemento 0.5s ease forwards; 
   cursor: pointer;
+  border-bottom: solid 2px #FFE901;
+}
+
+.menu-deplegable ul li:hover {
+  font-weight: 900;
 }
 
 .menu-deplegable li:nth-child(1) {
