@@ -2,7 +2,6 @@ body {
   background-color: #5499F8;
   margin: 0;
   font-family: 'Lato', sans-serif;
-  /* overflow-x: hidden; */
 }
 
 /**************** GENERAL ****************/
@@ -172,7 +171,6 @@ header {
   left: 0;
   right: 0;
   height: 227px;
-  /* height: 103px; */
   display: flex;
   justify-content: center;
   transition: all 1s ease;
@@ -377,18 +375,13 @@ header.fixed {
 
 #seccion-1 {
   position: relative;
-  /* z-index: 1; */
   background: url('imagenes/Seccion1/fondo1.png');
-  /* background-size:contain; */
   height: 850px;
   margin-top: 126px;
   display: flex;
   overflow: hidden;
-
   background-repeat: repeat-x;
-  /* background-size: cover; */
   animation: scroll 40s infinite linear;
-  /**/
 }
 
 @keyframes scroll {
@@ -450,7 +443,6 @@ header.fixed {
 #seccion-1 img#personaje2 {
   width: 465px;
   height: 465px;
-  /* left: 33.3%; */
   left: 35%;
   top: 277px;
   transition: all 1s;  
@@ -460,27 +452,10 @@ header.fixed {
   width: 393px;
   height: 393px;
   right: 10%;
-  /* right: 170px; */
   top: 209px;
   transition: all 2.5s;  
 
 }
-
-/* #personaje1.mover {
-  transform: translate(-40px, 20px);
-  transition: transform 0.5s;
-
-}
-#personaje2.mover {
-  transform: translate(0px, 20px);
-  transition: transform 0.5s;
-
-}
-
-#personaje3.mover {
-  transform: translate(40px, 20px);
-  transition: transform 0.5s;
-} */
 
 #seccion-1 img#tela-araña-izq,
 #seccion-1 img#tela-araña-der {
@@ -493,7 +468,6 @@ header.fixed {
 #seccion-1 img#tela-araña-izq {
   left: 0;
   bottom: -70px;
-  /* transform: scale(1); */
   transition: all 1s; 
 }
 
@@ -527,7 +501,6 @@ header.fixed {
 #seccion-2 div.width-1080 {
   z-index: 1;
   position: relative;
-  /* display: flex; */
 }
 
 #seccion-2 div.width-1080 div.texto {
@@ -537,7 +510,6 @@ header.fixed {
 #seccion-2 div.width-1080 div.personaje {
   position: absolute;
   right: -65px;
-  /* top: 100px; */
   top: 0;
   transform-origin: top;
   transform: translateY(0);
@@ -672,7 +644,6 @@ header.fixed {
   transition: transform 0.6s ease;
 }
 
-/* Estilos específicos para cada pista */
 #pista1 {
   border: none;
   z-index: 10;
@@ -750,8 +721,7 @@ header.fixed {
 }
 
 .parallax-nubes img {
-  /* width: 100%; Doble del ancho de la imagen para crear repetición */
-  animation: movimiento-nubes 60s linear infinite; /* Animación para mover las nubes */
+  animation: movimiento-nubes 60s linear infinite; 
 }
 
 @keyframes movimiento-nubes {
@@ -883,11 +853,6 @@ img#img-4.fijado {
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
 
-/* #seccion-7 {
-     background-color: white; 
- 
-} */
-
 #negro{
   background-color: black;
   clip-path: polygon(100% 10%, 100% 85%, 0 100%, 0 0);
@@ -974,8 +939,6 @@ img#img-4.fijado {
   background-image: url(imagenes/Seccion8/fondo4.png);
   display: flex;
   justify-content: center;
-  /* margin-top: -100px; */
-  /* z-index: -1; */
 }
 
 #seccion-8 div:first-child {
@@ -1014,7 +977,6 @@ img#img-4.fijado {
 }
 
 #suscribirse {
- /* width: 780px; */
  display: flex;
  justify-content: center;
 }
@@ -1040,7 +1002,6 @@ img#img-4.fijado {
   height: 100px;
   width: 216px;
   cursor: pointer;
-  
   color: #02187E;
   -webkit-text-stroke: 1px #02187E;
   font-family: 'Lato', sans-serif;
