@@ -1206,11 +1206,15 @@ footer {
 }
 
 footer #publicidad {
-  display: flex;
-  justify-content: center;
+  display: absolute;
   background-color: #242424;
   height: 80px;
   width: 100%;
+}
+
+#publicidad img {
+  margin-left: 100px;
+
 }
 
 footer p {
@@ -1230,4 +1234,5 @@ footer p + img {
   margin: 30px 100px;
   width: 212px;
   height: 41px;
+
 }
