@@ -1205,12 +1205,8 @@ footer {
   margin-top: 0;
 }
 
-footer #publicidad {
-  display: absolute;
-  background-color: #242424;
-  height: 80px;
-  width: 100%;
-  z-index: 100000;
+footer img {
+  width: 1280px;
 }
 
 
