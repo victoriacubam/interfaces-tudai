@@ -12,11 +12,11 @@ body {
   width: 100%;
 }
 
-
 .width-1080 {
   width: 1080px;
   height: 720px;
 }
+
 /**************** LOADER ******************/
 .loading{
   position: fixed; 
@@ -250,6 +250,8 @@ header.fixed {
 
   transform: rotate(-45deg) translate(-2px, 18px);
 }
+
+
 
 #btn-comprar {
   right: 100px;
@@ -1198,6 +1200,9 @@ footer {
   background-color: #5E5E5D;
   height: 678px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
 }
 
 footer #publicidad {
@@ -1223,4 +1228,6 @@ footer p span a {
 
 footer p + img {
   margin: 30px 100px;
+  width: 212px;
+  height: 41px;
 }
