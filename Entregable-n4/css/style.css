@@ -1210,6 +1210,8 @@ footer #publicidad {
   background-color: #242424;
   height: 80px;
   width: 100%;
+  z-index: 100000;
+
 }
 
 #publicidad img {
