@@ -177,6 +177,17 @@ window.onscroll = function() {
         
     texto4.classList.add('activar');
 
+    let contenedor = document.querySelector("#col-img").getBoundingClientRect();
+    //Calcula la distancia entre el contenedor y el borde de la ventana
+    let left = contenedor.left;
+    //Si es 100 significa que la ventana es de 1280px de lo contrario es mas grande y necesita agregarle 100px
+    if(left!=100){
+      left += 100;
+    }
+    
+    let imgFija =  document.querySelector("#img-4.fijado")   
+    imgFija.style.left = left + 'px';
+
   }
   else if(scrollY >= 5573 && scrollY < 5628){
     img4.classList.remove('fijado');

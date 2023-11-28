@@ -2,12 +2,8 @@ body {
   background-color: #5499F8;
   margin: auto;
   font-family: 'Lato', sans-serif;
-  /* overflow-x: hidden; */
   width: 1280px;
 
-}
-
-html {
 }
 
 /**************** GENERAL ****************/
@@ -806,12 +802,10 @@ header.fixed {
   display: flex;
   justify-content: space-between;
   height: 100%;
-  position: relative;
 }
 
 #col-img {
   width: 556px;
-  position: relative;
 }
 
 #col-textos .col-texto {
@@ -835,12 +829,13 @@ header.fixed {
   opacity:1;
 }
 
+
+
 .fijado {
   transition: opacity 0.5s ease-in-out;
   opacity:1;
   position: fixed;
   top: 33%;
-  /* left: 92px; */
 }
 
 #texto-4.col-texto {
@@ -853,10 +848,8 @@ img#img-4 {
 
 img#img-4.fijado {
   margin-top: 0;
-  margin-left: 0;
+  left: 0;
 }
-
-
 
 
 /**************** SECCION 7 "”un gran poder conlleva una gran responsabilidad" ****************/
