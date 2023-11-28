@@ -1,4 +1,4 @@
-
+//Efecto de paralax en la seccion de los vengadores 
 document.addEventListener('mousemove', function (e) {
     let parallaxElements = document.querySelectorAll('.parallax');
     parallaxElements.forEach(function (element) {
